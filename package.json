@@ -1,6 +1,7 @@
 {
     "name": "hazel-grace-styles",
     "version": "0.1.0",
+    "homepage": "https://Mudi-Igbinoba.github.io/HGS",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.4",
@@ -20,6 +21,8 @@
         "autoprefixer": "10.4.5"
     },
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -42,5 +45,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "gh-pages": "^4.0.0"
     }
 }
