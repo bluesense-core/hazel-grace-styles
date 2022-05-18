@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import ContactUs from './ui/ContactUs';
+import Header from './ui/Header';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './ui/Home';
+import Shop from './ui/Shop';
+import { useState, useEffect } from 'react';
+import { shopImages } from './components/Images.js';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [cards, setCards] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            fetch(cards).then((e) => {
+                setIsLoading(false);
+                setCards({ shopImages });
+            });
+        }, 1500);
+    }, []);
+    return (
+        <div>
+            <BrowserRouter>
+                <Header />
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route
+                        path='shop'
+                        element={
+                            <Shop isLoading={isLoading} data={shopImages} />
+                        }
+                    />
+                    <Route path='contact-us' element={<ContactUs />} />
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
