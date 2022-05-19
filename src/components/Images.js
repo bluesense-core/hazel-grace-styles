@@ -14,6 +14,11 @@ import Quinoa from '../img/quinoa-dress.webp';
 import Sesame from '../img/sesame-dress.webp';
 import Wildrice from '../img/wildrice-dress.webp';
 import Yellow from '../img/yellow-dress.webp';
+import Carousel1 from '../img/Carousel-1.webp';
+import Carousel2 from '../img/Carousel-2.webp';
+import Carousel3 from '../img/Carousel-3.webp';
+import Carousel4 from '../img/Carousel-4.webp';
+import Carousel5 from '../img/Carousel-5.webp';
 
 var shopImages = [
     { id: 1, src: Hazel, alt: 'Hazel Shirt', price: '15,000' },
@@ -34,4 +39,12 @@ var shopImages = [
     { id: 16, src: Wildrice, alt: 'Wildrice Dress', price: '25,000' },
 ];
 
-export { shopImages };
+var carouselImages = [
+    { id: 1, src: Carousel1 },
+    { id: 2, src: Carousel2 },
+    { id: 3, src: Carousel3 },
+    { id: 4, src: Carousel4 },
+    { id: 5, src: Carousel5 },
+];
+
+export { shopImages, carouselImages };

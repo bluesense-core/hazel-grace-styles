@@ -167,18 +167,9 @@ footer p,
     color: #414141;
 }
 
-/* .shop-overlay {
-    color: transparent;
-}
-
-.shop-overlay:hover {
-    color: #000;
-} */
-
-@media only screen and (max-width: 768px) {
-    /* #contact-us {
-        margin-top: 200px;
-    } */
+.carousel-img {
+    max-height: 100vh;
+    object-fit: cover;
 }
 
 @media only screen and (max-width: 576px) {

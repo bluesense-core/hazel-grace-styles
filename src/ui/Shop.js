@@ -14,7 +14,9 @@ const Shop = ({ isLoading, data }) => {
                     <Row xs={1} md={2} lg={4} className='gy-5 gx-4 py-5 px-3'>
                         {data.map((e) => (
                             <Col>
-                                <Card className='h-100 pb-5 text-center border-white rounded-0'>
+                                <Card
+                                    key={e.id}
+                                    className='h-100 pb-5 text-center border-white rounded-0'>
                                     <Card.Img
                                         variant='top'
                                         src={e.src}
