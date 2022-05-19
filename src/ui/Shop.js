@@ -7,7 +7,7 @@ const Shop = ({ isLoading, data }) => {
     return (
         <div>
             <section id='shop'>
-                <h1 className='text-center py-3'>All Products</h1>
+                <h1 className='text-center py-3'>Collection</h1>
                 {isLoading ? (
                     <Spinner />
                 ) : (

@@ -14,11 +14,11 @@ const Header = () => {
     const [show, setShow] = useState(false);
 
     return (
-        <header className='shadow-sm'>
+        <header className='shadow-sm h-75'>
             {/* Component */}
             <div className='banner'>
                 <a href='#' className='text-decoration-none text-white'>
-                    <p className='m-0 py-2 text-uppercase text-center'>
+                    <p className='m-0 py-1 text-uppercase text-center'>
                         Shop Our New Collection
                     </p>
                 </a>
@@ -28,7 +28,7 @@ const Header = () => {
                 bg='white'
                 expand='false'
                 className='d-flex flex-column pb-0'>
-                <div className='header-wrapper w-100'>
+                <div className='header-wrapper w-100 py-1'>
                     {/* Component */}
                     <Row className='align-items-center justify-content-between'>
                         <Col className='d-lg-none d-flex'>
@@ -114,7 +114,7 @@ const Header = () => {
 
                 <Nav
                     id='nav2'
-                    className='text-uppercase d-lg-flex d-none flex-row'>
+                    className='text-uppercase d-lg-flex d-none flex-row py-0'>
                     <Link to='/' className='me-4 py-3 text-decoration-none'>
                         Home
                     </Link>

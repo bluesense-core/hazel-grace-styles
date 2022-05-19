@@ -168,9 +168,36 @@ footer p,
 }
 
 .carousel-img {
-    max-height: 100vh;
+    max-height: 70vh;
     object-fit: cover;
 }
+
+.about-us {
+    height: 500px;
+}
+
+.about-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-img-div2 {
+    background-image: url('./img/confidence.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-img-div {
+    background-image: url('./img/Wcollect.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -400px;
+}
+
+/* .about-img2 {
+    height: 100%;
+    object-fit: cover;
+} */
 
 @media only screen and (max-width: 576px) {
     .header-wrapper,
