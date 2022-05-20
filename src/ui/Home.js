@@ -4,13 +4,14 @@ import { Carousel, Image } from 'react-bootstrap';
 import { carouselImages } from '../components/Images.js';
 import aboutPic from '../img/about-4.webp';
 import aboutPic2 from '../img/Wcollect.webp';
-
+import Header from './Header';
 import { FaTruck, FaHeadset, FaUndo } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+function Home() {
     return (
         <div>
+            <Header />
             <section id='home'>
                 <Carousel fade variant='dark'>
                     {carouselImages.map((e) => (
@@ -111,6 +112,6 @@ const Home = () => {
             </section>
         </div>
     );
-};
+}
 
 export default Home;

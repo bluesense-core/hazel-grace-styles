@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 
-const SidebarMenu = () => {
+function SidebarMenu() {
     return (
         <div id='sidebar-menu' className='mt-4 text-capitalize pb-5'>
             <Nav.Link href='#size-guide' className='py-2'>
@@ -21,6 +21,6 @@ const SidebarMenu = () => {
             </Nav.Link>
         </div>
     );
-};
+}
 
 export default SidebarMenu;

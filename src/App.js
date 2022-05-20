@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ContactUs from './ui/ContactUs';
-import Header from './ui/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './ui/Home';
 import Shop from './ui/Shop';
@@ -23,7 +22,6 @@ function App() {
     return (
         <div>
             <BrowserRouter>
-                <Header />
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route

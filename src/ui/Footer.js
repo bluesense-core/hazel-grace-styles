@@ -5,7 +5,7 @@ import { BsTwitter, BsInstagram } from 'react-icons/bs';
 import { FaFacebookF, FaPinterestP } from 'react-icons/fa';
 import SidebarMenu from '../components/SidebarMenu';
 
-const Footer = () => {
+function Footer() {
     return (
         <footer className='d-flex flex-column pt-5 pb-3'>
             <Row className='pt-4 flex-wrap'>
@@ -73,6 +73,6 @@ const Footer = () => {
             </div>
         </footer>
     );
-};
+}
 
 export default Footer;

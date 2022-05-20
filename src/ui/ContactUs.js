@@ -2,9 +2,12 @@ import React from 'react';
 import { Button, Row, Col, Form } from 'react-bootstrap';
 import Footer from './Footer';
 import { BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from 'react-icons/bs';
-const ContactUs = () => {
+import Header from './Header';
+
+function ContactUs() {
     return (
         <div>
+            <Header />
             <section id='contact-us' className='pt-4 pb-5'>
                 <div className='d-flex flex-column col col-lg-6 col-md-9 col-12 mx-auto'>
                     <div className='d-flex flex-column  text-uppercase'>
@@ -98,6 +101,6 @@ const ContactUs = () => {
             <Footer />
         </div>
     );
-};
+}
 
 export default ContactUs;

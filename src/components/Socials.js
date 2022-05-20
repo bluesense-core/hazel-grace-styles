@@ -2,7 +2,7 @@ import React from 'react';
 import { BsTwitter, BsInstagram } from 'react-icons/bs';
 import { FaFacebookF, FaPinterestP } from 'react-icons/fa';
 
-const Socials = () => {
+function Socials() {
     return (
         <div
             id='social-offcanvas'
@@ -21,6 +21,6 @@ const Socials = () => {
             </a>
         </div>
     );
-};
+}
 
 export default Socials;

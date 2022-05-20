@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
 
-const CurrencyForm = () => {
+function CurrencyForm() {
     return (
         <Form.Select size='lg' className='currency border-none'>
             <option value='1'>NGN₦</option>
@@ -9,6 +9,6 @@ const CurrencyForm = () => {
             <option value='3'>USD$</option>
         </Form.Select>
     );
-};
+}
 
 export default CurrencyForm;

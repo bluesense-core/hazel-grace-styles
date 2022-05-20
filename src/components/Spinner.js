@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from 'react-bootstrap';
 import Loader from '../img/spinner.gif';
 
-const Spinner = () => {
+function Spinner() {
     return (
         <div>
             <Image
@@ -13,6 +13,6 @@ const Spinner = () => {
             />
         </div>
     );
-};
+}
 
 export default Spinner;

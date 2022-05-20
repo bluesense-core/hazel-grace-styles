@@ -1,11 +1,13 @@
 import React from 'react';
 import Footer from './Footer';
+import Header from './Header';
 import { Row, Col, Card } from 'react-bootstrap';
 import Spinner from '../components/Spinner.js';
 
-const Shop = ({ isLoading, data }) => {
+function Shop({ isLoading, data }) {
     return (
         <div>
+            <Header />
             <section id='shop'>
                 <h1 className='text-center py-3'>Collection</h1>
                 {isLoading ? (
@@ -43,6 +45,6 @@ const Shop = ({ isLoading, data }) => {
             <Footer />
         </div>
     );
-};
+}
 
 export default Shop;

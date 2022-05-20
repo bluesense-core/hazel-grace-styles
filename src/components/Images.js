@@ -40,18 +40,21 @@ var shopImages = [
 var carouselImages = [
     {
         id: 1,
+        select: 'first-slide',
         src: Carousel1,
         caption:
             "Enthralling the world's fashion narrative with our finest indigenous styles.",
     },
     {
         id: 2,
+        select: 'second-slide',
         src: Carousel2,
         caption:
             "Enthralling the world's fashion narrative with our finest indigenous styles.",
     },
     {
         id: 3,
+        select: 'third-slide',
         src: Carousel3,
         caption:
             "Enthralling the world's fashion narrative with our finest indigenous styles.",

@@ -10,7 +10,7 @@ import Socials from '../components/Socials';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-const Header = () => {
+function Header() {
     const [show, setShow] = useState(false);
 
     return (
@@ -130,6 +130,6 @@ const Header = () => {
             </Navbar>
         </header>
     );
-};
+}
 
 export default Header;
