@@ -42,8 +42,7 @@ var carouselImages = [
         id: 1,
         select: 'first-slide',
         src: Carousel1,
-        caption:
-            "Enthralling the world's fashion narrative with our finest indigenous styles.",
+        caption: 'Welcome to Hazel Grace Styles',
     },
     {
         id: 2,
@@ -56,8 +55,7 @@ var carouselImages = [
         id: 3,
         select: 'third-slide',
         src: Carousel3,
-        caption:
-            "Enthralling the world's fashion narrative with our finest indigenous styles.",
+        caption: '',
     },
 ];
 
