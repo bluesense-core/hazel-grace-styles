@@ -101,7 +101,7 @@ function Home() {
                             <button className='btn text-white py-2 px-3 border-none'>
                                 SHOP NOW
                             </button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
