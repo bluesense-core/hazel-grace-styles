@@ -97,7 +97,7 @@ function Home() {
                         <h3 className='py-2 text-center lh-sm text-white'>
                             Explore our new collection
                         </h3>
-                        <a href='/shop' className=''>
+                        <Link to='/shop' className=''>
                             <button className='btn text-white py-2 px-3 border-none'>
                                 SHOP NOW
                             </button>
