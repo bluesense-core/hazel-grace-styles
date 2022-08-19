@@ -1,10 +1,10 @@
 import React from 'react';
-import Footer from './Footer';
+
 import { Carousel, Image } from 'react-bootstrap';
 import { carouselImages } from '../components/Images.js';
 import aboutPic from '../img/about-4.webp';
 import aboutPic2 from '../img/Wcollect.webp';
-import Header from './Header';
+
 import { FaTruck, FaHeadset, FaUndo } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Button } from 'bootstrap';
@@ -12,7 +12,6 @@ import { Button } from 'bootstrap';
 function Home() {
     return (
         <div>
-            <Header />
             <section id='home'>
                 <Carousel fade variant='dark' pause='hover'>
                     {carouselImages.map((e) => (
@@ -104,8 +103,6 @@ function Home() {
                         </Link>
                     </div>
                 </div>
-
-                <Footer />
             </section>
         </div>
     );

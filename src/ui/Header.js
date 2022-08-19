@@ -3,14 +3,14 @@ import { Col, Image, Navbar, Nav, Row, Offcanvas } from 'react-bootstrap';
 import Logo from '../img/footerlogo.webp';
 import { AiOutlineUser } from 'react-icons/ai';
 import { GrSearch } from 'react-icons/gr';
-import { BsBag } from 'react-icons/bs';
 import CurrencyForm from '../components/CurrencyForm';
 import SidebarMenu from '../components/SidebarMenu';
 import Socials from '../components/Socials';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import CartNav from '../components/CartNav';
 
-function Header() {
+function Header({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) {
     const [show, setShow] = useState(false);
 
     return (
@@ -100,12 +100,13 @@ function Header() {
                                         <GrSearch className='icon' />
                                     </a>
                                 </div>
-                                <div className='ps-2'>
-                                    <a
-                                        href='#'
-                                        className='text-decoration-none text-dark'>
-                                        <BsBag className='icon' />
-                                    </a>
+                                <div className='ps-2 me-md-0 me-3'>
+                                    <CartNav
+                                        cart={cart}
+                                        onUpdateCartQty={onUpdateCartQty}
+                                        onRemoveFromCart={onRemoveFromCart}
+                                        onEmptyCart={onEmptyCart}
+                                    />
                                 </div>
                             </div>
                         </Col>
