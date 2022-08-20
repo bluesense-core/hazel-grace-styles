@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Image, Navbar, Nav, Row, Offcanvas } from 'react-bootstrap';
-import Logo from '../img/footerlogo.webp';
+import Logo from '../img/logo.png';
 import { AiOutlineUser } from 'react-icons/ai';
 import { GrSearch } from 'react-icons/gr';
 import CurrencyForm from '../components/CurrencyForm';
@@ -79,8 +79,16 @@ function Header({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) {
                         <Col>
                             <Navbar.Brand
                                 href='#home'
-                                className='d-block d-flex justify-content-center'>
-                                <Image src={Logo} fluid />
+                                className='d-flex justify-content-center'>
+                                <Image
+                                    src={Logo}
+                                    fluid
+                                    className='d-none d-md-block'
+                                />
+                                <Image
+                                    src={Logo}
+                                    className='ms-3 logo2 d-md-none d-block'
+                                />
                             </Navbar.Brand>
                         </Col>
 

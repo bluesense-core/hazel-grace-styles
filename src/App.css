@@ -8,6 +8,16 @@ body {
     box-sizing: border-box;
 }
 
+.logo2 {
+    width: 150px;
+}
+
+@media screen and (max-width: 400px) {
+    .logo2 {
+        width: 100%;
+    }
+}
+
 button {
     transition: 1100ms;
 }
