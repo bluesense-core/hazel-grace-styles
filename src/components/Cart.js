@@ -234,9 +234,7 @@ const Cart = ({ formatter }) => {
                                     Empty cart
                                 </button>
 
-                                <Link
-                                    to='/checkout'
-                                    className='text-decoration-none'>
+                                <Link to='/' className='text-decoration-none'>
                                     <Button className='lh-0 ms-2  cart__btn-checkout text-white text-uppercase'>
                                         <BsCart4 className='me-2 fs-6' />
                                         Checkout

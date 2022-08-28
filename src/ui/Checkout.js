@@ -1,471 +1,370 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import commerce from '../lib/commerce';
-import { Navigate } from 'react-router-dom';
-import { useState, useRef } from 'react';
-import { useEffect } from 'react';
-import Spinner from '../components/Spinner';
+import React, { useState } from 'react';
+import { useCart } from 'react-use-cart';
+import { Button, Col, Form } from 'react-bootstrap';
+import { PaystackButton } from 'react-paystack';
+export default function Checkout({ formatter }) {
+    const { totalItems, items, cartTotal, emptyCart } = useCart();
 
-export default function Checkout({ cart, onCaptureCheckout }) {
-    const [checkoutToken, setCheckoutToken] = useState({});
-    // Customer details
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    const [validated, setValidated] = useState(false);
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        event.preventDefault();
+
+        if (form.checkValidity() === false) {
+            event.stopPropagation();
+        }
+
+        setValidated(true);
+    };
+
+    const publicKey = 'pk_test_d4e53e2d9a012de4590bb59a96bc9218a65b58d3';
+    const amount = cartTotal * 100; // Remember, set in kobo!
     const [email, setEmail] = useState('');
-    // Shipping details
-    const [shippingName, setShippingName] = useState('');
-    const [shippingStreet, setShippingStreet] = useState('');
-    const [shippingCity, setShippingCity] = useState('');
-    const [shippingStateProvince, setShippingStateProvince] = useState('');
-    const [shippingPostalZipCode, setShippingPostalZipCode] = useState('');
-    const [shippingCountry, setShippingCountry] = useState('');
-    // Payment details
-    const [cardNum, setCardNum] = useState('');
-    const [expMonth, setExpMonth] = useState('');
-    const [expYear, setExpYear] = useState('');
-    const [ccv, setCcv] = useState('');
-    const [billingPostalZipcode, setBillingPostalZipcode] = useState('');
-    // Shipping and fulfillment data
-    const [shippingCountries, setShippingCountries] = useState({});
-    const [shippingSubdivisions, setShippingSubdivisions] = useState({});
-    const [shippingOptions, setShippingOptions] = useState([]);
-    const [shippingOption, setShippingOption] = useState('');
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [country, setCountry] = useState('');
+    const [state, setState] = useState('');
+    const [address, setAddress] = useState('');
 
-    useEffect(() => {
-        generateCheckoutToken();
-    }, []);
-
-    const prevShippingCountryRef = useRef();
-
-    useEffect(() => {
-        prevShippingCountryRef.current = shippingCountry;
-        if (shippingCountry !== prevShippingCountryRef) {
-            fetchShippingOptions(checkoutToken.id, shippingCountry);
-        }
-    }, [shippingCountry]);
-
-    const sanitizedLineItems = (lineItems) => {
-        return lineItems.reduce((data, lineItem) => {
-            const item = data;
-            let variantData = null;
-            if (lineItem.selected_options.length) {
-                variantData = {
-                    [lineItem.selected_options[0].group_id]:
-                        lineItem.selected_options[0].option_id,
-                };
-            }
-            item[lineItem.id] = {
-                quantity: lineItem.quantity,
-                variants: variantData,
-            };
-            return item;
-        }, {});
+    const componentProps = {
+        email,
+        amount,
+        metadata: {
+            name,
+            phone,
+            country,
+            state,
+            address,
+        },
+        publicKey,
+        text: 'Place Order',
+        onSuccess: () => {
+            emptyCart();
+            alert('Thanks for doing business with us! Come back soon!!');
+        },
+        onClose: () => alert("Wait! Don't go!!!!"),
     };
 
-    const generateCheckoutToken = () => {
-        if (!cart.line_items) {
-            return '';
-        } else {
-            if (cart.line_items.length) {
-                return commerce.checkout
-                    .generateToken(cart.id, { type: 'cart' })
-                    .then((token) => setCheckoutToken(token))
-                    .then(() => fetchShippingCountries(checkoutToken.id))
-                    .catch((error) => {
-                        console.log(
-                            'There was an error in generating a token',
-                            error
-                        );
-                    });
-            }
-        }
-    };
-
-    const fetchShippingCountries = (checkoutTokenId) => {
-        commerce.services
-            .localeListShippingCountries(checkoutTokenId)
-            .then((countries) => {
-                setShippingCountries(countries.countries);
-            })
-            .catch((error) => {
-                console.log(
-                    'There was an error fetching a list of shipping countries',
-                    error
-                );
-            });
-    };
-
-    const fetchSubdivisions = (countryCode) => {
-        commerce.services
-            .localeListSubdivisions(countryCode)
-            .then((subdivisions) => {
-                setShippingSubdivisions(subdivisions.subdivisions);
-            })
-            .catch((error) => {
-                console.log(
-                    'There was an error fetching the subdivisions',
-                    error
-                );
-            });
-    };
-
-    const fetchShippingOptions = (
-        checkoutTokenId,
-        country,
-        stateProvince = null
-    ) => {
-        commerce.checkout
-            .getShippingOptions(checkoutTokenId, {
-                country: country,
-                region: stateProvince,
-            })
-            .then((options) => {
-                // Pre-select the first available method
-                const shippingOption = options[0] || null;
-                setShippingOption(shippingOption);
-                setShippingOptions(options);
-            })
-            .catch((error) => {
-                console.log(
-                    'There was an error fetching the shipping methods',
-                    error
-                );
-            });
-    };
-
-    const handleFormChanges = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value,
-        });
-    };
-
-    const handleShippingCountryChange = (e) => {
-        const currentValue = e.target.value;
-        fetchSubdivisions(currentValue);
-    };
-
-    const handleSubdivisionChange = (e) => {
-        const currentValue = e.target.value;
-        fetchShippingOptions(checkoutToken.id, shippingCountry, currentValue);
-    };
-
-    const handleCaptureCheckout = (e) => {
-        e.preventDefault();
-        const orderData = {
-            line_items: sanitizedLineItems(cart.line_items),
-            customer: {
-                firstname: firstName,
-                lastname: lastName,
-                email: email,
-            },
-            shipping: {
-                name: shippingName,
-                street: shippingStreet,
-                town_city: shippingCity,
-                county_state: shippingStateProvince,
-                postal_zip_code: shippingPostalZipCode,
-                country: shippingCountry,
-            },
-            fulfillment: {
-                shipping_method: shippingOption.id,
-            },
-            payment: {
-                gateway: 'test_gateway',
-                card: {
-                    number: cardNum,
-                    expiry_month: expMonth,
-                    expiry_year: expYear,
-                    cvc: ccv,
-                    postal_zip_code: shippingPostalZipCode,
-                },
-            },
-        };
-        onCaptureCheckout(checkoutToken.id, orderData);
-        <Navigate replace to={'/confirmation'} />;
-    };
-
-    const renderCheckoutForm = () => {
-        return (
-            <form className='checkout__form'>
-                <h4 className='checkout__subheading'>Customer information</h4>
-
-                <label className='checkout__label' htmlFor='firstName'>
-                    First name
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    onChange={(e) => setFirstName(e.target.value)}
-                    value={firstName}
-                    name='firstName'
-                    placeholder='Enter your first name'
-                    required
-                />
-
-                <label className='checkout__label' htmlFor='lastName'>
-                    Last name
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    onChange={(e) => setLastName(e.target.value)}
-                    value={lastName}
-                    name='lastName'
-                    placeholder='Enter your last name'
-                    required
-                />
-
-                <label className='checkout__label' htmlFor='email'>
-                    Email
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                    name='email'
-                    placeholder='Enter your email'
-                    required
-                />
-
-                <h4 className='checkout__subheading'>Shipping details</h4>
-
-                <label className='checkout__label' htmlFor='shippingName'>
-                    Full name
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    onChange={(e) => setShippingName(e.target.value)}
-                    value={shippingName}
-                    name='shippingName'
-                    placeholder='Enter your shipping full name'
-                    required
-                />
-
-                <label className='checkout__label' htmlFor='shippingStreet'>
-                    Street address
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    onChange={(e) => setShippingStreet(e.target.value)}
-                    value={shippingStreet}
-                    name='shippingStreet'
-                    placeholder='Enter your street address'
-                    required
-                />
-
-                <label className='checkout__label' htmlFor='shippingCity'>
-                    City
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    onChange={(e) => setShippingCity(e.target.value)}
-                    value={shippingCity}
-                    name='shippingCity'
-                    placeholder='Enter your city'
-                    required
-                />
-
-                <label
-                    className='checkout__label'
-                    htmlFor='shippingPostalZipCode'>
-                    Postal/Zip code
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    onChange={(e) => setShippingPostalZipCode(e.target.value)}
-                    value={shippingPostalZipCode}
-                    name='shippingPostalZipCode'
-                    placeholder='Enter your postal/zip code'
-                    required
-                />
-
-                <label className='checkout__label' htmlFor='shippingCountry'>
-                    Country
-                </label>
-                <select
-                    value={shippingCountry}
-                    name='shippingCountry'
-                    onChange={handleShippingCountryChange}
-                    className='checkout__select'>
-                    <option disabled>Country</option>
-                    {Object.keys(shippingCountries).map((index) => {
-                        return (
-                            <option value={index} key={index}>
-                                {shippingCountries[index]}
-                            </option>
-                        );
-                    })}
-                    ;
-                </select>
-
-                <label
-                    className='checkout__label'
-                    htmlFor='shippingStateProvince'>
-                    State/province
-                </label>
-                <select
-                    value={shippingStateProvince}
-                    name='shippingStateProvince'
-                    onChange={handleSubdivisionChange}
-                    className='checkout__select'>
-                    <option className='checkout__option' disabled>
-                        State/province
-                    </option>
-                    {Object.keys(shippingSubdivisions).map((index) => {
-                        return (
-                            <option value={index} key={index}>
-                                {shippingSubdivisions[index]}
-                            </option>
-                        );
-                    })}
-                    ;
-                </select>
-
-                <label className='checkout__label' htmlFor='shippingOption'>
-                    Shipping method
-                </label>
-                <select
-                    value={shippingOption.id}
-                    name='shippingOption'
-                    onChange={(e) => setShippingOption(e.target.value)}
-                    className='checkout__select'>
-                    <option className='checkout__select-option' disabled>
-                        Select a shipping method
-                    </option>
-                    {shippingOptions.map((method, index) => {
-                        return (
-                            <option
-                                className='checkout__select-option'
-                                value={method.id}
-                                key={
-                                    index
-                                }>{`${method.description} - $${method.price.formatted_with_code}`}</option>
-                        );
-                    })}
-                    ;
-                </select>
-
-                <h4 className='checkout__subheading'>Payment information</h4>
-
-                <label className='checkout__label' htmlFor='cardNum'>
-                    Credit card number
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    name='cardNum'
-                    onChange={(e) => setCardNum(e.target.value)}
-                    value={cardNum}
-                    placeholder='Enter your card number'
-                />
-
-                <label className='checkout__label' htmlFor='expMonth'>
-                    Expiry month
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    name='expMonth'
-                    onChange={(e) => setExpMonth(e.target.value)}
-                    value={expMonth}
-                    placeholder='Card expiry month'
-                />
-
-                <label className='checkout__label' htmlFor='expYear'>
-                    Expiry year
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    name='expYear'
-                    onChange={(e) => setExpYear(e.target.value)}
-                    value={expYear}
-                    placeholder='Card expiry year'
-                />
-
-                <label className='checkout__label' htmlFor='ccv'>
-                    CCV
-                </label>
-                <input
-                    className='checkout__input'
-                    type='text'
-                    name='ccv'
-                    onChange={(e) => setCcv(e.target.value)}
-                    value={ccv}
-                    placeholder='CCV (3 digits)'
-                />
-
-                <button
-                    onClick={handleCaptureCheckout}
-                    className='checkout__btn-confirm'>
-                    Confirm order
-                </button>
-            </form>
-        );
-    };
-
-    const renderCheckoutSummary = () => {
-        return (
-            <>
-                <div className='checkout__summary'>
-                    <h4>Order summary</h4>
-
-                    {!cart.line_items ? (
-                        <Spinner />
-                    ) : (
-                        cart.line_items.map((lineItem) => (
-                            <>
-                                <div
-                                    key={lineItem.id}
-                                    className='checkout__summary-details'>
-                                    <img
-                                        className='w-25 checkout__summary-img'
-                                        src={lineItem.image.url}
-                                        alt={lineItem.name}
-                                    />
-                                    <p className='checkout__summary-name'>
-                                        {lineItem.quantity} x {lineItem.name}
-                                    </p>
-                                    <p className='checkout__summary-value'>
-                                        {
-                                            lineItem.line_total
-                                                .formatted_with_symbol
-                                        }
-                                    </p>
-                                </div>
-                            </>
-                        ))
-                    )}
-                    <div className='checkout__summary-total'>
-                        <p className='checkout__summary-price'>
-                            <span>Subtotal:</span>
-                            {!cart.subtotal
-                                ? '₦'
-                                : cart.subtotal.formatted_with_symbol}
-                        </p>
-                    </div>
-                </div>
-            </>
-        );
-    };
     return (
-        <div className='checkout'>
-            <h2 className='checkout__heading'>Checkout</h2>
-            <div className='checkout__wrapper'>
-                {renderCheckoutForm()}
-                {renderCheckoutSummary()}
+        <main>
+            <div className='checkout' id='checkout'>
+                <section className='py-5'>
+                    <div className='container px-4 px-lg-5 my-5'>
+                        <div className='row'>
+                            <div className='col-lg-4  order-lg-2 mb-4 pb-lg-0 pb-5'>
+                                <h4 className='mb-3 d-flex justify-content-between align-items-center mb-3'>
+                                    <span className='text-muted text-uppercase'>
+                                        Order Summary
+                                    </span>
+                                    <span className=' badge  bg-dark py-2'>
+                                        <span className='text-white text-center'>
+                                            {totalItems}
+                                        </span>
+                                    </span>
+                                </h4>
+                                <ul className='list-group mt-4'>
+                                    {items.map((item, index) => {
+                                        return (
+                                            <li
+                                                key={index}
+                                                className=' d-flex justify-content-between align-items-center lh-condensed py-3'>
+                                                <div className='d-flex align-items-center justify-content-start'>
+                                                    <div className='w-50 position-relative'>
+                                                        <img
+                                                            className=' cart-item__image1 w-75  rounded-3'
+                                                            src={item.src}
+                                                            alt={item.alt}
+                                                        />
+                                                        <span className=' badge rounded-circle gold-badge '>
+                                                            <span className='text-white px-1 lh-lg'>
+                                                                {item.quantity}
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <h6 className='my-0'>
+                                                            {item.alt}
+                                                        </h6>
+                                                        <small className='text-muted'>
+                                                            ₦
+                                                            {formatter.format(
+                                                                item.price
+                                                            )}
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <span className='text-muted'>
+                                                    ₦
+                                                    {formatter.format(
+                                                        item.price *
+                                                            item.quantity
+                                                    )}
+                                                </span>
+                                            </li>
+                                        );
+                                    })}
+
+                                    <li className=' border-bottom border-top px-2 py-2 d-flex justify-content-between'>
+                                        <span>Total</span>
+                                        <strong>
+                                            ₦{formatter.format(cartTotal)}
+                                        </strong>
+                                    </li>
+                                </ul>
+
+                                {/* <form className='card p-2'>
+                                    <div className='input-group'>
+                                        <input
+                                            type='text'
+                                            className='form-control me-2'
+                                            placeholder='Promo code'
+                                        />
+                                        <div className='input-group-append'>
+                                            <button
+                                                type='button'
+                                                className='btn btn-dark px-4 rounded-pill'>
+                                                Redeem
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form> */}
+                            </div>
+                            <div className='col-lg-8 order-lg-1'>
+                                <h4 className='mb-3 text-uppercase'>
+                                    Billing address
+                                </h4>
+                                <Form
+                                    className='needs-validation mt-4'
+                                    noValidate
+                                    validated={validated}
+                                    onSubmit={handleSubmit}>
+                                    <div className=''>
+                                        <div className='mb-3'>
+                                            <label
+                                                htmlFor='firstName'
+                                                className='form-label'>
+                                                Name
+                                            </label>
+                                            <input
+                                                type='text'
+                                                className='form-control'
+                                                id='name'
+                                                placeholder=''
+                                                required
+                                                onChange={(e) =>
+                                                    setName(e.target.value)
+                                                }
+                                            />
+
+                                            <Form.Control.Feedback
+                                                type='invalid'
+                                                className='invalid-feedback'>
+                                                Valid name is required.
+                                            </Form.Control.Feedback>
+                                        </div>
+                                    </div>
+
+                                    <div className='mb-3'>
+                                        <label
+                                            htmlFor='email'
+                                            className='form-label'>
+                                            Email{' '}
+                                            {/* <span className='text-muted'>
+                                                (Optional)
+                                            </span> */}
+                                        </label>
+                                        <input
+                                            type='email'
+                                            className='form-control'
+                                            id='email'
+                                            placeholder='you@example.com'
+                                            required
+                                            onChange={(e) =>
+                                                setEmail(e.target.value)
+                                            }
+                                        />
+                                        <div className='invalid-feedback'>
+                                            Please enter a valid email address
+                                            for shipping updates.
+                                        </div>
+                                    </div>
+
+                                    <div className='mb-3'>
+                                        <label
+                                            htmlFor='phone'
+                                            className='form-label'>
+                                            Phone Number{' '}
+                                            {/* <span className='text-muted'>
+                                                (Optional)
+                                            </span> */}
+                                        </label>
+                                        <input
+                                            type={'tel'}
+                                            className='form-control'
+                                            id='tel'
+                                            placeholder=''
+                                            required
+                                            onChange={(e) =>
+                                                setPhone(e.target.value)
+                                            }
+                                        />
+                                        <small className='text-muted'>
+                                            Include your country code
+                                        </small>
+                                        <div className='invalid-feedback'>
+                                            Please enter a valid phone number
+                                            for shipping updates.
+                                        </div>
+                                    </div>
+
+                                    <div className='mb-3'>
+                                        <label
+                                            htmlFor='address'
+                                            className='form-label'>
+                                            Address
+                                        </label>
+                                        <input
+                                            type='text'
+                                            className='form-control'
+                                            id='address'
+                                            placeholder='1234 Main St'
+                                            required
+                                            onChange={(e) =>
+                                                setAddress(e.target.value)
+                                            }
+                                        />
+                                        <div className='invalid-feedback'>
+                                            Please enter your shipping address.
+                                        </div>
+                                    </div>
+
+                                    <div className='mb-3'>
+                                        <label
+                                            htmlFor='address2'
+                                            className='form-label'>
+                                            Address 2{' '}
+                                            <span className='text-muted'>
+                                                (Optional)
+                                            </span>
+                                        </label>
+                                        <input
+                                            type='text'
+                                            className='form-control'
+                                            id='address2'
+                                            placeholder='Apartment or suite'
+                                        />
+                                    </div>
+
+                                    <div className='row'>
+                                        <div className='col-md-5 mb-3'>
+                                            <label
+                                                htmlFor='country'
+                                                className='form-label'>
+                                                Country
+                                            </label>
+                                            <select
+                                                className='form-select d-block w-100'
+                                                id='country'
+                                                required
+                                                onChange={(e) =>
+                                                    setCountry(e.target.value)
+                                                }>
+                                                <option value=''>
+                                                    Choose...
+                                                </option>
+                                                <option>Nigeria</option>
+                                            </select>
+                                            <div className='invalid-feedback'>
+                                                Please select a valid country.
+                                            </div>
+                                        </div>
+                                        <div className='col-md-4 mb-3'>
+                                            <label
+                                                htmlFor='state'
+                                                className='form-label'>
+                                                State
+                                            </label>
+                                            <select
+                                                className='form-select d-block w-100'
+                                                id='state'
+                                                required
+                                                onChange={(e) =>
+                                                    setState(e.target.value)
+                                                }>
+                                                <option value=''>
+                                                    Choose...
+                                                </option>
+                                                <option>Lagos</option>
+                                                <option>Abia</option>
+                                                <option>Adamawa</option>
+                                                <option>Akwa Ibom</option>
+                                                <option>Anambra</option>
+                                                <option>Bauchi</option>
+                                                <option>Bayelsa</option>
+                                                <option>Benue</option>
+                                                <option>Borno</option>
+                                                <option>Cross River</option>
+                                                <option>Delta</option>
+                                                <option>Ebonyi</option>
+                                                <option>Edo</option>
+                                                <option>Ekiti</option>
+                                                <option>Enugu</option>
+                                                <option>Gombe</option>
+                                                <option>Imo</option>
+                                                <option>Jigawa</option>
+                                                <option>Kaduna</option>
+                                                <option>Kano</option>
+                                                <option>Katsina</option>
+                                                <option>Kebbi</option>
+                                                <option>Kogi</option>
+                                                <option>Kwara</option>
+                                                <option>Nasarawa</option>
+                                                <option>Niger</option>
+                                                <option>Ogun</option>
+                                                <option>Ondo</option>
+                                                <option>Osun</option>
+                                                <option>Oyo</option>
+                                                <option>Plateau</option>
+                                                <option>Rivers</option>
+                                                <option>Sokoto</option>
+                                                <option>Taraba</option>
+                                                <option>Yobe</option>
+                                                <option>Zamfara</option>
+                                            </select>
+                                            <div className='invalid-feedback'>
+                                                Please provide a valid state.
+                                            </div>
+                                        </div>
+                                        <div className='col-md-3 mb-3'>
+                                            <label
+                                                htmlFor='zip'
+                                                className='form-label'>
+                                                Zip
+                                            </label>
+                                            <span className='text-muted'>
+                                                (Optional)
+                                            </span>
+                                            <input
+                                                type='text'
+                                                className='form-control'
+                                                id='zip'
+                                                placeholder=''
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <hr className='mb-4' />
+                                    <PaystackButton
+                                        className='btn btn-dark px-4 rounded-pill'
+                                        {...componentProps}
+                                    />
+                                </Form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </div>
+        </main>
     );
 }
-
-Checkout.propTypes = {
-    cart: PropTypes.object,
-    history: PropTypes.object,
-    onCaptureCheckout: () => {},
-};

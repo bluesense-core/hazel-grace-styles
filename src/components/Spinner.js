@@ -6,7 +6,7 @@ function Spinner() {
     return (
         <div>
             <Image
-                fluid
+                fluid={+true}
                 src={Loader}
                 className='spinner d-block mx-auto'
                 alt='Loading'

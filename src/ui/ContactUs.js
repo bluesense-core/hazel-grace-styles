@@ -4,7 +4,7 @@ import { BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from 'react-icons/bs';
 
 function ContactUs() {
     return (
-        <div>
+        <main>
             <section id='contact-us' className='pt-4 pb-5'>
                 <div className='d-flex flex-column col col-lg-6 col-md-9 col-12 mx-auto'>
                     <div className='d-flex flex-column  text-uppercase'>
@@ -95,7 +95,7 @@ function ContactUs() {
                     </Form>
                 </div>
             </section>
-        </div>
+        </main>
     );
 }
 

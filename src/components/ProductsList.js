@@ -2,20 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ProductItem from './ProductItem';
 import { Row } from 'react-bootstrap';
+import { shopImages } from './Images';
 
-const ProductsList = ({ products, onAddToCart }) => {
+const ProductsList = ({ formatter, showCart, setShowCart }) => {
     return (
         <Row
-            xs={1}
+            xs={2}
             md={2}
             lg={4}
             className='gy-5 gx-4 py-5 px-3 products'
             id='products'>
-            {products.map((product) => (
+            {shopImages.map((product) => (
                 <ProductItem
                     key={product.id}
                     product={product}
-                    onAddToCart={onAddToCart}
+                    formatter={formatter}
+                    showCart={showCart}
+                    setShowCart={setShowCart}
                 />
             ))}
         </Row>
