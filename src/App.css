@@ -7,6 +7,21 @@ body {
     overflow-x: hidden;
     box-sizing: border-box;
 }
+main {
+    margin-top: 221px;
+}
+
+@media (max-width: 992px) {
+    main {
+        margin-top: 151px;
+    }
+}
+
+@media (max-width: 568px) {
+    main {
+        margin-top: 121px;
+    }
+}
 
 .logo2 {
     width: 150px;
@@ -14,7 +29,21 @@ body {
 
 @media screen and (max-width: 400px) {
     .logo2 {
+        width: 120px;
+    }
+
+    main {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .logo2 {
         width: 100%;
+    }
+
+    main {
+        margin-top: 75px;
     }
 }
 
@@ -138,6 +167,7 @@ footer p,
 
 .subscribe-btn:hover,
 .carousel .btn,
+#cart-menu .cart-btn,
 .message-btn,
 .collection .btn,
 #shop .card .btn,
@@ -148,6 +178,15 @@ footer p,
     font-size: 10px;
     letter-spacing: 0.2em;
     font-weight: 500;
+}
+
+#cart-menu table {
+    table-layout: fixed;
+}
+
+#cart-menu td {
+    width: 33%;
+    padding: 2em 0;
 }
 
 .subscribe-btn,
@@ -170,11 +209,76 @@ footer p,
 }
 
 #cart-menu .cart__btn-checkout {
-    padding: 1.25em 0;
+    padding: 1.5em 3em;
+    border-radius: 0;
 }
 
 #cart-menu .cart__btn-empty {
-    padding: 1.22em;
+    padding: 1.5em 3em;
+    border: none;
+}
+
+#cart-menu .cart-item1 {
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-menu .cart-item__image1 {
+    width: 45%;
+    object-fit: cover;
+}
+
+#cart-menu .cart-item__details1 {
+    width: 50%;
+}
+
+#cart-menu .cart-item__details-name1 {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #5c5c5c;
+}
+#cart-menu .item-group1 {
+    display: flex;
+    margin-top: 1em;
+}
+#cart-menu .cart-item__details-qty1 {
+    display: flex;
+    margin-bottom: 0;
+    border: 1px solid #dbdada;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 1rem;
+}
+
+#cart-menu .cart-item__details-qty1 button {
+    border: none;
+    background: none;
+    font-size: 1.25rem;
+}
+
+#cart-menu .cart-item__details-qty1 p {
+    margin-bottom: 0;
+    margin-top: 3px;
+    transition: 100ms;
+}
+
+#cart-menu .cart-item__details-price1 {
+    font-size: 0.7rem;
+    color: #191919;
+}
+
+#cart-menu .cart-item__remove1 {
+    text-decoration: underline;
+    font-size: 0.56rem;
+    text-transform: uppercase;
+    border: none;
+    background-color: #fff;
+    margin-left: auto;
+    color: #191919;
 }
 
 #contact-us,
@@ -196,11 +300,35 @@ footer p,
 .open-days p,
 .contact span,
 .services h3,
-.collection h3 {
+.collection h3,
+#cart-menu h1,
+#checkout h4 {
     font-weight: 500;
     font-size: 20px;
     letter-spacing: 0.2em;
     color: #5c5c5c;
+}
+
+#cart-menu h1 .logo {
+    color: #d4bc64;
+    font-size: 30px;
+}
+
+#checkout .gold-badge {
+    /* padding: 0.75em 1.05em; */
+    border-radius: 50%;
+    position: absolute;
+    font-size: 12px;
+    background-color: #d4bc64;
+    left: 62%;
+    top: -8%;
+}
+
+@media (max-width: 992px) {
+    #checkout .gold-badge {
+        left: 68%;
+        top: -5%;
+    }
 }
 
 #cart-menu .cart__empty h6 {
@@ -213,9 +341,14 @@ footer p,
 .open-days h2,
 .about-us p,
 .services p,
-#cart-menu .cart__none {
+#cart-menu .cart__none,
+#cart-menu th {
     font-size: 15px;
     color: #191919;
+}
+
+#cart-menu tbody {
+    border-color: #dbdada;
 }
 
 .open-days p,
@@ -327,9 +460,10 @@ footer p,
 
 #cart-menu .cart-item {
     padding: 2em 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+
+#cart-menu tbody tr {
+    border-color: #fff;
 }
 
 #cart-menu .cart-item__image {
@@ -350,7 +484,14 @@ footer p,
 }
 #cart-menu .item-group {
     display: flex;
-    margin-top: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 23%;
+}
+
+#cart-menu .total-price {
+    margin-top: 23%;
 }
 #cart-menu .cart-item__details-qty {
     display: flex;
@@ -384,7 +525,6 @@ footer p,
     text-transform: uppercase;
     border: none;
     background-color: #fff;
-    margin-left: auto;
     color: #191919;
 }
 
