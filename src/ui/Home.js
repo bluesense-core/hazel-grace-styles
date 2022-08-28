@@ -11,7 +11,7 @@ import { Button } from 'bootstrap';
 
 function Home() {
     return (
-        <div>
+        <main>
             <section id='home'>
                 <Carousel fade variant='dark' pause='hover'>
                     {carouselImages.map((e) => (
@@ -22,7 +22,7 @@ function Home() {
                             className='h-25'>
                             <img
                                 className='d-block w-100 carousel-img'
-                                fluid
+                                fluid={+true}
                                 src={e.src}
                                 alt='First slide'
                             />
@@ -57,7 +57,7 @@ function Home() {
                     <div className='about-img-div w-100'>
                         <Image
                             src={aboutPic}
-                            fluid
+                            fluid={+true}
                             className='about-img w-100 justify-self-end'
                         />
                     </div>
@@ -104,7 +104,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
     );
 }
 
