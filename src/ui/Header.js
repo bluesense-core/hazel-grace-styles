@@ -10,11 +10,11 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import CartNav from '../components/CartNav';
 
-function Header({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) {
+function Header({ formatter, showCart, setShowCart }) {
     const [show, setShow] = useState(false);
 
     return (
-        <header className='shadow-sm h-75'>
+        <header className='shadow-sm fixed-top'>
             {/* Component */}
             <div className='banner'>
                 <a href='#' className='text-decoration-none text-white'>
@@ -27,8 +27,8 @@ function Header({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) {
             <Navbar
                 bg='white'
                 expand='false'
-                className='d-flex flex-column pb-0'>
-                <div className='header-wrapper w-100 py-1'>
+                className='d-flex flex-column p-0'>
+                <div className='header-wrapper w-100 py-0'>
                     {/* Component */}
                     <Row className='align-items-center justify-content-between'>
                         <Col className='d-lg-none d-flex'>
@@ -82,7 +82,7 @@ function Header({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) {
                                 className='d-flex justify-content-center'>
                                 <Image
                                     src={Logo}
-                                    fluid
+                                    fluid={+true}
                                     className='d-none d-md-block'
                                 />
                                 <Image
@@ -110,10 +110,9 @@ function Header({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) {
                                 </div>
                                 <div className='ps-2 me-md-0 me-3'>
                                     <CartNav
-                                        cart={cart}
-                                        onUpdateCartQty={onUpdateCartQty}
-                                        onRemoveFromCart={onRemoveFromCart}
-                                        onEmptyCart={onEmptyCart}
+                                        showCart={showCart}
+                                        formatter={formatter}
+                                        setShowCart={setShowCart}
                                     />
                                 </div>
                             </div>
