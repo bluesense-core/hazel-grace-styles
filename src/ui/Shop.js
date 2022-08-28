@@ -2,22 +2,21 @@ import React from 'react';
 import ProductsList from '../components/ProductsList.js';
 import Spinner from '../components/Spinner.js';
 
-function Shop({ isLoading, formatter, showCart, setShowCart }) {
+function Shop({ isLoading, products, onAddToCart }) {
     return (
-        <main>
+        <div>
             <section id='shop'>
                 <h1 className='text-center py-3'>Collection</h1>
                 {isLoading ? (
                     <Spinner />
                 ) : (
                     <ProductsList
-                        formatter={formatter}
-                        showCart={showCart}
-                        setShowCart={setShowCart}
+                        products={products}
+                        onAddToCart={onAddToCart}
                     />
                 )}
             </section>
-        </main>
+        </div>
     );
 }
 
