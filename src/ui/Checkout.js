@@ -18,7 +18,7 @@ export default function Checkout({ formatter }) {
         setValidated(true);
     };
 
-    const publicKey = 'pk_test_d4e53e2d9a012de4590bb59a96bc9218a65b58d3';
+    const publicKey = 'pk_live_52618125cff02760cb4a111f58caa27a8981ecfa';
     const amount = cartTotal * 100; // Remember, set in kobo!
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -41,9 +41,7 @@ export default function Checkout({ formatter }) {
         text: 'Place Order',
         onSuccess: () => {
             emptyCart();
-            alert('Thanks for doing business with us! Come back soon!!');
         },
-        onClose: () => alert("Wait! Don't go!!!!"),
     };
 
     return (
