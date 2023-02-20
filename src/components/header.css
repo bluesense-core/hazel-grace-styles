@@ -3,6 +3,12 @@ header .banner {
     font-size: 0.95rem;
 }
 
+@media (max-width: 600px) {
+    header .banner {
+        font-size: 0.75rem;
+    }
+}
+
 header .header-logo {
     width: 70%;
 }
@@ -18,18 +24,6 @@ header .header-logo {
         width: 92%;
     }
 }
-/*
-@media (max-width: 880px) {
-    header .header-logo {
-        width: 55%;
-    }
-}
-
-@media (max-width: 800px) {
-    header .header-logo {
-        width: 60%;
-    }
-} */
 
 header #header-nav a {
     font-weight: 400;
@@ -93,15 +87,60 @@ header .navbar-toggler:focus {
     box-shadow: none;
 }
 
+#navbar-off a {
+    color: rgb(0, 0, 0, 0.5);
+    font-weight: 500;
+    border-bottom: 1px solid #dbdbda;
+}
+
+#navbar-off .off-logo {
+    width: 60%;
+}
+
+#navbar-off .btn-close:focus {
+    box-shadow: none;
+}
+
+#navbar-off .dropdown-menu a {
+    border: none;
+    padding: 12px;
+}
+
+#navbar-off a:hover,
+#navbar-off a:focus,
+#navbar-off a:active {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+#navbar-off .dropdown-menu a:hover,
+#navbar-off .dropdown-menu a:focus,
+#navbar-off .dropdown-menu a:active {
+    border: none;
+}
+
 #sidebar-menu a {
-    font-size: 11px;
-    font-weight: normal;
+    font-size: 14px;
+    font-weight: 500;
     color: rgb(0, 0, 0, 0.5);
     border: none;
 }
 
-#sidebar-menu a:hover {
+#sidebar-menu a:hover,
+#sidebar-menu a:focus,
+#sidebar-menu a:active {
     color: #000;
+    border: none;
+}
+
+#social-offcanvas a {
+    border: none;
+}
+
+#navbar-off #social-offcanvas a:hover,
+#navbar-off #social-offcanvas a:focus,
+#navbar-off #social-offcanvas a:active {
+    border: none;
 }
 
 #social-offcanvas a,
@@ -118,8 +157,4 @@ header .navbar-toggler:focus {
 #footer-socials a svg {
     width: 12px;
     height: 12px;
-}
-
-#nav1 a {
-    border-bottom: 1px solid #dbdbda;
 }
