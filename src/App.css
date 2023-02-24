@@ -5,8 +5,61 @@ body {
     box-sizing: border-box;
 }
 
+/* font-family: 'Happy Monkey', cursive; */
 body {
     font-family: 'Montserrat', sans-serif;
     color: #0c0b0b;
     overflow-x: hidden;
 }
+
+main {
+    margin-top: 167.7px;
+}
+
+@media (max-width: 679px) {
+    main {
+        margin-top: 167.5px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        margin-top: 182.6px;
+    }
+}
+
+@media (max-width: 575px) {
+    main {
+        margin-top: 177.3px;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        margin-top: 161.3px;
+    }
+}
+
+@media (max-width: 425px) {
+    main {
+        margin-top: 145.4px;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        margin-top: 137.5px;
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        margin-top: 121px;
+    }
+}
+
+/* @media (max-width: 320px) {
+    main {
+        margin-top: 121px;
+    }
+} */

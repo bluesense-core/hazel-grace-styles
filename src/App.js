@@ -9,7 +9,7 @@ import Confirmation from './ui/Confirmation';
 import { useState, useEffect } from 'react';
 import { cartItems } from './components/Images';
 import Header from './components/Header';
-import Footer from './ui/Footer';
+import Footer from './components/Footer';
 import commerce from './lib/commerce';
 import Cart from './components/Cart';
 // import { Checkout } from '@chec/commerce.js/features/checkout';
@@ -36,9 +36,9 @@ function App() {
                     showCart={showCart}
                     setShowCart={setShowCart}
                 />
-                {/* <Routes>
+                <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route
+                    {/* <Route
                         path='shop'
                         element={
                             <Shop
@@ -49,15 +49,15 @@ function App() {
                             />
                         }
                     /> */}
-                {/* <Route
+                    {/* <Route
                         path='cart'
                         element={<Cart formatter={formatter} />}
                     /> */}
-                {/* <Route
+                    {/* <Route
                         path='checkout'
                         element={<Checkout formatter={formatter} />}
                     /> */}
-                {/* <Route
+                    {/* <Route
                         path='confirmation'
                         element={
                             !order ? (
@@ -75,9 +75,10 @@ function App() {
                         }
                     /> */}
 
-                {/* <Route path='contact-us' element={<ContactUs />} /> */}
-                {/* </Routes> */}
-                {/* <Footer /> */}
+                    <Route path='contact' element={<ContactUs />} />
+                </Routes>
+
+                <Footer />
             </BrowserRouter>
         </div>
     );

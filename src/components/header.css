@@ -88,7 +88,8 @@ header .navbar-toggler:focus {
 }
 
 #navbar-off a {
-    color: rgb(0, 0, 0, 0.5);
+    color: #191919;
+    font-size: 14px;
     font-weight: 500;
     border-bottom: 1px solid #dbdbda;
 }

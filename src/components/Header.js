@@ -15,6 +15,7 @@ import SidebarMenu from './SidebarMenu';
 import Socials from './Socials';
 import CartNav from './CartNav';
 import { BsBag, BsChevronDown } from 'react-icons/bs';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Header({ formatter, showCart, setShowCart }) {
     const [show, setShow] = useState(false);
@@ -32,7 +33,6 @@ function Header({ formatter, showCart, setShowCart }) {
 
     return (
         <header className='shadow-sm fixed-top'>
-            {/* Component */}
             <div className='banner'>
                 <a href='#' className='text-decoration-none text-white'>
                     <p className='m-0 py-2 text-uppercase text-center'>
@@ -41,7 +41,7 @@ function Header({ formatter, showCart, setShowCart }) {
                 </a>
             </div>
 
-            <Navbar expand='lg' className=''>
+            <Navbar expand='lg' className='bg-white'>
                 <Container fluid className='px-lg-5'>
                     <Row className='g-0 w-100 align-items-center justify-content-between'>
                         <Col xs={3} lg='auto' className='d-lg-none d-block'>
@@ -55,11 +55,11 @@ function Header({ formatter, showCart, setShowCart }) {
                                     closeButton
                                     className='py-4 ps-4 sticky-top'>
                                     <Navbar.Brand>
-                                        <Image
-                                            className='off-logo'
+                                        <LazyLoadImage
+                                            className='off-logo img-fluid'
                                             src={Logo}
+                                            effect='blur'
                                             alt='Hazel Grace Styles Logo'
-                                            fluid
                                         />
                                     </Navbar.Brand>
                                 </Offcanvas.Header>
@@ -105,12 +105,12 @@ function Header({ formatter, showCart, setShowCart }) {
                         </Col>
 
                         <Col xs={6} lg='auto' className='d-lg-flex d-block'>
-                            <Navbar.Brand className='d-block m-0'>
-                                <Image
-                                    className='header-logo d-lg-inline d-block m-lg-0 mx-auto my-auto'
+                            <Navbar.Brand className='d-flex m-0 justify-content-center'>
+                                <LazyLoadImage
+                                    className='img-fluid header-logo d-lg-inline d-block m-lg-0 mx-auto'
                                     src={Logo}
+                                    effect='blur'
                                     alt='Hazel Grace Styles Logo'
-                                    fluid
                                 />
                             </Navbar.Brand>
                         </Col>
@@ -134,27 +134,6 @@ function Header({ formatter, showCart, setShowCart }) {
                                     show={dropdown}
                                     onMouseEnter={showDropdown}
                                     onMouseLeave={hideDropdown}>
-                                    <NavDropdown.Item
-                                        className='text-capitalize'
-                                        href='/shop/genesis'>
-                                        Genesis Collection
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item
-                                        className='text-capitalize'
-                                        href='/shop/naledi'>
-                                        Naledi Collection
-                                    </NavDropdown.Item>
-                                </NavDropdown>
-
-                                <NavDropdown
-                                    className='px-2 d-md-none d-block'
-                                    title={
-                                        <span>
-                                            Shop
-                                            <BsChevronDown className='ms-2 mb-1 arrow' />
-                                        </span>
-                                    }
-                                    id=''>
                                     <NavDropdown.Item
                                         className='text-capitalize'
                                         href='/shop/genesis'>

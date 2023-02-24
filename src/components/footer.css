@@ -1,0 +1,42 @@
+footer .footer-logo {
+    width: 70%;
+}
+@media (max-width: 991px) {
+    footer .footer-logo {
+        width: 30%;
+    }
+}
+
+@media (max-width: 500px) {
+    footer .footer-logo {
+        width: 50%;
+    }
+}
+
+footer {
+    border-bottom: 16px solid #d5b066;
+}
+
+footer #footer-nav a {
+    color: #000;
+    font-size: 18px;
+}
+
+footer #footer-nav a:hover,
+footer #footer-nav a:focus,
+footer #footer-nav a:active {
+    text-decoration: underline;
+    text-decoration-color: #2c2b2b;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 7px;
+}
+
+footer .socials a {
+    font-size: 24px;
+    color: #d5b066;
+}
+
+footer p {
+    font-size: 18px;
+    color: #777777;
+}

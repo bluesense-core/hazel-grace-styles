@@ -1,107 +1,184 @@
 import React from 'react';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import pink from '../img/home-img/pink.png';
+import brown from '../img/home-img/brown.png';
+import cream from '../img/home-img/cream.png';
+import orange from '../img/home-img/orange.png';
+import spotlight from '../img/home-img/spotlight.png';
+import about1 from '../img/home-img/who.png';
+import about2 from '../img/home-img/we.png';
 
-import { Carousel, Image } from 'react-bootstrap';
-import { carouselImages } from '../components/Images.js';
-import aboutPic from '../img/about-4.webp';
-import aboutPic2 from '../img/Wcollect.webp';
-
-import { FaTruck, FaHeadset, FaUndo } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { Button } from 'bootstrap';
+import { FaAngleDoubleDown, FaAngleDoubleRight } from 'react-icons/fa';
+import '../components/home/home-hero.css';
+import '../components/home/home-naledi.css';
+import '../components/home/home-about.css';
+import { NavHashLink } from 'react-router-hash-link';
+import Masonry from 'react-masonry-css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Home() {
     return (
         <main>
             <section id='home'>
-                <Carousel fade variant='dark' pause='hover'>
-                    {carouselImages.map((e) => (
-                        <Carousel.Item
-                            // interval={5000}
-                            key={e.id}
-                            id={e.select}
-                            className='h-25'>
-                            <img
-                                className='d-block w-100 carousel-img'
-                                fluid={+true}
-                                src={e.src}
-                                alt='First slide'
+                <div className='home-hero text-center text-white'>
+                    <div className='text'>
+                        <h1 className='display-2'>Genesis Collection</h1>
+                        <h2 className='display-6'>Hazel grace styles</h2>
+                    </div>
+
+                    <NavHashLink
+                        to='/#home-naledi'
+                        className='d-sm-inline d-none'>
+                        Explore <FaAngleDoubleDown />{' '}
+                    </NavHashLink>
+                </div>
+
+                <Container id='home-naledi' className='pb-5 px-3 text-center'>
+                    <h2 className='display-5'>
+                        Naledi <br />{' '}
+                        <span className='display-6'>Collection</span>
+                    </h2>
+
+                    <Row className='masonry d-lg-flex d-none gy-4 align-items-center'>
+                        <Col lg={4}>
+                            <LazyLoadImage
+                                effect='blur'
+                                src={pink}
+                                className='naledi-img img-fluid'
                             />
-                            <Carousel.Caption className='d-flex h-100 text-white justify-content-center align-items-center'>
-                                <h3 className='mt-5'>{e.caption}</h3>
-                                <Link to='/shop'>
-                                    <button className='btn text-white mt-5 py-2 px-3 border-none'>
-                                        SHOP NOW
-                                    </button>
-                                </Link>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    ))}
-                </Carousel>
+                            <LazyLoadImage
+                                effect='blur'
+                                src={brown}
+                                className='naledi-img img-fluid down'
+                            />
+                        </Col>
 
-                <div className='about-us d-flex justify-content-between flex-md-nowrap flex-wrap pt-md-5 pb-md-0 py-5 ps-md-5 pe-md-0 p px-3'>
-                    <div className='about-text-div w-100 m-auto text-md-start text-center  ps-md-2 pe-md-5 px-1'>
-                        <h3 className='py-lg-2 text-uppercase py-0 text-md-start text-center'>
-                            About Us
-                        </h3>
-                        <p className='pe-lg-3 pe-0 lh-lg'>
-                            We are a contemporary African luxury fashion and
-                            lifestyle brand found in Nigeria! We create high
-                            fashion pieces for special occasions and unique
-                            pieces for every client. With Hazelgrace, every day
-                            is special and every consumer deserves a special
-                            design to suit their unique personality. Be sure to
-                            stand out in our pieces as our pieces adds the most
-                            important style to your look; CONFIDENCE!
+                        <Col lg={4} className=''>
+                            <LazyLoadImage
+                                effect='blur'
+                                src={spotlight}
+                                className='naledi-img img-fluid'
+                            />
+                            <Button
+                                href='/shop/naledi'
+                                as='a'
+                                className='shop-btn'>
+                                Shop Now <FaAngleDoubleRight />{' '}
+                            </Button>
+                        </Col>
+
+                        <Col lg={4}>
+                            <LazyLoadImage
+                                effect='blur'
+                                src={orange}
+                                className='naledi-img img-fluid'
+                            />
+
+                            <LazyLoadImage
+                                effect='blur'
+                                src={cream}
+                                className='naledi-img img-fluid down'
+                            />
+                        </Col>
+                    </Row>
+
+                    <Masonry
+                        breakpointCols={2}
+                        className='masonry row gy-4 d-lg-none d-flex'
+                        columnClassName='my-masonry-grid_column'>
+                        <div>
+                            <LazyLoadImage
+                                effect='blur'
+                                src={pink}
+                                className='naledi-img img-fluid'
+                            />
+                            <LazyLoadImage
+                                effect='blur'
+                                src={brown}
+                                className='naledi-img img-fluid down'
+                            />
+
+                            <LazyLoadImage
+                                effect='blur'
+                                src={orange}
+                                className='naledi-img img-fluid down'
+                            />
+                        </div>
+
+                        <div className=''>
+                            <LazyLoadImage
+                                effect='blur'
+                                src={spotlight}
+                                className='naledi-img img-fluid'
+                            />
+
+                            <LazyLoadImage
+                                effect='blur'
+                                src={cream}
+                                className='naledi-img img-fluid down'
+                            />
+
+                            <Button
+                                href='/shop/naledi'
+                                as='a'
+                                className='shop-btn'>
+                                Shop Now <FaAngleDoubleRight />{' '}
+                            </Button>
+                        </div>
+                    </Masonry>
+                </Container>
+
+                <div className='home-about'>
+                    <Container className='ps-4 pe-lg-5 pe-4'>
+                        <Row className='align-items-center gx-5 gy-5'>
+                            <Col lg={6} className='text-center'>
+                                <LazyLoadImage effect='blur' src={about1} />
+                                <LazyLoadImage
+                                    effect='blur'
+                                    src={about2}
+                                    className='mt-5 about-2 d-lg-inline d-none'
+                                />
+                            </Col>
+                            <Col lg={6} className='ms-auto pe-lg-5'>
+                                <h2 className='h2 mb-3'>Who We Are</h2>
+                                <p className='mb-4'>
+                                    We are a contemporary African luxury fashion
+                                    and lifestyle brand found in Nigeria! We
+                                    create high fashion pieces for special
+                                    occasions and unique pieces for every
+                                    client.{' '}
+                                </p>
+                                <p>
+                                    With Hazelgrace, every day is special and
+                                    every consumer deserves a special design to
+                                    suit their unique personality. Be sure to
+                                    stand out in our pieces as our pieces adds
+                                    the most important style to your look;
+                                    CONFIDENCE!
+                                </p>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+
+                <div className='newsletter'>
+                    <Container className='text-center px-4'>
+                        <h2 className='display-6'>Subscribe</h2>
+                        <p className='mt-3'>
+                            Sign up with your email address to receive news and
+                            updates.
                         </p>
-                    </div>
-                    <div className='about-img-div w-100'>
-                        <Image
-                            src={aboutPic}
-                            fluid={+true}
-                            className='about-img w-100 justify-self-end'
-                        />
-                    </div>
-                </div>
 
-                <div className='services bg-light d-flex justify-content-center justify-content-md-between  align-items-center pt-5 pb-4 px-xl-5 ps-md-4 pe-md-2 px-2 flex-md-nowrap flex-wrap'>
-                    <div className='d-flex justify-content-center'>
-                        <FaTruck className='service-icon me-2 mt-2' />
-                        <div className='ms-2 lh-sm text-wrap'>
-                            <h3>PAYMENT & DELIVERY</h3>
-                            <p>Free Shipping for orders over N1000</p>
-                        </div>
-                    </div>
-
-                    <div className='d-flex justify-content-center mt-md-0 mt-4'>
-                        <FaUndo className='service-icon me-2 mt-2' />
-                        <div className='ms-2 lh-sm text-wrap'>
-                            <h3>RETURN & REFUND</h3>
-                            <p>Free 100% money back guarantee</p>
-                        </div>
-                    </div>
-
-                    <div className='d-flex justify-content-center mt-md-0 mt-4'>
-                        <FaHeadset className='service-icon me-2 mt-2' />
-                        <div className='ms-2 lh-sm text-wrap'>
-                            <h3>QUALITY SUPPORT</h3>
-                            <p>Always online feedback 24/7</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='collection d-flex justify-content-center'>
-                    <div className='collection-div w-100 h-100'></div>
-
-                    <div className='about-text-div w-100 d-flex flex-column justify-content-center align-items-center'>
-                        <h3 className='py-2 text-center lh-sm text-white'>
-                            Explore our new collection
-                        </h3>
-                        <Link to='/shop' className=''>
-                            <button className='btn text-white py-2 px-3 border-none'>
-                                SHOP NOW
-                            </button>
-                        </Link>
-                    </div>
+                        <Form className='d-flex mt-3 justify-content-between align-items-center'>
+                            <Form.Control
+                                className='d-inline'
+                                type='email'
+                                placeholder='Email'
+                                required
+                            />
+                            <Button className='d-inline'>Sign Up</Button>
+                        </Form>
+                    </Container>
                 </div>
             </section>
         </main>
