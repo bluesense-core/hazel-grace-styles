@@ -3,7 +3,7 @@ import './App.css';
 import ContactUs from './ui/ContactUs';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './ui/Home';
-import Shop from './ui/Shop';
+import NalediShop from './ui/NalediShop';
 import Checkout from './ui/Checkout';
 import Confirmation from './ui/Confirmation';
 import { useState, useEffect } from 'react';
@@ -12,20 +12,17 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import commerce from './lib/commerce';
 import Cart from './components/Cart';
-// import { Checkout } from '@chec/commerce.js/features/checkout';
+import Arcturus from './components/naledi/Arcturus';
 
 function App() {
     const formatter = new Intl.NumberFormat('en-US');
 
-    const [cards, setCards] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [showCart, setShowCart] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
-            fetch(cards).then(() => {
-                setIsLoading(false);
-            });
+            setIsLoading(false);
         }, 1800);
     }, []);
     return (
@@ -38,17 +35,28 @@ function App() {
                 />
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    {/* <Route
-                        path='shop'
+                    <Route
+                        path='shop/naledi'
                         element={
-                            <Shop
+                            <NalediShop
                                 isLoading={isLoading}
                                 showCart={showCart}
                                 setShowCart={setShowCart}
                                 formatter={formatter}
                             />
                         }
-                    /> */}
+                    />
+                    <Route
+                        path='shop/naledi/arcturus-blouse'
+                        element={
+                            <Arcturus
+                                isLoading={isLoading}
+                                showCart={showCart}
+                                setShowCart={setShowCart}
+                                formatter={formatter}
+                            />
+                        }
+                    />
                     {/* <Route
                         path='cart'
                         element={<Cart formatter={formatter} />}

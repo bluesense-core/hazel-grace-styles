@@ -132,11 +132,15 @@ function Home() {
                     <Container className='ps-4 pe-lg-5 pe-4'>
                         <Row className='align-items-center gx-5 gy-5'>
                             <Col lg={6} className='text-center'>
-                                <LazyLoadImage effect='blur' src={about1} />
+                                <LazyLoadImage
+                                    effect='blur'
+                                    src={about1}
+                                    className='img-fluid'
+                                />
                                 <LazyLoadImage
                                     effect='blur'
                                     src={about2}
-                                    className='mt-5 about-2 d-lg-inline d-none'
+                                    className='mt-5 about-2 d-lg-inline d-none img-fluid'
                                 />
                             </Col>
                             <Col lg={6} className='ms-auto pe-lg-5'>

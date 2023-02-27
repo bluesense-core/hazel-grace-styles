@@ -52,28 +52,28 @@ function Footer() {
                     <Col lg={4}>
                         <div className='socials mt-lg-0 mt-3 mb-4 d-flex justify-content-lg-end justify-content-center'>
                             <a
-                                className='me-lg-4'
-                                href='/'
+                                className='me-3'
+                                href='https://web.facebook.com/hazelgracestyles/'
                                 target='_blank'
                                 rel='noopener noreferrer'>
                                 <BsFacebook />
                             </a>
 
                             <a
-                                className='me-lg-4 mx-lg-0 mx-4'
+                                className='ms-3 me-lg-4'
                                 href='https://www.instagram.com/hazelgracestyles/'
                                 target='_blank'
                                 rel='noopener noreferrer'>
                                 <BsInstagram />
                             </a>
 
-                            <a
+                            {/* <a
                                 className='me-lg-3'
                                 href='/'
                                 target='_blank'
                                 rel='noopener noreferrer'>
                                 <BsTwitter />
-                            </a>
+                            </a> */}
                         </div>
                         <p className='text-lg-end text-center mb-2'>
                             © Hazel Grace Styles 2022

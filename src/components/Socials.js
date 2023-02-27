@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsTwitter, BsInstagram } from 'react-icons/bs';
+import { BsTwitter, BsInstagram, BsFacebook } from 'react-icons/bs';
 import { FaFacebookF, FaPinterestP } from 'react-icons/fa';
 
 function Socials() {
@@ -7,18 +7,22 @@ function Socials() {
         <div
             id='social-offcanvas'
             className='py-3 bg-white sticky-bottom text-decoration-none d-flex justify-content-evenly'>
-            <a href='#'>
-                <FaFacebookF />
+            <a
+                target='_blank'
+                href='https://web.facebook.com/hazelgracestyles/'>
+                <BsFacebook className='icon' />
             </a>
-            <a href='#'>
+            {/* <a  href='#'>
                 <BsTwitter />
+            </a> */}
+            <a
+                target='_blank'
+                href='https://www.instagram.com/hazelgracestyles/'>
+                <BsInstagram className='icon' />
             </a>
-            <a href='https://www.instagram.com/hazelgracestyles/'>
-                <BsInstagram />
-            </a>
-            <a href='#'>
+            {/* <a href='#'>
                 <FaPinterestP />
-            </a>
+            </a> */}
         </div>
     );
 }

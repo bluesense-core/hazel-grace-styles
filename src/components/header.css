@@ -154,8 +154,6 @@ header .navbar-toggler:focus {
     width: inherit;
 }
 
-#social-offcanvas a svg,
-#footer-socials a svg {
-    width: 12px;
-    height: 12px;
+#social-offcanvas a svg {
+    font-size: 15px;
 }

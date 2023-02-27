@@ -18,14 +18,14 @@ import { BsBag, BsChevronDown } from 'react-icons/bs';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Header({ formatter, showCart, setShowCart }) {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState();
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     const [dropdown, setDropdown] = useState(false);
     const showDropdown = (e) => {
-        setDropdown(!show);
+        setDropdown((prevData) => !prevData);
     };
     const hideDropdown = (e) => {
         setDropdown(false);
