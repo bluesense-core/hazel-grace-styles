@@ -3,7 +3,7 @@ import NalediList from '../components/NalediList.js';
 import Spinner from '../components/Spinner.js';
 import './shop.css';
 
-function NalediShop({ isLoading, formatter, showCart, setShowCart }) {
+function NalediShop({ isLoading, formatter }) {
     return (
         <main className='shop'>
             <section id='shop-naledi'>
@@ -11,15 +11,7 @@ function NalediShop({ isLoading, formatter, showCart, setShowCart }) {
                 <h1 className='text-center display-6 lh-1'>
                     Naledi Collection
                 </h1>
-                {isLoading ? (
-                    <Spinner />
-                ) : (
-                    <NalediList
-                        formatter={formatter}
-                        showCart={showCart}
-                        setShowCart={setShowCart}
-                    />
-                )}
+                {isLoading ? <Spinner /> : <NalediList formatter={formatter} />}
             </section>
         </main>
     );

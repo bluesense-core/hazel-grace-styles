@@ -1,1 +1,138 @@
 @import '~react-image-gallery/styles/css/image-gallery.css';
+
+#single-view .hgs {
+    font-weight: 400;
+    color: #444444;
+}
+
+#single-view .name {
+    font-family: 'Happy Monkey';
+    color: #d5b066;
+}
+
+#single-view .price {
+    font-family: 'Happy Monkey';
+    letter-spacing: 0.05em;
+    color: #444444;
+}
+
+#single-view .size-guide {
+    background-color: transparent;
+    border: 2px solid #d5b066;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 18px;
+    color: #1d1b1b;
+}
+
+#single-view .size-guide:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+#single-view .form-label {
+    font-weight: 600;
+    color: #000000;
+}
+
+#single-view .form-check-input {
+    display: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+#single-view .form-check-input:focus {
+    outline: none;
+}
+
+#single-view .form-check-label {
+    cursor: pointer;
+    border: 1px solid #444444;
+    padding: 8px 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #000000;
+    transition: 150ms;
+}
+
+#single-view input:checked ~ .form-check-label {
+    border: 1px solid #d5b066;
+    background-color: #d5b066;
+    color: #fff;
+}
+
+#single-view .details-qty {
+    border: 1px solid #444444;
+    width: 35%;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #444444;
+}
+
+@media (max-width: 575px) {
+    #single-view .details-qty {
+        width: 100%;
+    }
+}
+
+#single-view .details-qty button {
+    border: none;
+    background: transparent;
+    width: 20%;
+}
+
+#single-view .details-qty button:disabled {
+    color: #444444;
+}
+
+#single-view .details-qty input {
+    border: none;
+    background: transparent;
+    width: 60%;
+    text-align: center;
+    -moz-appearance: textfield;
+}
+
+#single-view .details-qty input::-webkit-outer-spin-button,
+#single-view .details-qty input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#single-view .details-qty input:focus {
+    box-shadow: none;
+}
+
+#single-view .addToCart {
+    background: #000;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #ffffff;
+    border: none;
+    transition: 200ms;
+}
+
+#single-view .addToCart:hover {
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+}
+
+/* Carousel */
+#single-view .image-gallery-image,
+#single-view .originalImg,
+.image-gallery-thumbnail,
+.image-gallery-thumbnail-inner,
+.image-gallery-thumbnail-image {
+    border-radius: 15px;
+}
+
+.image-gallery-thumbnail {
+    filter: grayscale(90%);
+    transition: 200ms;
+}
+
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
+    border-color: transparent;
+    filter: none;
+}

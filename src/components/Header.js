@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-    Image,
     Navbar,
     Nav,
     Offcanvas,
@@ -13,11 +12,11 @@ import Logo from '../img/logo.png';
 import './header.css';
 import SidebarMenu from './SidebarMenu';
 import Socials from './Socials';
-import CartNav from './CartNav';
 import { BsBag, BsChevronDown } from 'react-icons/bs';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useCart } from 'react-use-cart';
 
-function Header({ formatter, showCart, setShowCart }) {
+function Header() {
     const [show, setShow] = useState();
 
     const handleClose = () => setShow(false);
@@ -30,6 +29,8 @@ function Header({ formatter, showCart, setShowCart }) {
     const hideDropdown = (e) => {
         setDropdown(false);
     };
+
+    const { isEmpty, totalItems } = useCart();
 
     return (
         <header className='shadow-sm fixed-top'>
@@ -152,7 +153,14 @@ function Header({ formatter, showCart, setShowCart }) {
 
                                 <div className='ps-2'>
                                     <Nav.Link href='/cart'>
-                                        <BsBag className='cart-icon ' />
+                                        <BsBag className='cart-icon mb-1' />
+                                        {!isEmpty && (
+                                            <span className=' badge rounded-circle bg-dark'>
+                                                <span className='text-white'>
+                                                    {totalItems}
+                                                </span>
+                                            </span>
+                                        )}
                                     </Nav.Link>
                                 </div>
                             </Nav>
@@ -162,7 +170,14 @@ function Header({ formatter, showCart, setShowCart }) {
                                 id='header-nav'
                                 className=' text-uppercase justify-content-end'>
                                 <Nav.Link href='/cart' className='ms-auto px-3'>
-                                    <BsBag className='cart-icon ' />
+                                    <BsBag className='cart-icon me-4' />
+                                    {!isEmpty && (
+                                        <span className=' badge rounded-circle bg-dark'>
+                                            <span className='text-white'>
+                                                {totalItems}
+                                            </span>
+                                        </span>
+                                    )}
                                 </Nav.Link>
                             </Nav>
                         </Col>

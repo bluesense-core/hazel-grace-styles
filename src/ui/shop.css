@@ -3,7 +3,7 @@
     border-bottom: 0.5px solid #d5b066;
 }
 
-#shop-naledi h1 {
+.shop h1 {
     font-family: 'Happy Monkey';
     color: #d5b066;
 }
@@ -15,7 +15,7 @@
     line-height: 27px;
     color: #000000;
 }
-#shop-naledi img {
+.shop img {
     cursor: pointer;
     transition: 200ms;
 }
@@ -29,6 +29,15 @@
     white-space: nowrap;
 }
 
+#shop-genesis .product__name,
+#shop-genesis .product__price {
+    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 0.15em;
+    color: #1d1b1b;
+    white-space: nowrap;
+}
+
 @media (max-width: 767px) {
     #shop-naledi .product__name,
     #shop-naledi .product__price {
@@ -37,7 +46,8 @@
     }
 }
 
-#shop-naledi .shop-overlay {
+#shop-naledi .shop-overlay,
+#shop-genesis .shop-overlay {
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -49,4 +59,8 @@
     transition: 200ms;
     color: #fff;
     text-decoration: underline;
+}
+
+#shop-genesis .shop-overlay {
+    padding: 1rem 0;
 }

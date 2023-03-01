@@ -4,8 +4,8 @@ import altair from '../img/shop-img/naledi/altair/main-altair.png';
 import altthumb1 from '../img/shop-img/naledi/altair/thumb-alt1.jpg';
 import altthumb2 from '../img/shop-img/naledi/altair/thumb-alt2.jpg';
 import arcturus from '../img/shop-img/naledi/arcturus/main-arcturus.png';
-import arcthumb1 from '../img/shop-img/naledi/arcturus/thumb-arc1.png';
-import arcthumb2 from '../img/shop-img/naledi/arcturus/thumb-arc2.png';
+import arcthumb1 from '../img/shop-img/naledi/arcturus/thumb-arc1.jpg';
+import arcthumb2 from '../img/shop-img/naledi/arcturus/thumb-arc2.jpg';
 import canopus from '../img/shop-img/naledi/canopus/main-canopus.png';
 import canthumb from '../img/shop-img/naledi/canopus/thumb-can.jpg';
 import castor from '../img/shop-img/naledi/castor/main-castor.png';
@@ -57,7 +57,7 @@ import yellthumb from '../img/shop-img/genesis/yellow/thumb-yell.jpeg';
 // Naledi Data
 const nalediData = [
     {
-        id: nanoid(),
+        id: 1,
         src: arcturus,
         alt: 'Arcturus Blouse',
         price: 60000,
@@ -92,7 +92,7 @@ const nalediData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 2,
         src: canopus,
         alt: 'Canopus Dress',
         price: 55000,
@@ -118,7 +118,7 @@ const nalediData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 3,
         src: orion,
         alt: 'Orion Dress',
         price: 50000,
@@ -144,7 +144,7 @@ const nalediData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 4,
         src: castor,
         alt: 'Castor Ensemble',
         price: 60000,
@@ -170,7 +170,7 @@ const nalediData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 5,
         src: rigel,
         alt: 'Rigel Dress',
         price: 40000,
@@ -196,7 +196,7 @@ const nalediData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 6,
         src: procyon,
         alt: 'Procyon Ensemble',
         price: 40000,
@@ -222,7 +222,7 @@ const nalediData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 7,
         src: altair,
         alt: 'Altair Dress',
         price: 35000,
@@ -257,7 +257,7 @@ const nalediData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 8,
         src: sirius,
         alt: 'Sirius Dress',
         price: 30000,
@@ -283,7 +283,7 @@ const nalediData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 9,
         src: venus,
         alt: 'Venus Dress',
         price: 30000,
@@ -321,7 +321,7 @@ const nalediData = [
 
 const genesisData = [
     {
-        id: nanoid(),
+        id: 10,
         src: pomegranate,
         alt: 'Pomegranate Blouse',
         price: 25000,
@@ -338,7 +338,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 11,
         src: hazel,
         alt: 'Hazel Shirt',
         price: 15000,
@@ -355,7 +355,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 12,
         src: pistachio,
         alt: 'Pistachio Blouse',
         price: 25000,
@@ -372,7 +372,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 13,
         src: grace,
         alt: 'Grace Dress',
         price: 45000,
@@ -398,7 +398,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 14,
         src: jessica,
         alt: 'Jessica Dress',
         price: 20000,
@@ -424,7 +424,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 15,
         src: anita,
         alt: 'Anita Dress',
         price: 25000,
@@ -459,7 +459,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 16,
         src: naomi,
         alt: 'Naomi Dress',
         price: 25000,
@@ -494,7 +494,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 17,
         src: ruth,
         alt: 'Ruth Dress',
         price: 20000,
@@ -529,7 +529,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 18,
         src: chia,
         alt: 'Chia Dress',
         price: 30000,
@@ -546,7 +546,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 19,
         src: wildrice,
         alt: 'Wildrice Dress',
         price: 25000,
@@ -563,7 +563,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 20,
         src: quinoa,
         alt: 'Quinoa Dress',
         price: 20000,
@@ -580,7 +580,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 21,
         src: sesame,
         alt: 'Sesame Dress',
         price: 50000,
@@ -597,7 +597,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 22,
         src: yellow,
         alt: 'Yellow Dress',
         price: 45000,
@@ -623,7 +623,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 23,
         src: bb,
         alt: 'BB Ensemble',
         price: 30000,
@@ -658,7 +658,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 24,
         src: esta,
         alt: 'Esta Dress',
         price: 25000,
@@ -693,7 +693,7 @@ const genesisData = [
         ],
     },
     {
-        id: nanoid(),
+        id: 25,
         src: pink,
         alt: 'Pink Blouse',
         price: 25000,

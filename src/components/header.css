@@ -66,15 +66,15 @@ header .dropdown .dropdown-menu a:active {
 header #header-nav .cart-icon {
     position: relative;
     color: #000;
-    font-size: 28px;
+    font-size: 30px;
     bottom: 4px;
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
     header #header-nav .cart-icon {
-        font-size: 24px;
+        font-size: 26px;
     }
-}
+} */
 
 .dropdown-toggle::after {
     display: none;
@@ -156,4 +156,45 @@ header .navbar-toggler:focus {
 
 #social-offcanvas a svg {
     font-size: 15px;
+}
+
+header .badge {
+    position: absolute;
+    top: 25%;
+    right: 30px;
+    border: 2px solid #fff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 150ms;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    header .badge {
+        top: 27%;
+        /*  right: 0px;
+        padding: 7px 9px;
+        font-size: 15px;*/
+    }
+}
+
+@media (max-width: 400px) {
+    header .badge {
+        top: 20%;
+        /*  right: 0px;
+        padding: 7px 9px;
+        font-size: 15px;*/
+    }
+}
+
+@media (max-width: 350px) {
+    header .badge {
+        right: 15px;
+        /*padding: 7px 9px;
+        font-size: 15px;*/
+    }
 }

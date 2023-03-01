@@ -12,6 +12,17 @@ body {
     overflow-x: hidden;
 }
 
+button:focus,
+.btn-primary:focus,
+.btn:focus,
+.btn-primary:active:focus {
+    box-shadow: none;
+}
+
+button:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
 main {
     margin-top: 167.7px;
 }
