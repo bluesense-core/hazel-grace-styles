@@ -35,7 +35,9 @@ function Header() {
     return (
         <header className='shadow-sm fixed-top'>
             <div className='banner'>
-                <a href='#' className='text-decoration-none text-white'>
+                <a
+                    href='/shop/naledi'
+                    className='text-decoration-none text-white'>
                     <p className='m-0 py-2 text-uppercase text-center'>
                         Shop Our New Collection
                     </p>

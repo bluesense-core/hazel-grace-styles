@@ -7,7 +7,6 @@ import orange from '../img/home-img/orange.png';
 import spotlight from '../img/home-img/spotlight.png';
 import about1 from '../img/home-img/who.png';
 import about2 from '../img/home-img/we.png';
-
 import { FaAngleDoubleDown, FaAngleDoubleRight } from 'react-icons/fa';
 import '../components/home/home-hero.css';
 import '../components/home/home-naledi.css';

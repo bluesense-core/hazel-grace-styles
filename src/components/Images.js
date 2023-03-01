@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 // Naledi Images
 import altair from '../img/shop-img/naledi/altair/main-altair.png';
 import altthumb1 from '../img/shop-img/naledi/altair/thumb-alt1.jpg';

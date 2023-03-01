@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from 'react-use-cart';
-import { Button, Col, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import { PaystackButton } from 'react-paystack';
 import './checkout.css';
 export default function Checkout({ formatter }) {

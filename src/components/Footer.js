@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../img/logo.png';
 import { Row, Col, Nav, Container, Image } from 'react-bootstrap';
-import { BsTwitter, BsInstagram, BsFacebook } from 'react-icons/bs';
+import { BsInstagram, BsFacebook } from 'react-icons/bs';
 import './footer.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -45,7 +45,7 @@ function Footer() {
                                 <Nav.Link href='/'>Terms of service</Nav.Link>
                             </Nav.Item>
                             <Nav.Item className='px-xl-2'>
-                                <Nav.Link href='/y'>Privacy policy</Nav.Link>
+                                <Nav.Link href='/'>Privacy policy</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Col>

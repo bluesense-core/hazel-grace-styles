@@ -22,7 +22,7 @@ const Yellow = ({ formatter }) => {
         quantity: 1,
     });
 
-    const { addItem, items, updateItem } = useCart();
+    const { addItem, updateItem } = useCart();
 
     const addToCart = () => {
         addItem(data);

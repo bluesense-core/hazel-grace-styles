@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './ui/Home';
 import NalediShop from './ui/NalediShop';
 import Checkout from './ui/Checkout';
-import Confirmation from './ui/Confirmation';
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';

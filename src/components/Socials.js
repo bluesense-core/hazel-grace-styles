@@ -1,6 +1,5 @@
 import React from 'react';
-import { BsTwitter, BsInstagram, BsFacebook } from 'react-icons/bs';
-import { FaFacebookF, FaPinterestP } from 'react-icons/fa';
+import { BsInstagram, BsFacebook } from 'react-icons/bs';
 
 function Socials() {
     return (
@@ -9,6 +8,7 @@ function Socials() {
             className='py-3 bg-white sticky-bottom text-decoration-none d-flex justify-content-evenly'>
             <a
                 target='_blank'
+                rel='noreferrer'
                 href='https://web.facebook.com/hazelgracestyles/'>
                 <BsFacebook className='icon' />
             </a>
@@ -17,6 +17,7 @@ function Socials() {
             </a> */}
             <a
                 target='_blank'
+                rel='noreferrer'
                 href='https://www.instagram.com/hazelgracestyles/'>
                 <BsInstagram className='icon' />
             </a>
