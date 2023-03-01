@@ -58,10 +58,7 @@ function Home() {
                                 src={spotlight}
                                 className='naledi-img img-fluid'
                             />
-                            <Button
-                                href='/shop/naledi'
-                                as='a'
-                                className='shop-btn'>
+                            <Button href='/naledi' as='a' className='shop-btn'>
                                 Shop Now <FaAngleDoubleRight />{' '}
                             </Button>
                         </Col>
@@ -117,10 +114,7 @@ function Home() {
                                 className='naledi-img img-fluid down'
                             />
 
-                            <Button
-                                href='/shop/naledi'
-                                as='a'
-                                className='shop-btn'>
+                            <Button href='/naledi' as='a' className='shop-btn'>
                                 Shop Now <FaAngleDoubleRight />{' '}
                             </Button>
                         </div>

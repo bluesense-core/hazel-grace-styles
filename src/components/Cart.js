@@ -34,7 +34,7 @@ const Cart = ({ formatter }) => {
                             </p>
                             <div className='d-flex justify-content-center'>
                                 <Link
-                                    to='/shop/naledi'
+                                    to='/naledi'
                                     className='text-decoration-none cart-btn btn mx-auto  text-white mt-1 py-2 px-3 border-none'>
                                     SHOP NOW
                                 </Link>

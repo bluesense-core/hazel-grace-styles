@@ -53,7 +53,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route
-                        path='/shop/naledi'
+                        path='/naledi'
                         element={
                             <NalediShop
                                 isLoading={isLoading}
@@ -62,7 +62,7 @@ function App() {
                         }
                     />
                     <Route
-                        path='/shop/genesis'
+                        path='/genesis'
                         element={
                             <GenesisShop
                                 isLoading={isLoading}
@@ -72,105 +72,105 @@ function App() {
                     />
                     {/* Naledi CLothes */}
                     <Route
-                        path='/shop/naledi/arcturus-blouse'
+                        path='/naledi/arcturus-blouse'
                         element={<Arcturus formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/naledi/canopus-dress'
+                        path='/naledi/canopus-dress'
                         element={<Canopus formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/naledi/orion-dress'
+                        path='/naledi/orion-dress'
                         element={<Orion formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/naledi/castor-ensemble'
+                        path='/naledi/castor-ensemble'
                         element={<Castor formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/naledi/rigel-dress'
+                        path='/naledi/rigel-dress'
                         element={<Rigel formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/naledi/procyon-ensemble'
+                        path='/naledi/procyon-ensemble'
                         element={<Procyon formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/naledi/altair-dress'
+                        path='/naledi/altair-dress'
                         element={<Altair formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/naledi/sirius-dress'
+                        path='/naledi/sirius-dress'
                         element={<Sirius formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/naledi/venus-dress'
+                        path='/naledi/venus-dress'
                         element={<Venus formatter={formatter} />}
                     />
 
                     {/* Genesis Clothes */}
                     <Route
-                        path='/shop/genesis/pomegranate-blouse'
+                        path='/genesis/pomegranate-blouse'
                         element={<Pomegranate formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/hazel-shirt'
+                        path='/genesis/hazel-shirt'
                         element={<Hazel formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/pistachio-blouse'
+                        path='/genesis/pistachio-blouse'
                         element={<Pistachio formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/grace-dress'
+                        path='/genesis/grace-dress'
                         element={<Grace formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/jessica-dress'
+                        path='/genesis/jessica-dress'
                         element={<Jessica formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/anita-dress'
+                        path='/genesis/anita-dress'
                         element={<Anita formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/naomi-dress'
+                        path='/genesis/naomi-dress'
                         element={<Naomi formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/ruth-dress'
+                        path='/genesis/ruth-dress'
                         element={<Ruth formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/chia-dress'
+                        path='/genesis/chia-dress'
                         element={<Chia formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/wildrice-dress'
+                        path='/genesis/wildrice-dress'
                         element={<Wildrice formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/quinoa-dress'
+                        path='/genesis/quinoa-dress'
                         element={<Quinoa formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/sesame-dress'
+                        path='/genesis/sesame-dress'
                         element={<Sesame formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/yellow-dress'
+                        path='/genesis/yellow-dress'
                         element={<Yellow formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/bb-ensemble'
+                        path='/genesis/bb-ensemble'
                         element={<BB formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/esta-dress'
+                        path='/genesis/esta-dress'
                         element={<Esta formatter={formatter} />}
                     />
                     <Route
-                        path='/shop/genesis/pink-blouse'
+                        path='/genesis/pink-blouse'
                         element={<Pink formatter={formatter} />}
                     />
 

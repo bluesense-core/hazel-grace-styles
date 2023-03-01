@@ -35,9 +35,7 @@ function Header() {
     return (
         <header className='shadow-sm fixed-top'>
             <div className='banner'>
-                <a
-                    href='/shop/naledi'
-                    className='text-decoration-none text-white'>
+                <a href='/naledi' className='text-decoration-none text-white'>
                     <p className='m-0 py-2 text-uppercase text-center'>
                         Shop Our New Collection
                     </p>
@@ -85,12 +83,12 @@ function Header() {
                                             id=''>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/shop/genesis'>
+                                                href='/genesis'>
                                                 Genesis Collection
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/shop/naledi'>
+                                                href='/naledi'>
                                                 Naledi Collection
                                             </NavDropdown.Item>
                                         </NavDropdown>
@@ -139,12 +137,12 @@ function Header() {
                                     onMouseLeave={hideDropdown}>
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/shop/genesis'>
+                                        href='/genesis'>
                                         Genesis Collection
                                     </NavDropdown.Item>
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/shop/naledi'>
+                                        href='/naledi'>
                                         Naledi Collection
                                     </NavDropdown.Item>
                                 </NavDropdown>
