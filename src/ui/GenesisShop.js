@@ -1,6 +1,6 @@
 import React from 'react';
 import Spinner from '../components/Spinner.js';
-import '..css';
+import './shop.css';
 import GenesisList from '../components/GenesisList.js';
 
 const GenesisShop = ({ isLoading, formatter }) => {
