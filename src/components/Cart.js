@@ -4,6 +4,7 @@ import { useCart } from 'react-use-cart';
 import { Link } from 'react-router-dom';
 import { BsCart4 } from 'react-icons/bs';
 import { Button, Container, Table } from 'react-bootstrap';
+import './cart.css';
 
 const Cart = ({ formatter }) => {
     const {
@@ -33,7 +34,7 @@ const Cart = ({ formatter }) => {
                             </p>
                             <div className='d-flex justify-content-center'>
                                 <Link
-                                    to='/shop'
+                                    to='/shop/naledi'
                                     className='text-decoration-none cart-btn btn mx-auto  text-white mt-1 py-2 px-3 border-none'>
                                     SHOP NOW
                                 </Link>
@@ -65,7 +66,7 @@ const Cart = ({ formatter }) => {
                                                         src={item.src}
                                                         alt={item.title}
                                                     />
-                                                    <div className='ms-lg-0 ms-3'>
+                                                    <div className='ms-lg-2 ms-3'>
                                                         <h4 className='cart-item__details-name'>
                                                             {item.alt}
                                                         </h4>
@@ -84,17 +85,18 @@ const Cart = ({ formatter }) => {
                                                             <button
                                                                 className='px-2 py-1 '
                                                                 type='button'
-                                                                onClick={() =>
-                                                                    item.quantity >
+                                                                disabled={
+                                                                    item.quantity ===
                                                                     1
-                                                                        ? updateItemQuantity(
-                                                                              item.id,
-                                                                              item.quantity -
-                                                                                  1
-                                                                          )
-                                                                        : removeItem(
-                                                                              item.id
-                                                                          )
+                                                                        ? true
+                                                                        : false
+                                                                }
+                                                                onClick={() =>
+                                                                    updateItemQuantity(
+                                                                        item.id,
+                                                                        item.quantity -
+                                                                            1
+                                                                    )
                                                                 }>
                                                                 -
                                                             </button>
@@ -114,6 +116,12 @@ const Cart = ({ formatter }) => {
                                                                 +
                                                             </button>
                                                         </div>
+                                                        <p className='fs-6 mt-2'>
+                                                            Size:{' '}
+                                                            {item.size
+                                                                ? item.size
+                                                                : 'Not specified'}
+                                                        </p>
                                                         <button
                                                             type='button'
                                                             className='cart-item__remove mt-2'
@@ -161,21 +169,28 @@ const Cart = ({ formatter }) => {
                                             <div className='cart-item__details-price1'>
                                                 ₦{formatter.format(item.price)}
                                             </div>
-                                            <div className='item-group1'>
-                                                <div className='cart-item__details-qty1'>
+                                            <p className='fs-6 mt-4'>
+                                                Size:{' '}
+                                                {item.size
+                                                    ? item.size
+                                                    : 'Not specified'}
+                                            </p>
+                                            <div className='item-group1  flex-wrap-sm-nowrap flex-wrap'>
+                                                <div className='cart-item__details-qty1 '>
                                                     <button
                                                         className='px-2 py-1'
                                                         type='button'
+                                                        disabled={
+                                                            item.quantity === 1
+                                                                ? true
+                                                                : false
+                                                        }
                                                         onClick={() =>
-                                                            item.quantity > 1
-                                                                ? updateItemQuantity(
-                                                                      item.id,
-                                                                      item.quantity -
-                                                                          1
-                                                                  )
-                                                                : removeItem(
-                                                                      item.id
-                                                                  )
+                                                            updateItemQuantity(
+                                                                item.id,
+                                                                item.quantity -
+                                                                    1
+                                                            )
                                                         }>
                                                         -
                                                     </button>
@@ -195,6 +210,7 @@ const Cart = ({ formatter }) => {
                                                         +
                                                     </button>
                                                 </div>
+
                                                 <button
                                                     type='button'
                                                     className='cart-item__remove1'

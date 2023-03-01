@@ -1,0 +1,23 @@
+#checkout h4 {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: #5c5c5c;
+}
+
+#checkout .gold-badge {
+    /* padding: 0.75em 1.05em; */
+    border-radius: 50%;
+    position: absolute;
+    font-size: 12px;
+    background-color: #d4bc64;
+    left: 62%;
+    top: -8%;
+}
+
+@media (max-width: 992px) {
+    #checkout .gold-badge {
+        left: 68%;
+        top: -5%;
+    }
+}

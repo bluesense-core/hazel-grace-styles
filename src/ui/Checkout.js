@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useCart } from 'react-use-cart';
 import { Button, Col, Form } from 'react-bootstrap';
 import { PaystackButton } from 'react-paystack';
+import './checkout.css';
 export default function Checkout({ formatter }) {
     const { totalItems, items, cartTotal, emptyCart } = useCart();
 
@@ -49,7 +50,7 @@ export default function Checkout({ formatter }) {
             <div className='checkout' id='checkout'>
                 <section className='py-5'>
                     <div className='container px-4 px-lg-5 my-5'>
-                        <div className='row'>
+                        <div className='row gx-4'>
                             <div className='col-lg-4  order-lg-2 mb-4 pb-lg-0 pb-5'>
                                 <h4 className='mb-3 d-flex justify-content-between align-items-center mb-3'>
                                     <span className='text-muted text-uppercase'>
@@ -84,11 +85,19 @@ export default function Checkout({ formatter }) {
                                                         <h6 className='my-0'>
                                                             {item.alt}
                                                         </h6>
-                                                        <small className='text-muted'>
+                                                        <small className='text-muted d-sm-block d-none'>
                                                             ₦
                                                             {formatter.format(
                                                                 item.price
                                                             )}
+                                                        </small>
+                                                        <small className='text-muted'>
+                                                            <p className='fs-6 mt-sm-4'>
+                                                                Size:{' '}
+                                                                {item.size
+                                                                    ? item.size
+                                                                    : 'Not specified'}
+                                                            </p>
                                                         </small>
                                                     </div>
                                                 </div>
@@ -128,7 +137,7 @@ export default function Checkout({ formatter }) {
                                     </div>
                                 </form> */}
                             </div>
-                            <div className='col-lg-8 order-lg-1'>
+                            <div className='col-lg-7 order-lg-1'>
                                 <h4 className='mb-3 text-uppercase'>
                                     Billing address
                                 </h4>
