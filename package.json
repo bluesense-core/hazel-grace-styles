@@ -1,7 +1,7 @@
 {
     "name": "hazel-grace-styles",
     "version": "0.1.0",
-    "homepage": ".",
+    "homepage": "https://hgs-v2.netlify.app/",
     "private": true,
     "dependencies": {
         "@chec/commerce.js": "^2.8.0",
