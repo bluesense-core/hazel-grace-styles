@@ -26,7 +26,7 @@ const GenesisItem = ({ product, formatter }) => {
                 onMouseOver={() => setIsOverlay(true)}
                 onMouseLeave={() => setIsOverlay(false)}>
                 <a
-                    href={'/genesis/' + toLink(product.alt)}
+                    href={'genesis/' + toLink(product.alt)}
                     className='text-decoration-none '>
                     <LazyLoadImage
                         style={gray}

@@ -26,7 +26,7 @@ const NalediItem = ({ product, formatter }) => {
                 onMouseOver={() => setIsOverlay(true)}
                 onMouseLeave={() => setIsOverlay(false)}>
                 <a
-                    href={'/naledi/' + toLink(product.alt)}
+                    href={'naledi/' + toLink(product.alt)}
                     className='text-decoration-none '>
                     <LazyLoadImage
                         style={gray}
