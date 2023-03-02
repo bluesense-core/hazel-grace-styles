@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Card, Col } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const NalediItem = ({ product, formatter }) => {
@@ -25,8 +27,9 @@ const NalediItem = ({ product, formatter }) => {
                 className='product__card h-100  text-center border-white rounded-0'
                 onMouseOver={() => setIsOverlay(true)}
                 onMouseLeave={() => setIsOverlay(false)}>
-                <a
-                    href={'naledi/' + toLink(product.alt)}
+                <NavLink
+                    reloadDocument
+                    to={'/naledi/' + toLink(product.alt)}
                     className='text-decoration-none '>
                     <LazyLoadImage
                         style={gray}
@@ -40,7 +43,7 @@ const NalediItem = ({ product, formatter }) => {
                         className='shop-overlay h5 fw-bolder'>
                         View More
                     </Card.Text>
-                </a>
+                </NavLink>
                 <Card.Body className='product__info text-uppercase'>
                     <h5 className='product__name shop-title py-2'>
                         {product.alt}
