@@ -76,7 +76,7 @@ function Footer() {
                             </a> */}
                         </div>
                         <p className='text-lg-end text-center mb-2'>
-                            © Hazel Grace Styles 2022
+                            © Hazel Grace Styles 2023
                         </p>
                     </Col>
                 </Row>
