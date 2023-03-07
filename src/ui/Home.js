@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import pink from '../img/home-img/pink.png';
 import brown from '../img/home-img/brown.png';
@@ -14,8 +14,32 @@ import '../components/home/home-about.css';
 import { NavHashLink } from 'react-router-hash-link';
 import Masonry from 'react-masonry-css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import emailjs from '@emailjs/browser';
 
 function Home() {
+    const formRef = useRef();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        emailjs
+            .sendForm(
+                'service_hd6w2lk',
+                'template_6b6tzjx',
+                formRef.current,
+                'NadKuQM6677lL9__h'
+            )
+
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
+    };
+
     return (
         <main>
             <section id='home'>
@@ -166,7 +190,10 @@ function Home() {
                             updates.
                         </p>
 
-                        <Form className='d-flex mt-3 justify-content-between align-items-center'>
+                        <Form
+                            ref={formRef}
+                            onSubmit={handleSubmit}
+                            className='d-flex mt-3 justify-content-between align-items-center'>
                             <Form.Control
                                 className='d-inline'
                                 type='email'
