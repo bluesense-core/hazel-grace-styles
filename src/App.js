@@ -51,7 +51,6 @@ function App() {
         <div>
             <CartProvider>
                 <BrowserRouter>
-                    <Header formatter={formatter} />
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route
@@ -184,28 +183,9 @@ function App() {
                             path='/checkout'
                             element={<Checkout formatter={formatter} />}
                         />
-                        {/* <Route
-                        path='confirmation'
-                        element={
-                            !order ? (
-                                <Navigate replace to={'/'} />
-                            ) : (
-                                <Confirmation
-                                    order={order}
-                                    onBackToHome={() =>
-                                        window.localStorage.removeItem(
-                                            'order_receipt'
-                                        )
-                                    }
-                                />
-                            )
-                        }
-                    /> */}
 
                         <Route path='/contact' element={<ContactUs />} />
                     </Routes>
-
-                    <Footer />
                 </BrowserRouter>
             </CartProvider>
         </div>

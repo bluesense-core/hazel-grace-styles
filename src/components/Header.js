@@ -22,12 +22,19 @@ function Header() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [dropdown, setDropdown] = useState(false);
-    const showDropdown = (e) => {
-        setDropdown((prevData) => !prevData);
+    const [dropdown1, setDropdown1] = useState(false);
+    const showDropdown1 = (e) => {
+        setDropdown1((prevData) => !prevData);
     };
-    const hideDropdown = (e) => {
-        setDropdown(false);
+    const hideDropdown1 = (e) => {
+        setDropdown1(false);
+    };
+    const [dropdown2, setDropdown2] = useState(false);
+    const showDropdown2 = (e) => {
+        setDropdown2((prevData) => !prevData);
+    };
+    const hideDropdown2 = (e) => {
+        setDropdown2(false);
     };
 
     const { isEmpty, totalItems } = useCart();
@@ -93,6 +100,27 @@ function Header() {
                                             </NavDropdown.Item>
                                         </NavDropdown>
 
+                                        <NavDropdown
+                                            className='py-3 text-decoration-none'
+                                            title={
+                                                <span>
+                                                    Stores
+                                                    <BsChevronDown className='ms-2 mb-1 arrow' />
+                                                </span>
+                                            }
+                                            id=''>
+                                            <NavDropdown.Item
+                                                className='text-capitalize'
+                                                href='/hazelbee'>
+                                                HazelBee
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Item
+                                                className='text-capitalize'
+                                                href='/hazelbabies'>
+                                                HazelBabies
+                                            </NavDropdown.Item>
+                                        </NavDropdown>
+
                                         <Nav.Item className='py-3 text-decoration-none'>
                                             <Nav.Link href='/contact'>
                                                 Contact
@@ -132,9 +160,9 @@ function Header() {
                                         </span>
                                     }
                                     id=''
-                                    show={dropdown}
-                                    onMouseEnter={showDropdown}
-                                    onMouseLeave={hideDropdown}>
+                                    show={dropdown1}
+                                    onMouseEnter={showDropdown1}
+                                    onMouseLeave={hideDropdown1}>
                                     <NavDropdown.Item
                                         className='text-capitalize'
                                         href='/genesis'>
@@ -144,6 +172,30 @@ function Header() {
                                         className='text-capitalize'
                                         href='/naledi'>
                                         Naledi Collection
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+
+                                <NavDropdown
+                                    className='px-2 d-md-block d-none'
+                                    title={
+                                        <span>
+                                            Stores
+                                            <BsChevronDown className='ms-2 mb-1 arrow' />
+                                        </span>
+                                    }
+                                    id=''
+                                    show={dropdown2}
+                                    onMouseEnter={showDropdown2}
+                                    onMouseLeave={hideDropdown2}>
+                                    <NavDropdown.Item
+                                        className='text-capitalize'
+                                        href='/hazelbee'>
+                                        HazelBee
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item
+                                        className='text-capitalize'
+                                        href='/hazelbabies'>
+                                        HazelBabies
                                     </NavDropdown.Item>
                                 </NavDropdown>
 
