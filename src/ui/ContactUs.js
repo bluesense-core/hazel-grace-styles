@@ -1,11 +1,6 @@
 import React from 'react';
 import { Button, Row, Col, Form, Container } from 'react-bootstrap';
-import {
-    BsEnvelopeFill,
-    BsGeoAltFill,
-    BsInstagram,
-    BsTelephoneFill,
-} from 'react-icons/bs';
+import { BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from 'react-icons/bs';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import './contact.css';

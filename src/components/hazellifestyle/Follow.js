@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { BsInstagram } from 'react-icons/bs';
-import InstaFeeds from '../InstaFeeds';
+// import InstaFeeds from '../InstaFeeds';
 import './follow.css';
 
 const Follow = () => {
@@ -32,10 +32,10 @@ const Follow = () => {
                     </Col>
                 </Row>
 
-                <InstaFeeds
+                {/* <InstaFeeds
                     token='IGQVJXXzJjWmlmVmxab1kwVVNwRzN1RTA5SEpyRmoyc0VCb1V5OGNMdVc2aGk0ZA29tbWR6MF9GNGJIbzU2dkxvNlJmNE5SRUk2Y2xHcjRxcUVGMVNBUVNvNjlBclA2SERsUGFHc3ZAkQlpTZAXpfNGptVwZDZD'
                     limit={9}
-                />
+                /> */}
 
                 <Button
                     target='_blank'

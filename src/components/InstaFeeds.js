@@ -3,8 +3,7 @@ import axios from 'axios';
 
 import Feed from './Feed';
 
-// import './instaFeeds.css';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 const InstaFeeds = ({ token, limit }) => {
     const [feeds, setFeedsData] = useState();
@@ -37,7 +36,7 @@ const InstaFeeds = ({ token, limit }) => {
             // cancel pending fetch request on component unmount
             abortController.abort();
         };
-    }, [limit]);
+    });
 
     return (
         <>

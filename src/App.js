@@ -6,8 +6,6 @@ import Home from './ui/Home';
 import NalediShop from './ui/NalediShop';
 import Checkout from './ui/Checkout';
 import { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import Cart from './components/Cart';
 import Arcturus from './components/naledi/Arcturus';
 import Canopus from './components/naledi/Canopus';
