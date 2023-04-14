@@ -1,0 +1,38 @@
+#follow {
+    padding: 5em 0;
+}
+
+#follow h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #40444b;
+    font-weight: 700;
+}
+
+#follow img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 200ms ease-out;
+}
+
+#follow img:hover {
+    transform: scale(1.04);
+}
+
+#follow .circle {
+    width: 70px;
+    height: 70px;
+    background: #886f68;
+    border-radius: 50%;
+}
+
+#follow .username {
+    font-family: Raleway;
+}
+
+#follow .btn {
+    background: #886f68;
+    border: 1px solid #886f68;
+    border-radius: 10px;
+    width: 300px;
+}

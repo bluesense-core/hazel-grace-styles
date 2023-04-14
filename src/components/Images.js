@@ -53,6 +53,36 @@ import wildrice from '../img/shop-img/genesis/wildrice/main-wild.png';
 import yellow from '../img/shop-img/genesis/yellow/main-yell.png';
 import yellthumb from '../img/shop-img/genesis/yellow/thumb-yell.jpeg';
 
+// Hazelbee Images
+import cilia from '../img/hazelbee-img/Cilia.png';
+import lush from '../img/hazelbee-img/lush.png';
+import zaya from '../img/hazelbee-img/zaya.png';
+import keith from '../img/hazelbee-img/Keith.png';
+import jane from '../img/hazelbee-img/Jane.png';
+import becca from '../img/hazelbee-img/Becca.png';
+import zuri from '../img/hazelbee-img/Zuri.png';
+import sanny from '../img/hazelbee-img/Sanny.png';
+import anitabee from '../img/hazelbee-img/Anita.png';
+
+// Hazelbabies Images
+import baby1 from '../img/babies-img/baby1.png';
+import baby2 from '../img/babies-img/baby2.png';
+import baby3 from '../img/babies-img/baby3.png';
+// import baby4 from '../img/babies-img/baby4.png';
+// import baby5 from '../img/babies-img/baby5.png';
+// import baby6 from '../img/babies-img/baby6.png';
+
+// Hazellifestyle Images
+import one from '../img/lifestyle-img/one.png';
+import two from '../img/lifestyle-img/two.png';
+import three from '../img/lifestyle-img/three.png';
+import four from '../img/lifestyle-img/four.png';
+import five from '../img/lifestyle-img/five.png';
+import six from '../img/lifestyle-img/six.png';
+import seven from '../img/lifestyle-img/seven.png';
+import eight from '../img/lifestyle-img/eight.png';
+import nine from '../img/lifestyle-img/nine.png';
+
 // Naledi Data
 const nalediData = [
     {
@@ -719,6 +749,43 @@ const genesisData = [
     },
 ];
 
-// let cartItems = [];
+const hazelBeeData = [
+    { id: 1, img: cilia, title: 'Cilia Dress', price: '₦35,000' },
+    { id: 2, img: lush, title: 'Lush Blouse', price: '₦15,000' },
+    { id: 3, img: zaya, title: 'Zaya Dress', price: '₦28,000' },
+    { id: 4, img: keith, title: 'Keith Set', price: '₦18,000' },
+    { id: 5, img: jane, title: 'Jane Dress', price: '₦30,000' },
+    { id: 6, img: becca, title: 'Becca Set', price: '₦25,000' },
+    { id: 7, img: zuri, title: 'Zuri Set', price: '₦35,000' },
+    { id: 8, img: sanny, title: 'Sanny Kimono Dress', price: '₦20,000' },
+    { id: 9, img: anitabee, title: 'Anita Dress', price: '₦25,000' },
+];
 
-export { nalediData, genesisData };
+const hazelBabiesData = [
+    { id: 1, img: baby1, title: 'Custom Dress', price: '' },
+    { id: 2, img: baby2, title: 'Custom Dress', price: '' },
+    { id: 3, img: baby3, title: 'Custom Dress', price: '' },
+    // { id: 4, img: baby4, title: 'Custom Dress', price: '' },
+    // { id: 5, img: baby5, title: 'Custom Dress', price: '' },
+    // { id: 6, img: baby6, title: 'Custom Dress', price: '' },
+];
+
+const hazelLifestyleData = [
+    { id: 1, img: one },
+    { id: 2, img: two },
+    { id: 3, img: three },
+    { id: 4, img: four },
+    { id: 5, img: five },
+    { id: 6, img: six },
+    { id: 7, img: seven },
+    { id: 8, img: eight },
+    { id: 9, img: nine },
+];
+
+export {
+    nalediData,
+    genesisData,
+    hazelBeeData,
+    hazelBabiesData,
+    hazelLifestyleData,
+};

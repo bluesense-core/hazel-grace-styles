@@ -1,0 +1,74 @@
+#bee-hero h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #40444b;
+    font-weight: 700;
+}
+
+#bee-hero p {
+    text-shadow: 0px 0px 0px #000000a1;
+}
+
+@media (max-width: 1199px) {
+    #bee-hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 991px) {
+    #bee-hero .container-fluid {
+        padding-right: 1.5rem;
+    }
+
+    #bee-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #bee-hero img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 767px) {
+    #bee-hero h1 {
+        font-size: 2rem;
+    }
+
+    #bee-hero p {
+        font-size: 18px !important;
+    }
+
+    #bee-hero .container-fluid {
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    #bee-hero img {
+        width: 80%;
+    }
+}
+
+#bee-hero .btn {
+    background: none;
+    color: #886f68;
+    border: 1px solid #886f68;
+    border-radius: 0;
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    #bee-hero .btn {
+        font-size: 18px;
+    }
+}
+
+#bee-hero .btn:hover,
+#bee-hero .btn:focus,
+#bee-hero .btn:active {
+    background: #886f68;
+    color: #fff;
+}
+
+#bee-hero .btn:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}

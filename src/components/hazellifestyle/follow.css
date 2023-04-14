@@ -1,0 +1,62 @@
+#follow-lifestyle {
+    padding: 5em 0;
+    border-bottom: 1px solid #000;
+}
+
+#follow-lifestyle h2 {
+    font-family: 'League Spartan', sans-serif;
+    color: #d5b066;
+    font-weight: 900;
+}
+
+#follow-lifestyle p {
+    padding: 0 7em;
+}
+
+@media (max-width: 1399px) {
+    #follow-lifestyle p {
+        padding: 0 5em;
+    }
+}
+
+@media (max-width: 1199px) {
+    #follow-lifestyle p {
+        padding: 0em;
+    }
+}
+
+@media (max-width: 575px) {
+    #follow-lifestyle p {
+        font-size: 18px !important;
+    }
+}
+
+#follow-lifestyle img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 200ms ease-out;
+}
+
+#follow-lifestyle img:hover {
+    transform: scale(1.04);
+}
+
+#follow-lifestyle .circle {
+    width: 70px;
+    height: 70px;
+    background: #f2f2f2;
+    border-radius: 50%;
+}
+
+#follow-lifestyle .username {
+    padding: initial;
+}
+
+#follow-lifestyle .btn {
+    background: #d5b066;
+    border: 1px solid #d5b066;
+    border-radius: 10px;
+    width: 300px;
+    font-weight: 700;
+}

@@ -1,6 +1,11 @@
 import React from 'react';
 import { Button, Row, Col, Form, Container } from 'react-bootstrap';
-import { BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from 'react-icons/bs';
+import {
+    BsEnvelopeFill,
+    BsGeoAltFill,
+    BsInstagram,
+    BsTelephoneFill,
+} from 'react-icons/bs';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import './contact.css';
@@ -12,7 +17,17 @@ function ContactUs() {
             <main>
                 <section id='contact-us' className='pt-4 pb-5'>
                     <Container className='px-lg-5'>
-                        <h1 className='text-center py-5'>Contact Us</h1>
+                        <h1 className='text-center pt-5 mb-3 '>Contact Us</h1>
+                        <p className='text-center'>
+                            For virtual consultations and to order from our
+                            Hazel Bee, Hazel Babies, and Hazel Lifestyle stores,
+                            please don't hesitate to reach out to us. You can
+                            send us a direct message on our Instagram pages
+                            below or contact us directly via phone at{' '}
+                            <a href='tel:+2349056043956'>+2349056043956</a>. Our
+                            team is always happy to help you bring your vision
+                            to life!
+                        </p>
                         <Row className='py-md-5 pb-5 gy-5'>
                             <Col lg={6} xl={4}>
                                 <div className='open-days text-md-start text-center'>
@@ -39,7 +54,7 @@ function ContactUs() {
                                         Reach Us On:
                                     </h2>
 
-                                    <div className='mb-4'>
+                                    <div className='mb-3'>
                                         <BsTelephoneFill className='icon mb-1' />
                                         <span className='ms-3'>
                                             <a
@@ -50,7 +65,7 @@ function ContactUs() {
                                         </span>
                                     </div>
 
-                                    <div className='mb-4'>
+                                    <div className='mb-3'>
                                         <BsEnvelopeFill className='icon mb-1' />
                                         <span className='ms-3'>
                                             <a
@@ -66,6 +81,45 @@ function ContactUs() {
                                         <span className='ms-3'>
                                             12, Omerelu street, GRA Phase I,
                                             Port-Harcourt.
+                                        </span>
+                                    </div>
+
+                                    <div className='mb-3'>
+                                        <span className='ms-3'>
+                                            <a
+                                                href='https://www.instagram.com/hazelbe.e/'
+                                                target='_blank'
+                                                className='fw-bolder ig text-decoration-none'
+                                                rel='noopener noreferrer'>
+                                                @hazelbe.e
+                                            </a>{' '}
+                                            - Hazel Bee
+                                        </span>
+                                    </div>
+
+                                    <div className='mb-3'>
+                                        <span className='ms-3'>
+                                            <a
+                                                href='https://www.instagram.com/hazel_babies/'
+                                                target='_blank'
+                                                className='fw-bolder ig text-decoration-none'
+                                                rel='noopener noreferrer'>
+                                                @hazel_babies
+                                            </a>{' '}
+                                            - Hazel Babies
+                                        </span>
+                                    </div>
+
+                                    <div className='mb-3'>
+                                        <span className='ms-3'>
+                                            <a
+                                                href='https://www.instagram.com/hazel_lifestyle/'
+                                                target='_blank'
+                                                className='fw-bolder ig text-decoration-none'
+                                                rel='noopener noreferrer'>
+                                                @hazel_lifestyle
+                                            </a>{' '}
+                                            - Hazel Lifestyle
                                         </span>
                                     </div>
                                 </div>

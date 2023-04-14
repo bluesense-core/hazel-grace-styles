@@ -1,0 +1,42 @@
+#babies-hero {
+    background-image: url(../../img/babies-img/hero.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    height: calc(0.5792 * 100vw);
+}
+
+#babies-hero .blue-box {
+    background-color: rgba(137, 207, 240, 0.9);
+}
+
+@media (max-width: 47.9375rem) {
+    #babies-hero .blue-box {
+        background: none;
+    }
+}
+
+#babies-hero h1 {
+    font-family: 'Bubblegum Sans', cursive;
+    color: #ffffff;
+    text-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 47.9375rem) {
+    #babies-hero h1 {
+        color: #d5b066;
+        text-shadow: 0rem 0.25rem 0.25rem hwb(0 100% 0% / 0.25);
+    }
+}
+
+@media (max-width: 25rem) {
+    #babies-hero h1 {
+        font-size: 1.875rem;
+    }
+}
+
+@media (max-width: 330px) {
+    #babies-hero h1 {
+        font-size: 1.6rem;
+    }
+}

@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* font-family: 'Happy Monkey', cursive; */
@@ -19,7 +20,8 @@ button:focus,
     box-shadow: none;
 }
 
-button:active {
+button:active,
+.btn:active {
     box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
 
@@ -39,9 +41,9 @@ main {
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
     main {
-        margin-top: 177.3px;
+        margin-top: 177.5px;
     }
 }
 

@@ -1,0 +1,59 @@
+#bee-about {
+    padding: 5em 0;
+    border-bottom: 1px solid #886f68;
+}
+
+#bee-about h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #40444b;
+    font-weight: 700;
+}
+
+#bee-about p {
+    text-shadow: 0px 0px 0px #000000a1;
+    padding: 0 12em;
+}
+
+@media (max-width: 1399px) {
+    #bee-about p {
+        padding: 0 10em;
+    }
+}
+
+@media (max-width: 1199px) {
+    #bee-about p {
+        padding: 0 6em;
+    }
+}
+
+@media (max-width: 991px) {
+    #bee-about p {
+        padding: 0;
+    }
+}
+
+#bee-about .card {
+    background: transparent;
+    border-radius: 0%;
+    border: none;
+}
+
+#bee-about .card-title {
+    font-family: 'Berkshire Swash';
+    font-weight: 400;
+    color: #40444b;
+}
+
+#bee-about .card-text {
+    font-family: Raleway;
+    font-weight: 400;
+    color: #886f68;
+    text-shadow: none;
+}
+#bee-about img {
+    transition: 200ms;
+}
+
+#bee-about .card a:hover img {
+    transform: scale(1.08);
+}

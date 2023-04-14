@@ -36,6 +36,9 @@ import BB from './components/genesis/BB';
 import Esta from './components/genesis/Esta';
 import Pink from './components/genesis/Pink';
 import { CartProvider } from 'react-use-cart';
+import HazelBee from './ui/HazelBee';
+import HazelBabies from './ui/HazelBabies';
+import HazelLifestyle from './ui/HazelLifestyle';
 
 function App() {
     const formatter = new Intl.NumberFormat('en-US');
@@ -173,6 +176,13 @@ function App() {
                         <Route
                             path='/genesis/pink-blouse'
                             element={<Pink formatter={formatter} />}
+                        />
+
+                        <Route path='/hazelbee' element={<HazelBee />} />
+                        <Route path='/hazelbabies' element={<HazelBabies />} />
+                        <Route
+                            path='/hazellifestyle'
+                            element={<HazelLifestyle />}
                         />
 
                         <Route

@@ -8,10 +8,10 @@ import {
     Col,
     Row,
 } from 'react-bootstrap';
-import Logo from '../img/logo.png';
+import Logo from '../../img/logo.png';
 import './header.css';
-import SidebarMenu from './SidebarMenu';
-import Socials from './Socials';
+import SidebarMenu from '../SidebarMenu';
+import Socials from '../Socials';
 import { BsBag, BsChevronDown } from 'react-icons/bs';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useCart } from 'react-use-cart';
@@ -120,10 +120,10 @@ function Header() {
                                                 Hazel Babies
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
-                                                className='text-capitalize'
-                                                href='/hazellifestyle'>
-                                                Hazel Lifestyle
-                                            </NavDropdown.Item>
+                                        className='text-capitalize'
+                                        href='/hazellifestyle'>
+                                        Hazel Lifestyle
+                                    </NavDropdown.Item>
                                         </NavDropdown>
 
                                         <Nav.Item className='py-3 text-decoration-none'>

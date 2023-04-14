@@ -1,0 +1,57 @@
+#babies-about {
+    padding: 5em 0;
+    border-bottom: 1px solid #000;
+}
+
+#babies-about h2 {
+    font-family: 'Bubblegum Sans', cursive;
+    color: #89cff0;
+    font-weight: 400;
+}
+
+#babies-about p {
+    padding: 0 8em;
+}
+
+@media (max-width: 1399px) {
+    #babies-about p {
+        padding: 0 6em;
+    }
+}
+
+@media (max-width: 1199px) {
+    #babies-about p {
+        padding: 0 2em;
+    }
+}
+
+@media (max-width: 991px) {
+    #babies-about p {
+        padding: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    #babies-about p {
+        font-size: 18px !important;
+    }
+}
+
+#babies-about .card {
+    background: transparent;
+    border-radius: 0%;
+    border: none;
+}
+
+#babies-about .card-title {
+    font-family: 'Berkshire Swash';
+    font-weight: 400;
+    color: #40444b;
+}
+#babies-about img {
+    transition: 200ms;
+}
+
+#babies-about .card a:hover img {
+    transform: scale(1.08);
+}

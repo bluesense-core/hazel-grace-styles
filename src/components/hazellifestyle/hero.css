@@ -1,0 +1,72 @@
+#lifestyle-hero {
+    background-image: url(../../img/lifestyle-img/hero.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    height: calc(0.5507 * 100vw);
+}
+
+#lifestyle-hero h1 {
+    font-family: 'League Spartan', sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 47.9375rem) {
+    #lifestyle-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+    #lifestyle-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 25rem) {
+    #lifestyle-hero h1 {
+        font-size: 1.875rem;
+    }
+}
+
+@media (max-width: 330px) {
+    #lifestyle-hero h1 {
+        font-size: 1.6rem;
+    }
+}
+
+#lifestyle-hero .btn {
+    background: #d5b066;
+    color: #fff;
+    border: 1px solid #d5b066;
+    border-radius: 0;
+    font-size: 20px;
+    font-weight: 700;
+    width: 30%;
+}
+
+@media (max-width: 767px) {
+    #lifestyle-hero .btn {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 615px) {
+    #lifestyle-hero .btn {
+        width: 35%;
+    }
+}
+
+#lifestyle-hero .btn:hover,
+#lifestyle-hero .btn:focus,
+#lifestyle-hero .btn:active {
+    background: #886f68;
+    color: #fff;
+    border: 1px solid #886f68;
+}
+
+#lifestyle-hero .btn:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}

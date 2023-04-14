@@ -1,0 +1,47 @@
+#lifestyle-about {
+    padding: 5em 0;
+    border-bottom: 1px solid #000;
+}
+
+#lifestyle-about h2 {
+    font-family: 'League Spartan', sans-serif;
+    color: #d5b066;
+    font-weight: 900;
+}
+
+#lifestyle-about p {
+    padding: 0 4em;
+}
+
+@media (max-width: 1399px) {
+    #lifestyle-about p {
+        padding: 0 2em;
+    }
+}
+
+@media (max-width: 1199px) {
+    #lifestyle-about p {
+        padding: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    #lifestyle-about p {
+        font-size: 18px !important;
+    }
+}
+
+#lifestyle-about img {
+    transition: 200ms;
+}
+
+@media (max-width: 900px) {
+    #lifestyle-about img {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+#lifestyle-about img:hover {
+    transform: scale(1.08);
+}

@@ -5,7 +5,7 @@
 #contact-us h1 {
     font-family: 'Happy Monkey';
     font-size: 30px;
-    color: #444444;
+    color: #d5b066;
 }
 
 #contact-us h2 {
@@ -19,6 +19,10 @@
 #contact-us a {
     font-size: 18px;
     color: #444444;
+}
+
+#contact-us span .ig {
+    color: #d5b066;
 }
 
 #contact-us .icon {
