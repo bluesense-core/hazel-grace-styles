@@ -16,14 +16,18 @@ const Hero = () => {
                         lg={{ span: 6, order: 'first' }}
                         className='text-lg-start text-center my-lg-auto py-xl-0 py-lg-5 ps-lg-0 pe-lg-4'>
                         <h1 className='display-3 mb-0'>
-                            Affordable Bespoke Clothing for Every Occasion
+                            Elevate Your Wedding Look with Us
                         </h1>
                         <p className='my-4 pe-lg-5 fs-5 '>
-                            Welcome to Hazel Bee, your destination for
-                            affordable bespoke ready-to-wear clothing. We
-                            understand that looking good shouldn't come at a
-                            high cost, which is why we offer our clients quality
-                            clothing at prices that won't break the bank.
+                            Welcome to Hazel Bee, your go-to destination for
+                            affordable and stylish ready-to-wear clothing
+                            perfect for any wedding occasion.{' '}
+                            <span className='d-sm-inline d-none'>
+                                Whether you're a bridesmaid, a wedding guest, or
+                                the mother of the bride, we've got you covered
+                                with our curated collection of elegant and chic
+                                outfits that are sure to turn heads.
+                            </span>
                         </p>
                         <Button
                             href='/naledi'

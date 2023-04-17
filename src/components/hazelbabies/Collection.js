@@ -13,11 +13,11 @@ const Collection = () => {
                     Explore Our Collection
                 </h2>
                 <p className='fs-5 text-center'>
-                    From classic styles to modern designs, our collection is
-                    inspired by the latest fashion trends and tailored to fit
-                    your child's unique style and personality. Whether you're
-                    looking for a princess-inspired dress or a sharp suit for
-                    your little gentleman, we've got you covered.
+                    Step into the magical world of Hazel Babies and explore our
+                    stunning collection of kidswear designed for life's special
+                    moments. From birthdays to flower girl dresses, baptism
+                    ceremonies to graduations, we have an outfit for every
+                    occasion.
                 </p>
 
                 <Row
