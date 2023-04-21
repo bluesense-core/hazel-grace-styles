@@ -30,7 +30,7 @@ const Hero = () => {
                             </span>
                         </p>
                         <Button
-                            href='/naledi'
+                            href='/hazelbee/genesis'
                             className='mt-2 px-md-5 px-4 py-3 '>
                             Shop Now <FaAngleDoubleDown className='ms-2 mb-1' />
                         </Button>

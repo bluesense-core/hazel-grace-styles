@@ -28,7 +28,7 @@ const GenesisItem = ({ product, formatter }) => {
                 onMouseLeave={() => setIsOverlay(false)}>
                 <NavLink
                     reloadDocument
-                    to={'/genesis/' + toLink(product.alt)}
+                    to={'/hazelbee/genesis/' + toLink(product.alt)}
                     className='text-decoration-none '>
                     <LazyLoadImage
                         style={gray}

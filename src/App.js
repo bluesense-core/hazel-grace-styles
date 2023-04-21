@@ -64,7 +64,7 @@ function App() {
                             }
                         />
                         <Route
-                            path='/genesis'
+                            path='/hazelbee/genesis'
                             element={
                                 <GenesisShop
                                     isLoading={isLoading}
@@ -112,67 +112,67 @@ function App() {
 
                         {/* Genesis Clothes */}
                         <Route
-                            path='/genesis/pomegranate-blouse'
+                            path='/hazelbee/genesis/pomegranate-blouse'
                             element={<Pomegranate formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/hazel-shirt'
+                            path='/hazelbee/genesis/hazel-shirt'
                             element={<Hazel formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/pistachio-blouse'
+                            path='/hazelbee/genesis/pistachio-blouse'
                             element={<Pistachio formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/grace-dress'
+                            path='/hazelbee/genesis/grace-dress'
                             element={<Grace formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/jessica-dress'
+                            path='/hazelbee/genesis/jessica-dress'
                             element={<Jessica formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/anita-dress'
+                            path='/hazelbee/genesis/anita-dress'
                             element={<Anita formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/naomi-dress'
+                            path='/hazelbee/genesis/naomi-dress'
                             element={<Naomi formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/ruth-dress'
+                            path='/hazelbee/genesis/ruth-dress'
                             element={<Ruth formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/chia-dress'
+                            path='/hazelbee/genesis/chia-dress'
                             element={<Chia formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/wildrice-dress'
+                            path='/hazelbee/genesis/wildrice-dress'
                             element={<Wildrice formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/quinoa-dress'
+                            path='/hazelbee/genesis/quinoa-dress'
                             element={<Quinoa formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/sesame-dress'
+                            path='/hazelbee/genesis/sesame-dress'
                             element={<Sesame formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/yellow-dress'
+                            path='/hazelbee/genesis/yellow-dress'
                             element={<Yellow formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/bb-ensemble'
+                            path='/hazelbee/genesis/bb-ensemble'
                             element={<BB formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/esta-dress'
+                            path='/hazelbee/genesis/esta-dress'
                             element={<Esta formatter={formatter} />}
                         />
                         <Route
-                            path='/genesis/pink-blouse'
+                            path='/hazelbee/genesis/pink-blouse'
                             element={<Pink formatter={formatter} />}
                         />
 

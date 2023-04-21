@@ -11,7 +11,9 @@ function NalediShop({ isLoading, formatter }) {
             <Header />
             <main className='shop'>
                 <section id='shop-naledi'>
-                    <p className='new text-center py-3 mb-2'>#New</p>
+                    <p className='new text-center py-3 mb-2'>
+                        #HazelGraceStyles
+                    </p>
                     <h1 className='text-center display-6 lh-1'>
                         Naledi Collection
                     </h1>

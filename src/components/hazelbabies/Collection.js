@@ -30,7 +30,7 @@ const Collection = () => {
                             <Card className='h-100'>
                                 <NavLink
                                     reloadDocument
-                                    to='/genesis'
+                                    to='/hazelbee/genesis'
                                     className='text-decoration-none'>
                                     <LazyLoadImage
                                         className='img-fluid d-block mx-auto'

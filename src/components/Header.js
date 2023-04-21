@@ -90,7 +90,7 @@ function Header() {
                                             id=''>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/genesis'>
+                                                href='/hazelbee/genesis'>
                                                 Genesis Collection
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
@@ -170,7 +170,7 @@ function Header() {
                                     onMouseLeave={hideDropdown1}>
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/genesis'>
+                                        href='/hazelbee/genesis'>
                                         Genesis Collection
                                     </NavDropdown.Item>
                                     <NavDropdown.Item

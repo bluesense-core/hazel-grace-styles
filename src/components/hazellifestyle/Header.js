@@ -90,7 +90,7 @@ function Header() {
                                             id=''>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/genesis'>
+                                                href='/hazelbee/genesis'>
                                                 Genesis Collection
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
@@ -120,10 +120,10 @@ function Header() {
                                                 Hazel Babies
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
-                                        className='text-capitalize'
-                                        href='/hazellifestyle'>
-                                        Hazel Lifestyle
-                                    </NavDropdown.Item>
+                                                className='text-capitalize'
+                                                href='/hazellifestyle'>
+                                                Hazel Lifestyle
+                                            </NavDropdown.Item>
                                         </NavDropdown>
 
                                         <Nav.Item className='py-3 text-decoration-none'>
@@ -170,7 +170,7 @@ function Header() {
                                     onMouseLeave={hideDropdown1}>
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/genesis'>
+                                        href='/hazelbee/genesis'>
                                         Genesis Collection
                                     </NavDropdown.Item>
                                     <NavDropdown.Item
