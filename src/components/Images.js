@@ -51,7 +51,43 @@ import ruththumb2 from '../img/shop-img/genesis/ruth/thumb-ruth2.jpg';
 import sesame from '../img/shop-img/genesis/sesame/main-sesame.png';
 import wildrice from '../img/shop-img/genesis/wildrice/main-wild.png';
 import yellow from '../img/shop-img/genesis/yellow/main-yell.png';
-import yellthumb from '../img/shop-img/genesis/yellow/thumb-yell.jpeg';
+import yellthumb from '../img/shop-img/genesis/yellow/thumb-yell.png';
+
+// Bespoke Images
+import lookone from '../img/shop-img/bespoke/look1/look-one.png';
+import thumbone1 from '../img/shop-img/bespoke/look1/thumbone1.png';
+import thumbone2 from '../img/shop-img/bespoke/look1/thumbone2.png';
+import thumbone3 from '../img/shop-img/bespoke/look1/thumbone3.png';
+import looktwo from '../img/shop-img/bespoke/look2/look-two.png';
+import thumbtwo1 from '../img/shop-img/bespoke/look2/thumbtwo1.png';
+import thumbtwo2 from '../img/shop-img/bespoke/look2/thumbtwo2.png';
+import lookthree from '../img/shop-img/bespoke/look3/look-three.png';
+import thumbthree1 from '../img/shop-img/bespoke/look3/thumbthree1.png';
+import thumbthree2 from '../img/shop-img/bespoke/look3/thumbthree2.png';
+import lookfour from '../img/shop-img/bespoke/look4/look-four.png';
+import thumbfour1 from '../img/shop-img/bespoke/look4/thumbfour1.png';
+import thumbfour2 from '../img/shop-img/bespoke/look4/thumbfour2.png';
+import lookfive from '../img/shop-img/bespoke/look5/look-five.png';
+import thumbfive1 from '../img/shop-img/bespoke/look5/thumbfive1.png';
+import thumbfive2 from '../img/shop-img/bespoke/look5/thumbfive2.png';
+import thumbfive3 from '../img/shop-img/bespoke/look5/thumbfive3.png';
+import looksix from '../img/shop-img/bespoke/look6/look-six.png';
+import thumbsix1 from '../img/shop-img/bespoke/look6/thumbsix1.png';
+import thumbsix2 from '../img/shop-img/bespoke/look6/thumbsix2.png';
+import thumbsix3 from '../img/shop-img/bespoke/look6/thumbsix3.png';
+import lookseven from '../img/shop-img/bespoke/look7/look-seven.png';
+import thumbseven from '../img/shop-img/bespoke/look7/thumbseven.png';
+import lookeight from '../img/shop-img/bespoke/look8/look-eight.png';
+import thumbeight from '../img/shop-img/bespoke/look8/thumbeight.png';
+import looknine from '../img/shop-img/bespoke/look9/look-nine.png';
+import thumbnine from '../img/shop-img/bespoke/look9/thumbnine.png';
+import lookten from '../img/shop-img/bespoke/look10/look-ten.png';
+import thumbten1 from '../img/shop-img/bespoke/look10/thumbten1.png';
+import thumbten2 from '../img/shop-img/bespoke/look10/thumbten2.png';
+import lookeleven from '../img/shop-img/bespoke/look11/look-eleven.png';
+import thumbeleven1 from '../img/shop-img/bespoke/look11/thumbeleven1.png';
+import thumbeleven2 from '../img/shop-img/bespoke/look11/thumbeleven2.png';
+import thumbeleven3 from '../img/shop-img/bespoke/look11/thumbeleven3.png';
 
 // Hazelbee Images
 import cilia from '../img/hazelbee-img/Cilia.png';
@@ -625,34 +661,9 @@ const genesisData = [
             },
         ],
     },
-    // {
-    //     id: 22,
-    //     src: yellow,
-    //     alt: 'Yellow Dress',
-    //     price: 45000,
-    //     carousel: [
-    //         {
-    //             original: yellow,
-    //             thumbnail: yellow,
-    //             originalClass: 'originalImg',
-    //             thumbnailClass: 'thumbImg',
-    //             originalAlt: 'Yellow Dress',
-    //             thumbnailAlt: 'Yellow Dress',
-    //             loading: 'lazy',
-    //         },
-    //         {
-    //             original: yellthumb,
-    //             thumbnail: yellthumb,
-    //             originalClass: 'originalImg',
-    //             thumbnailClass: 'thumbImg',
-    //             originalAlt: 'Yellow Dress',
-    //             thumbnailAlt: 'Yellow Dress',
-    //             loading: 'lazy',
-    //         },
-    //     ],
-    // },
+
     {
-        id: 23,
+        id: 22,
         src: bb,
         alt: 'BB Ensemble',
         price: 30000,
@@ -687,7 +698,7 @@ const genesisData = [
         ],
     },
     {
-        id: 24,
+        id: 23,
         src: esta,
         alt: 'Esta Dress',
         price: 25000,
@@ -722,7 +733,7 @@ const genesisData = [
         ],
     },
     {
-        id: 25,
+        id: 24,
         src: pink,
         alt: 'Pink Blouse',
         price: 25000,
@@ -743,6 +754,438 @@ const genesisData = [
                 thumbnailClass: 'thumbImg',
                 originalAlt: 'Pink Blouse',
                 thumbnailAlt: 'Pink Blouse',
+                loading: 'lazy',
+            },
+        ],
+    },
+];
+
+const bespokeData = [
+    {
+        id: 25,
+        src: lookone,
+        alt: 'Look 1',
+        carousel: [
+            {
+                original: lookone,
+                thumbnail: lookone,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 1',
+                thumbnailAlt: 'Look 1',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbone1,
+                thumbnail: thumbone1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 1',
+                thumbnailAlt: 'Look 1',
+                loading: 'lazy',
+            },
+            {
+                original: thumbone2,
+                thumbnail: thumbone2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 1',
+                thumbnailAlt: 'Look 1',
+                loading: 'lazy',
+            },
+            {
+                original: thumbone3,
+                thumbnail: thumbone3,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 1',
+                thumbnailAlt: 'Look 1',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 26,
+        src: looktwo,
+        alt: 'Look 2',
+        carousel: [
+            {
+                original: looktwo,
+                thumbnail: looktwo,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 2',
+                thumbnailAlt: 'Look 2',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbtwo1,
+                thumbnail: thumbtwo1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 2',
+                thumbnailAlt: 'Look 2',
+                loading: 'lazy',
+            },
+            {
+                original: thumbtwo2,
+                thumbnail: thumbtwo2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 2',
+                thumbnailAlt: 'Look 2',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 27,
+        src: lookthree,
+        alt: 'Look 3',
+        carousel: [
+            {
+                original: lookthree,
+                thumbnail: lookthree,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 3',
+                thumbnailAlt: 'Look 3',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbthree1,
+                thumbnail: thumbthree1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 3',
+                thumbnailAlt: 'Look 3',
+                loading: 'lazy',
+            },
+            {
+                original: thumbthree2,
+                thumbnail: thumbthree2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 3',
+                thumbnailAlt: 'Look 3',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 28,
+        src: lookfour,
+        alt: 'Look 4',
+        carousel: [
+            {
+                original: lookfour,
+                thumbnail: lookfour,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 4',
+                thumbnailAlt: 'Look 4',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbfour1,
+                thumbnail: thumbfour1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 4',
+                thumbnailAlt: 'Look 4',
+                loading: 'lazy',
+            },
+            {
+                original: thumbfour2,
+                thumbnail: thumbfour2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 4',
+                thumbnailAlt: 'Look 4',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 29,
+        src: lookfive,
+        alt: 'Look 5',
+        carousel: [
+            {
+                original: lookfive,
+                thumbnail: lookfive,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 5',
+                thumbnailAlt: 'Look 5',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbfive1,
+                thumbnail: thumbfive1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 5',
+                thumbnailAlt: 'Look 5',
+                loading: 'lazy',
+            },
+            {
+                original: thumbfive2,
+                thumbnail: thumbfive2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 5',
+                thumbnailAlt: 'Look 5',
+                loading: 'lazy',
+            },
+            {
+                original: thumbfive3,
+                thumbnail: thumbfive3,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 5',
+                thumbnailAlt: 'Look 5',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 30,
+        src: looksix,
+        alt: 'Look 6',
+        carousel: [
+            {
+                original: looksix,
+                thumbnail: looksix,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 6',
+                thumbnailAlt: 'Look 6',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbsix1,
+                thumbnail: thumbsix1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 6',
+                thumbnailAlt: 'Look 6',
+                loading: 'lazy',
+            },
+            {
+                original: thumbsix2,
+                thumbnail: thumbsix2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 6',
+                thumbnailAlt: 'Look 6',
+                loading: 'lazy',
+            },
+            {
+                original: thumbsix3,
+                thumbnail: thumbsix3,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 6',
+                thumbnailAlt: 'Look 6',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 31,
+        src: lookseven,
+        alt: 'Look 7',
+        carousel: [
+            {
+                original: lookseven,
+                thumbnail: lookseven,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 7',
+                thumbnailAlt: 'Look 7',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbseven,
+                thumbnail: thumbseven,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 7',
+                thumbnailAlt: 'Look 7',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 32,
+        src: lookeight,
+        alt: 'Look 8',
+        carousel: [
+            {
+                original: lookeight,
+                thumbnail: lookeight,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 8',
+                thumbnailAlt: 'Look 8',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbeight,
+                thumbnail: thumbeight,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 8',
+                thumbnailAlt: 'Look 8',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 33,
+        src: looknine,
+        alt: 'Look 9',
+        carousel: [
+            {
+                original: looknine,
+                thumbnail: looknine,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 9',
+                thumbnailAlt: 'Look 9',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbnine,
+                thumbnail: thumbnine,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 9',
+                thumbnailAlt: 'Look 9',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 34,
+        src: lookten,
+        alt: 'Look 10',
+        carousel: [
+            {
+                original: lookten,
+                thumbnail: lookten,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 10',
+                thumbnailAlt: 'Look 10',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbten1,
+                thumbnail: thumbten1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 10',
+                thumbnailAlt: 'Look 10',
+                loading: 'lazy',
+            },
+            {
+                original: thumbten2,
+                thumbnail: thumbten2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 10',
+                thumbnailAlt: 'Look 10',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 35,
+        src: lookeleven,
+        alt: 'Look 11',
+        carousel: [
+            {
+                original: lookeleven,
+                thumbnail: lookeleven,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 11',
+                thumbnailAlt: 'Look 11',
+                loading: 'lazy',
+            },
+
+            {
+                original: thumbeleven1,
+                thumbnail: thumbeleven1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 11',
+                thumbnailAlt: 'Look 11',
+                loading: 'lazy',
+            },
+            {
+                original: thumbeleven2,
+                thumbnail: thumbeleven2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 11',
+                thumbnailAlt: 'Look 11',
+                loading: 'lazy',
+            },
+            {
+                original: thumbeleven3,
+                thumbnail: thumbeleven3,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 11',
+                thumbnailAlt: 'Look 11',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 36,
+        src: yellow,
+        alt: 'Look 12',
+        carousel: [
+            {
+                original: yellow,
+                thumbnail: yellow,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 12',
+                thumbnailAlt: 'Look 12',
+                loading: 'lazy',
+            },
+            {
+                original: yellthumb,
+                thumbnail: yellthumb,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Look 12',
+                thumbnailAlt: 'Look 12',
                 loading: 'lazy',
             },
         ],
@@ -785,6 +1228,7 @@ const hazelLifestyleData = [
 export {
     nalediData,
     genesisData,
+    bespokeData,
     hazelBeeData,
     hazelBabiesData,
     hazelLifestyleData,

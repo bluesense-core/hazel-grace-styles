@@ -29,7 +29,6 @@ import Chia from './components/genesis/Chia';
 import Wildrice from './components/genesis/Wildrice';
 import Quinoa from './components/genesis/Quinoa';
 import Sesame from './components/genesis/Sesame';
-import Yellow from './components/genesis/Yellow';
 import BB from './components/genesis/BB';
 import Esta from './components/genesis/Esta';
 import Pink from './components/genesis/Pink';
@@ -37,6 +36,19 @@ import { CartProvider } from 'react-use-cart';
 import HazelBee from './ui/HazelBee';
 import HazelBabies from './ui/HazelBabies';
 import HazelLifestyle from './ui/HazelLifestyle';
+import BespokeShop from './ui/BespokeShop';
+import Yellow from './components/bespoke/Yellow';
+import Look1 from './components/bespoke/Look1';
+import Look2 from './components/bespoke/Look2';
+import Look3 from './components/bespoke/Look3';
+import Look4 from './components/bespoke/Look4';
+import Look5 from './components/bespoke/Look5';
+import Look6 from './components/bespoke/Look6';
+import Look7 from './components/bespoke/Look7';
+import Look8 from './components/bespoke/Look8';
+import Look9 from './components/bespoke/Look9';
+import Look10 from './components/bespoke/Look10';
+import Look11 from './components/bespoke/Look11';
 
 function App() {
     const formatter = new Intl.NumberFormat('en-US');
@@ -64,6 +76,10 @@ function App() {
                             }
                         />
                         <Route
+                            path='/bespoke'
+                            element={<BespokeShop isLoading={isLoading} />}
+                        />
+                        <Route
                             path='/hazelbee/genesis'
                             element={
                                 <GenesisShop
@@ -72,6 +88,7 @@ function App() {
                                 />
                             }
                         />
+
                         {/* Naledi CLothes */}
                         <Route
                             path='/naledi/arcturus-blouse'
@@ -109,6 +126,20 @@ function App() {
                             path='/naledi/venus-dress'
                             element={<Venus formatter={formatter} />}
                         />
+
+                        {/* Bespoke Clothes */}
+                        <Route path='/bespoke/look-1' element={<Look1 />} />
+                        <Route path='/bespoke/look-2' element={<Look2 />} />
+                        <Route path='/bespoke/look-3' element={<Look3 />} />
+                        <Route path='/bespoke/look-4' element={<Look4 />} />
+                        <Route path='/bespoke/look-5' element={<Look5 />} />
+                        <Route path='/bespoke/look-6' element={<Look6 />} />
+                        <Route path='/bespoke/look-7' element={<Look7 />} />
+                        <Route path='/bespoke/look-8' element={<Look8 />} />
+                        <Route path='/bespoke/look-9' element={<Look9 />} />
+                        <Route path='/bespoke/look-10' element={<Look10 />} />
+                        <Route path='/bespoke/look-11' element={<Look11 />} />
+                        <Route path='/bespoke/look-12' element={<Yellow />} />
 
                         {/* Genesis Clothes */}
                         <Route

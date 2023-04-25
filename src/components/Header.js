@@ -40,9 +40,9 @@ function Header() {
     const { isEmpty, totalItems } = useCart();
 
     return (
-        <header className='shadow-sm fixed-top'>
+        <header className='shadow-sm '>
             <div className='banner'>
-                <a href='/naledi' className='text-decoration-none text-white'>
+                <a href='/bespoke' className='text-decoration-none text-white'>
                     <p className='m-0 py-2 text-uppercase text-center'>
                         Shop Our New Collection
                     </p>
@@ -97,6 +97,11 @@ function Header() {
                                                 className='text-capitalize'
                                                 href='/naledi'>
                                                 Naledi Collection
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Item
+                                                className='text-capitalize'
+                                                href='/bespoke'>
+                                                Bespoke Collection
                                             </NavDropdown.Item>
                                         </NavDropdown>
 
@@ -177,6 +182,11 @@ function Header() {
                                         className='text-capitalize'
                                         href='/naledi'>
                                         Naledi Collection
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item
+                                        className='text-capitalize'
+                                        href='/bespoke'>
+                                        Bespoke Collection
                                     </NavDropdown.Item>
                                 </NavDropdown>
 

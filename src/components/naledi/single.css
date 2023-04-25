@@ -1,4 +1,7 @@
 @import '~react-image-gallery/styles/css/image-gallery.css';
+#single-view {
+    border-bottom: 1px solid #d5b066;
+}
 
 #single-view .hgs {
     font-weight: 400;

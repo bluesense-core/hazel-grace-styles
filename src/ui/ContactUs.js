@@ -14,11 +14,10 @@ function ContactUs() {
                     <Container className='px-lg-5'>
                         <h1 className='text-center pt-5 mb-3 '>Contact Us</h1>
                         <p className='text-center'>
-                            For virtual consultations and to order from our
-                            Hazel Bee, Hazel Babies, and Hazel Lifestyle stores,
-                            please don't hesitate to reach out to us. You can
-                            send us a direct message on our Instagram pages
-                            below or contact us directly via phone at{' '}
+                            For virtual consultations and to order from all our
+                            stores, please don't hesitate to reach out to us.
+                            You can send us a direct message on our Instagram
+                            pages below or contact us directly via phone at{' '}
                             <a href='tel:+2349056043956'>+2349056043956</a>. Our
                             team is always happy to help you bring your vision
                             to life!
