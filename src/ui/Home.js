@@ -71,11 +71,17 @@ function Home() {
                         <Row className='masonry d-lg-flex d-none gy-4 align-items-center'>
                             <Col lg={4}>
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     effect='blur'
                                     src={pink}
                                     className='naledi-img img-fluid'
                                 />
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     effect='blur'
                                     src={brown}
                                     className='naledi-img img-fluid down'
@@ -84,6 +90,9 @@ function Home() {
 
                             <Col lg={4} className=''>
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     effect='blur'
                                     src={spotlight}
                                     className='naledi-img img-fluid'
@@ -98,12 +107,18 @@ function Home() {
 
                             <Col lg={4}>
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     effect='blur'
                                     src={orange}
                                     className='naledi-img img-fluid'
                                 />
 
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     effect='blur'
                                     src={cream}
                                     className='naledi-img img-fluid down'
@@ -117,17 +132,26 @@ function Home() {
                             columnClassName='my-masonry-grid_column'>
                             <div>
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     effect='blur'
                                     src={pink}
                                     className='naledi-img img-fluid'
                                 />
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     effect='blur'
                                     src={brown}
                                     className='naledi-img img-fluid down'
                                 />
 
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     effect='blur'
                                     src={orange}
                                     className='naledi-img img-fluid down'
@@ -136,12 +160,18 @@ function Home() {
 
                             <div className=''>
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     effect='blur'
                                     src={spotlight}
                                     className='naledi-img img-fluid'
                                 />
 
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     effect='blur'
                                     src={cream}
                                     className='naledi-img img-fluid down'
@@ -162,11 +192,17 @@ function Home() {
                             <Row className='align-items-center gx-5 gy-5'>
                                 <Col lg={6} className='text-center'>
                                     <LazyLoadImage
+                                        delayTime='150'
+                                        effect='blur'
+                                        visibleByDefault={true}
                                         effect='blur'
                                         src={about1}
                                         className='img-fluid'
                                     />
                                     <LazyLoadImage
+                                        delayTime='150'
+                                        effect='blur'
+                                        visibleByDefault={true}
                                         effect='blur'
                                         src={about2}
                                         className='mt-5 about-2 d-lg-inline d-none img-fluid'

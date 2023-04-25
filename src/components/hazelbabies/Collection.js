@@ -33,6 +33,9 @@ const Collection = () => {
                                     to='/hazelbee/genesis'
                                     className='text-decoration-none'>
                                     <LazyLoadImage
+                                        delayTime='150'
+                                        effect='blur'
+                                        visibleByDefault={true}
                                         className='img-fluid d-block mx-auto'
                                         src={e.img}
                                         alt={e.title}

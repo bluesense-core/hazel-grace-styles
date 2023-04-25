@@ -64,6 +64,9 @@ function Header() {
                                     className='py-4 ps-4 sticky-top'>
                                     <Navbar.Brand>
                                         <LazyLoadImage
+                                            delayTime='150'
+                                            effect='blur'
+                                            visibleByDefault={true}
                                             className='off-logo img-fluid'
                                             src={Logo}
                                             effect='blur'
@@ -146,6 +149,9 @@ function Header() {
                         <Col xs={6} lg='auto' className='d-lg-flex d-block'>
                             <Navbar.Brand className='d-flex m-0 justify-content-center'>
                                 <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
                                     className='img-fluid header-logo d-lg-inline d-block m-lg-0 mx-auto'
                                     src={Logo}
                                     effect='blur'
