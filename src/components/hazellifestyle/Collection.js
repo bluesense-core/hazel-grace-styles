@@ -24,10 +24,6 @@ const Collection = () => {
                     <Masonry gutter='0' className='mx-auto g-md-'>
                         {hazelLifestyleData.map((e) => (
                             <LazyLoadImage
-                                delayTime='150'
-                                effect='blur'
-                                visibleByDefault={true}
-                                visibleByDefault={true}
                                 key={e.id}
                                 className='h-100'
                                 src={e.img}
