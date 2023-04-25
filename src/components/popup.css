@@ -1,0 +1,18 @@
+#scroll-popup .modal-content {
+    background-color: #d5b066;
+    color: #fff;
+}
+
+#scroll-popup .modal-title {
+    font-weight: 700;
+    font-family: 'Happy Monkey';
+}
+
+#scroll-popup p,
+#scroll-popup label {
+    font-weight: 500;
+}
+
+#scroll-popup button {
+    font-weight: 500;
+}

@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button, Row, Col, Form, Container } from 'react-bootstrap';
 import { BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from 'react-icons/bs';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import emailjs from '@emailjs/browser';
+
 import './contact.css';
 
 function ContactUs() {
+    const formRef = useRef();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        emailjs
+            .sendForm(
+                'service_hd6w2lk',
+                'template_6b6tzjx',
+                formRef.current,
+                'NadKuQM6677lL9__h'
+            )
+
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
+    };
     return (
         <>
             <Header />
@@ -122,12 +146,16 @@ function ContactUs() {
 
                         <div className='my-5 contact-form'>
                             <h2 className='text-center'>Send Us Message</h2>
-                            <Form className='mt-4 pb-5 d-block mx-auto'>
+                            <Form
+                                ref={formRef}
+                                onSubmit={handleSubmit}
+                                className='mt-4 pb-5 d-block mx-auto'>
                                 <Row>
                                     <Col lg={6} className='mt-4 mb-2'>
                                         <Form.Control
                                             placeholder='Your name'
                                             required
+                                            name='from_name'
                                             className=' message '
                                         />
                                     </Col>
@@ -135,6 +163,7 @@ function ContactUs() {
                                         <Form.Control
                                             placeholder='Your email'
                                             type='email'
+                                            name='from_email'
                                             required
                                             className=' message'
                                         />
@@ -143,6 +172,7 @@ function ContactUs() {
                                     <Form.Group className='mt-4 mb-2'>
                                         <Form.Control
                                             className=' message '
+                                            name='from_phone'
                                             placeholder='Your phone (optional)'
                                         />
                                     </Form.Group>
@@ -153,6 +183,7 @@ function ContactUs() {
                                             placeholder='Your message'
                                             rows={5}
                                             required
+                                            name='message'
                                             className=' message'
                                         />
                                     </Form.Group>

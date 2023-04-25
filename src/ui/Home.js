@@ -17,6 +17,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ScrollPopup from '../components/ScrollPopup';
 
 function Home() {
     const formRef = useRef();
@@ -74,7 +75,6 @@ function Home() {
                                     delayTime='150'
                                     effect='blur'
                                     visibleByDefault={true}
-                                    effect='blur'
                                     src={pink}
                                     className='naledi-img img-fluid'
                                 />
@@ -82,7 +82,6 @@ function Home() {
                                     delayTime='150'
                                     effect='blur'
                                     visibleByDefault={true}
-                                    effect='blur'
                                     src={brown}
                                     className='naledi-img img-fluid down'
                                 />
@@ -93,7 +92,6 @@ function Home() {
                                     delayTime='150'
                                     effect='blur'
                                     visibleByDefault={true}
-                                    effect='blur'
                                     src={spotlight}
                                     className='naledi-img img-fluid'
                                 />
@@ -110,7 +108,6 @@ function Home() {
                                     delayTime='150'
                                     effect='blur'
                                     visibleByDefault={true}
-                                    effect='blur'
                                     src={orange}
                                     className='naledi-img img-fluid'
                                 />
@@ -119,7 +116,6 @@ function Home() {
                                     delayTime='150'
                                     effect='blur'
                                     visibleByDefault={true}
-                                    effect='blur'
                                     src={cream}
                                     className='naledi-img img-fluid down'
                                 />
@@ -135,7 +131,6 @@ function Home() {
                                     delayTime='150'
                                     effect='blur'
                                     visibleByDefault={true}
-                                    effect='blur'
                                     src={pink}
                                     className='naledi-img img-fluid'
                                 />
@@ -143,7 +138,6 @@ function Home() {
                                     delayTime='150'
                                     effect='blur'
                                     visibleByDefault={true}
-                                    effect='blur'
                                     src={brown}
                                     className='naledi-img img-fluid down'
                                 />
@@ -152,7 +146,6 @@ function Home() {
                                     delayTime='150'
                                     effect='blur'
                                     visibleByDefault={true}
-                                    effect='blur'
                                     src={orange}
                                     className='naledi-img img-fluid down'
                                 />
@@ -163,7 +156,6 @@ function Home() {
                                     delayTime='150'
                                     effect='blur'
                                     visibleByDefault={true}
-                                    effect='blur'
                                     src={spotlight}
                                     className='naledi-img img-fluid'
                                 />
@@ -172,7 +164,6 @@ function Home() {
                                     delayTime='150'
                                     effect='blur'
                                     visibleByDefault={true}
-                                    effect='blur'
                                     src={cream}
                                     className='naledi-img img-fluid down'
                                 />
@@ -195,7 +186,6 @@ function Home() {
                                         delayTime='150'
                                         effect='blur'
                                         visibleByDefault={true}
-                                        effect='blur'
                                         src={about1}
                                         className='img-fluid'
                                     />
@@ -203,7 +193,6 @@ function Home() {
                                         delayTime='150'
                                         effect='blur'
                                         visibleByDefault={true}
-                                        effect='blur'
                                         src={about2}
                                         className='mt-5 about-2 d-lg-inline d-none img-fluid'
                                     />
@@ -244,6 +233,7 @@ function Home() {
                                 className='d-flex mt-3 justify-content-between align-items-center'>
                                 <Form.Control
                                     className='d-inline'
+                                    name='from_email'
                                     type='email'
                                     placeholder='Email'
                                     required
@@ -255,6 +245,7 @@ function Home() {
                 </section>
             </main>
             <Footer />
+            <ScrollPopup />
         </>
     );
 }
