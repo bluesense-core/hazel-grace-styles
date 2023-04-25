@@ -15,6 +15,10 @@ function Footer() {
                         className='justify-content-lg-start justify-content-center'>
                         <div className='d-flex justify-content-lg-start justify-content-center'>
                             <LazyLoadImage
+                                delayTime='150'
+                                effect='blur'
+                                visibleByDefault={true}
+                                visibleByDefault={true}
                                 className='d-lg-inline d-none footer-logo img-fluid mx-auto'
                                 src={Logo}
                                 effect='blur'

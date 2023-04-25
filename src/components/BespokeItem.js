@@ -30,6 +30,10 @@ const BespokeItem = ({ product }) => {
                     to={'/bespoke/' + toLink(product.alt)}
                     className='text-decoration-none '>
                     <LazyLoadImage
+                        delayTime='150'
+                        effect='blur'
+                        visibleByDefault={true}
+                        visibleByDefault={true}
                         style={gray}
                         className='position-relative product__image h-100 shop-img img-fluid'
                         src={product.src}
