@@ -26,14 +26,14 @@ const ScrollPopup = () => {
             );
     };
     const [showModal, setShowModal] = useState(false);
-    const handleScroll = () => {
-        const scrollTop =
-            window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > 800) {
-            setShowModal(true);
-            window.removeEventListener('scroll', handleScroll);
-        }
-    };
+    // const handleScroll = () => {
+    //     const scrollTop =
+    //         window.pageYOffset || document.documentElement.scrollTop;
+    //     if (scrollTop > 800) {
+    //         setShowModal(true);
+    //         window.removeEventListener('scroll', handleScroll);
+    //     }
+    // };
 
     const shouldShowPopup = (event) => {
         // const viewportHeight = window.innerHeight;
@@ -43,7 +43,7 @@ const ScrollPopup = () => {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        // window.addEventListener('scroll', handleScroll);
 
         const handleExitIntent = (event) => {
             if (shouldShowPopup(event)) {
@@ -54,7 +54,7 @@ const ScrollPopup = () => {
         document.addEventListener('mouseout', handleExitIntent);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            // window.removeEventListener('scroll', handleScroll);
             document.removeEventListener('mouseout', handleExitIntent);
         };
     });
