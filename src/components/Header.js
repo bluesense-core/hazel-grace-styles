@@ -69,7 +69,6 @@ function Header() {
                                             visibleByDefault={true}
                                             className='off-logo img-fluid'
                                             src={Logo}
-                                            effect='blur'
                                             alt='Hazel Grace Styles Logo'
                                         />
                                     </Navbar.Brand>
@@ -154,7 +153,6 @@ function Header() {
                                     visibleByDefault={true}
                                     className='img-fluid header-logo d-lg-inline d-block m-lg-0 mx-auto'
                                     src={Logo}
-                                    effect='blur'
                                     alt='Hazel Grace Styles Logo'
                                 />
                             </Navbar.Brand>
