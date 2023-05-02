@@ -16,7 +16,8 @@
 #home .home-hero h1 {
     font-weight: 300;
     text-transform: uppercase;
-    text-shadow: 5px 10px 5px rgba(250, 250, 250, 0.63);
+    text-shadow: 5px 10px 5px #000000a9;
+    /* color: #d5b066; */
 }
 
 #home .home-hero h2 {
@@ -26,35 +27,30 @@
 }
 
 @media (max-width: 767px) {
-    #home .home-hero h1 {
+    /* #home .home-hero h1 {
         font-size: 4.5vw;
-    }
-
+    } */
+    /* 
     #home .home-hero h2 {
         font-size: 3.5vw;
-    }
+    } */
 }
 
-@media (max-width: 600px) {
-    #home .home-hero h1 {
-        font-size: 5vw;
+@media (max-width: 599px) {
+    #home .home-hero {
+        background-image: url(../../img/home-img/hero-left.png);
+        height: calc(1.1083 * 100vw);
     }
 
-    #home .home-hero h2 {
-        font-size: 4vw;
-    }
-}
-
-@media (max-width: 425px) {
     #home .home-hero .text {
-        margin-top: 22%;
+        margin-top: 50%;
+        transform: translateY(-50%);
     }
-    #home .home-hero h1 {
-        font-size: 6vw;
-    }
+}
 
-    #home .home-hero h2 {
-        font-size: 5vw;
+@media (max-width: 450px) {
+    #home .home-hero {
+        background-size: contain;
     }
 }
 

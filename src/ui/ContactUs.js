@@ -38,12 +38,12 @@ function ContactUs() {
                     <Container className='px-lg-5'>
                         <h1 className='text-center pt-5 mb-3 '>Contact Us</h1>
                         <p className='text-center'>
-                            For virtual consultations and to order from all our
-                            stores, please don't hesitate to reach out to us.
-                            You can send us a direct message on our Instagram
-                            pages below or contact us directly via phone at{' '}
-                            <a href='tel:+2349056043956'>+2349056043956</a>. Our
-                            team is always happy to help you bring your vision
+                            For Bookings and consultations on Bespoke orders;
+                            email{' '}
+                            <a href='mailto:infohazelgrace@gmail.com'>
+                                infohazelgrace@gmail.com
+                            </a>
+                            . Our team is always happy to help bring your vision
                             to life!
                         </p>
                         <Row className='py-md-5 pb-5 gy-5'>
@@ -105,13 +105,26 @@ function ContactUs() {
                                     <div className='mb-3'>
                                         <span className='ms-3'>
                                             <a
+                                                href='https://www.instagram.com/hazelgracestyles/'
+                                                target='_blank'
+                                                className='fw-bolder ig text-decoration-none'
+                                                rel='noopener noreferrer'>
+                                                @hazelgracestyles
+                                            </a>{' '}
+                                            - HazelGrace Styles
+                                        </span>
+                                    </div>
+
+                                    <div className='mb-3'>
+                                        <span className='ms-3'>
+                                            <a
                                                 href='https://www.instagram.com/hazelbe.e/'
                                                 target='_blank'
                                                 className='fw-bolder ig text-decoration-none'
                                                 rel='noopener noreferrer'>
                                                 @hazelbe.e
                                             </a>{' '}
-                                            - Hazel Bee
+                                            - HazelBee
                                         </span>
                                     </div>
 
@@ -124,7 +137,7 @@ function ContactUs() {
                                                 rel='noopener noreferrer'>
                                                 @hazel_babies
                                             </a>{' '}
-                                            - Hazel Babies
+                                            - HazelBabies
                                         </span>
                                     </div>
 
@@ -137,7 +150,7 @@ function ContactUs() {
                                                 rel='noopener noreferrer'>
                                                 @hazel_lifestyle
                                             </a>{' '}
-                                            - Hazel Lifestyle
+                                            - HazelLifestyle
                                         </span>
                                     </div>
                                 </div>
@@ -145,7 +158,7 @@ function ContactUs() {
                         </Row>
 
                         <div className='my-5 contact-form'>
-                            <h2 className='text-center'>Send Us Message</h2>
+                            <h2 className='text-center'>Send A Message</h2>
                             <Form
                                 ref={formRef}
                                 onSubmit={handleSubmit}

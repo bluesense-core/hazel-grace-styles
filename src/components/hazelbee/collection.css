@@ -30,6 +30,16 @@
     #bee-about p {
         padding: 0;
     }
+
+    #bee-about {
+        padding: 3em 0;
+    }
+}
+
+@media (max-width: 767px) {
+    #bee-about {
+        padding: 0;
+    }
 }
 
 #bee-about .card {

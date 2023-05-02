@@ -18,19 +18,19 @@ function Footer() {
                                 className='d-lg-inline d-none footer-logo img-fluid mx-auto'
                                 src={Logo}
                                 effect='blur'
-                                alt='Hazel Grace Styles Logo'
+                                alt='HazelGrace Styles Logo'
                             />
 
                             <Image
                                 className='d-lg-none d-inline-block footer-logo img-fluid mx-auto'
                                 src={Logo}
-                                alt='Hazel Grace Styles Logo'
+                                alt='HazelGrace Styles Logo'
                             />
                         </div>
 
                         <Nav
                             id='footer-nav'
-                            className='mt-4 justify-content-lg-start justify-content-center'>
+                            className='mt-4 text-center justify-content-lg-start justify-content-center'>
                             <Nav.Item className='pe-2'>
                                 <Nav.Link className='ps-lg-0' href='/contact'>
                                     Contact
@@ -38,15 +38,19 @@ function Footer() {
                             </Nav.Item>
 
                             <Nav.Item className='px-2'>
-                                <Nav.Link href='/'>Size Guide</Nav.Link>
+                                <Nav.Link href='#size-guide'>
+                                    Size Guide
+                                </Nav.Link>
                             </Nav.Item>
 
                             <Nav.Item className='px-2'>
-                                <Nav.Link href='/'>Terms of service</Nav.Link>
+                                <Nav.Link href='/terms'>
+                                    Terms of Service, Delivery and Refund Policy
+                                </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item className='px-xl-2'>
+                            {/* <Nav.Item className='px-xl-2'>
                                 <Nav.Link href='/'>Privacy policy</Nav.Link>
-                            </Nav.Item>
+                            </Nav.Item> */}
                         </Nav>
                     </Col>
                     <Col lg={4}>
@@ -61,7 +65,7 @@ function Footer() {
 
                             <a
                                 className='ms-3 me-lg-4'
-                                href='https://www.instagram.com/hazelgracestyles/'
+                                href='https://www.instagram.com/hazel_babies/'
                                 target='_blank'
                                 rel='noopener noreferrer'>
                                 <BsInstagram />
@@ -76,7 +80,7 @@ function Footer() {
                             </a> */}
                         </div>
                         <p className='text-lg-end text-center mb-2'>
-                            © Hazel Babies 2023
+                            © HazelBabies 2023
                         </p>
                     </Col>
                 </Row>

@@ -25,15 +25,21 @@
     }
 }
 
-@media (max-width: 25rem) {
+@media (max-width: 500px) {
     #lifestyle-hero h1 {
-        font-size: 1.875rem;
+        font-size: 1.8rem;
     }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 400px) {
     #lifestyle-hero h1 {
         font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 350px) {
+    #lifestyle-hero h1 {
+        font-size: 1.25rem;
     }
 }
 

@@ -1,0 +1,13 @@
+#terms {
+    border-bottom: 1px solid #d5b066;
+}
+
+#terms h2 {
+    font-weight: 500;
+    color: #d5b066;
+}
+
+#terms p {
+    font-size: 18px;
+    line-height: 1.8;
+}

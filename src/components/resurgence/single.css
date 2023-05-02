@@ -1,0 +1,148 @@
+@import '~react-image-gallery/styles/css/image-gallery.css';
+
+#bespoke {
+    border-bottom: 1px solid #d5b066;
+}
+
+#bespoke .hgs {
+    font-weight: 400;
+    color: #444444;
+}
+
+#bespoke a {
+    color: #d5b066;
+    font-weight: 600;
+}
+
+#bespoke .name {
+    font-family: 'Happy Monkey';
+    color: #d5b066;
+}
+
+#bespoke .price {
+    font-family: 'Happy Monkey';
+    letter-spacing: 0.05em;
+    color: #444444;
+}
+
+#bespoke .size-guide {
+    background-color: transparent;
+    border: 2px solid #d5b066;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 18px;
+    color: #1d1b1b;
+}
+
+#bespoke .size-guide:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+#bespoke .form-label {
+    font-weight: 600;
+    color: #000000;
+}
+
+#bespoke .form-check-input {
+    display: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+#bespoke .form-check-input:focus {
+    outline: none;
+}
+
+#bespoke .form-check-label {
+    cursor: pointer;
+    border: 1px solid #444444;
+    padding: 8px 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #000000;
+    transition: 150ms;
+}
+
+#bespoke input:checked ~ .form-check-label {
+    border: 1px solid #d5b066;
+    background-color: #d5b066;
+    color: #fff;
+}
+
+#bespoke .details-qty {
+    border: 1px solid #444444;
+    width: 35%;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #444444;
+}
+
+@media (max-width: 575px) {
+    #bespoke .details-qty {
+        width: 100%;
+    }
+}
+
+#bespoke .details-qty button {
+    border: none;
+    background: transparent;
+    width: 20%;
+}
+
+#bespoke .details-qty button:disabled {
+    color: #444444;
+}
+
+#bespoke .details-qty input {
+    border: none;
+    background: transparent;
+    width: 60%;
+    text-align: center;
+    -moz-appearance: textfield;
+}
+
+#bespoke .details-qty input::-webkit-outer-spin-button,
+#bespoke .details-qty input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#bespoke .details-qty input:focus {
+    box-shadow: none;
+}
+
+#bespoke .addToCart {
+    background: #000;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #ffffff;
+    border: none;
+    transition: 200ms;
+}
+
+#bespoke .addToCart:hover {
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+}
+
+/* Carousel */
+
+#bespoke.image-gallery-thumbnail,
+#bespoke .image-gallery-thumbnail-inner,
+#bespoke .image-gallery-thumbnail-image {
+    border-radius: 15px;
+}
+
+.image-gallery-thumbnail {
+    filter: grayscale(90%);
+    transition: 200ms;
+    border-color: #fff;
+}
+
+.image-gallery-thumbnail:hover .image-gallery-thumbnail:focus,
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail.active:hover {
+    border-color: #fff;
+    filter: none;
+}

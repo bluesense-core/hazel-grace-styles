@@ -7,18 +7,18 @@ function SidebarMenu() {
             <Nav.Link href='#size-guide' className='py-2'>
                 Size Guide
             </Nav.Link>
-            <Nav.Link href='#events' className='py-2'>
+            {/* <Nav.Link href='#events' className='py-2'>
                 Events
+            </Nav.Link> */}
+            <Nav.Link href='/terms' className='py-2'>
+                Terms of Service, Delivery and Refund Policy
             </Nav.Link>
-            <Nav.Link href='#delivery' className='py-2'>
-                Delivery, Shipping, Return Policy
-            </Nav.Link>
-            <Nav.Link href='#privacy-policy' className='py-2'>
+            {/* <Nav.Link href='#privacy-policy' className='py-2'>
                 Privacy Policy
             </Nav.Link>
             <Nav.Link href='#faq' className='py-2'>
                 FAQ
-            </Nav.Link>
+            </Nav.Link> */}
         </div>
     );
 }

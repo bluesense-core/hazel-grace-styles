@@ -4,7 +4,7 @@
 }
 
 #babies-about h2 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Berkshire Swash';
     color: #89cff0;
     font-weight: 400;
 }
@@ -29,6 +29,10 @@
     #babies-about p {
         padding: 0;
     }
+
+    #babies-about {
+        padding: 3em 0;
+    }
 }
 
 @media (max-width: 575px) {
@@ -52,6 +56,6 @@
     transition: 200ms;
 }
 
-#babies-about .card a:hover img {
+#babies-about .card img:hover {
     transform: scale(1.08);
 }

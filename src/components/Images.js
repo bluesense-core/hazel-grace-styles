@@ -34,6 +34,9 @@ import estathumb1 from '../img/shop-img/genesis/esta/thumb-esta1.jpg';
 import estathumb2 from '../img/shop-img/genesis/esta/thumb-esta2.jpg';
 import grace from '../img/shop-img/genesis/grace/main-grace.png';
 import gracethumb from '../img/shop-img/genesis/grace/thumb-grace.jpg';
+import gracethumb1 from '../img/shop-img/genesis/grace/thumb-grace1.png';
+import gracethumb2 from '../img/shop-img/genesis/grace/thumb-grace2.png';
+
 import hazel from '../img/shop-img/genesis/hazel/main-hazel.png';
 import jessica from '../img/shop-img/genesis/jessica/main-jessica.png';
 import jessthumb from '../img/shop-img/genesis/jessica/thumb-jess.jpg';
@@ -53,41 +56,41 @@ import wildrice from '../img/shop-img/genesis/wildrice/main-wild.png';
 import yellow from '../img/shop-img/genesis/yellow/main-yell.png';
 import yellthumb from '../img/shop-img/genesis/yellow/thumb-yell.png';
 
-// Bespoke Images
-import lookone from '../img/shop-img/bespoke/look1/look-one.png';
-import thumbone1 from '../img/shop-img/bespoke/look1/thumbone1.png';
-import thumbone2 from '../img/shop-img/bespoke/look1/thumbone2.png';
-import thumbone3 from '../img/shop-img/bespoke/look1/thumbone3.png';
-import looktwo from '../img/shop-img/bespoke/look2/look-two.png';
-import thumbtwo1 from '../img/shop-img/bespoke/look2/thumbtwo1.png';
-import thumbtwo2 from '../img/shop-img/bespoke/look2/thumbtwo2.png';
-import lookthree from '../img/shop-img/bespoke/look3/look-three.png';
-import thumbthree1 from '../img/shop-img/bespoke/look3/thumbthree1.png';
-import thumbthree2 from '../img/shop-img/bespoke/look3/thumbthree2.png';
-import lookfour from '../img/shop-img/bespoke/look4/look-four.png';
-import thumbfour1 from '../img/shop-img/bespoke/look4/thumbfour1.png';
-import thumbfour2 from '../img/shop-img/bespoke/look4/thumbfour2.png';
-import lookfive from '../img/shop-img/bespoke/look5/look-five.png';
-import thumbfive1 from '../img/shop-img/bespoke/look5/thumbfive1.png';
-import thumbfive2 from '../img/shop-img/bespoke/look5/thumbfive2.png';
-import thumbfive3 from '../img/shop-img/bespoke/look5/thumbfive3.png';
-import looksix from '../img/shop-img/bespoke/look6/look-six.png';
-import thumbsix1 from '../img/shop-img/bespoke/look6/thumbsix1.png';
-import thumbsix2 from '../img/shop-img/bespoke/look6/thumbsix2.png';
-import thumbsix3 from '../img/shop-img/bespoke/look6/thumbsix3.png';
-import lookseven from '../img/shop-img/bespoke/look7/look-seven.png';
-import thumbseven from '../img/shop-img/bespoke/look7/thumbseven.png';
-import lookeight from '../img/shop-img/bespoke/look8/look-eight.png';
-import thumbeight from '../img/shop-img/bespoke/look8/thumbeight.png';
-import looknine from '../img/shop-img/bespoke/look9/look-nine.png';
-import thumbnine from '../img/shop-img/bespoke/look9/thumbnine.png';
-import lookten from '../img/shop-img/bespoke/look10/look-ten.png';
-import thumbten1 from '../img/shop-img/bespoke/look10/thumbten1.png';
-import thumbten2 from '../img/shop-img/bespoke/look10/thumbten2.png';
-import lookeleven from '../img/shop-img/bespoke/look11/look-eleven.png';
-import thumbeleven1 from '../img/shop-img/bespoke/look11/thumbeleven1.png';
-import thumbeleven2 from '../img/shop-img/bespoke/look11/thumbeleven2.png';
-import thumbeleven3 from '../img/shop-img/bespoke/look11/thumbeleven3.png';
+// Resurgence Images
+import lookone from '../img/shop-img/resurgence/look1/look-one.png';
+import thumbone1 from '../img/shop-img/resurgence/look1/thumbone1.png';
+import thumbone2 from '../img/shop-img/resurgence/look1/thumbone2.png';
+import thumbone3 from '../img/shop-img/resurgence/look1/thumbone3.png';
+import looktwo from '../img/shop-img/resurgence/look2/look-two.png';
+import thumbtwo1 from '../img/shop-img/resurgence/look2/thumbtwo1.png';
+import thumbtwo2 from '../img/shop-img/resurgence/look2/thumbtwo2.png';
+import lookthree from '../img/shop-img/resurgence/look3/look-three.png';
+import thumbthree1 from '../img/shop-img/resurgence/look3/thumbthree1.png';
+import thumbthree2 from '../img/shop-img/resurgence/look3/thumbthree2.png';
+import lookfour from '../img/shop-img/resurgence/look4/look-four.png';
+import thumbfour1 from '../img/shop-img/resurgence/look4/thumbfour1.png';
+import thumbfour2 from '../img/shop-img/resurgence/look4/thumbfour2.png';
+import lookfive from '../img/shop-img/resurgence/look5/look-five.png';
+import thumbfive1 from '../img/shop-img/resurgence/look5/thumbfive1.png';
+import thumbfive2 from '../img/shop-img/resurgence/look5/thumbfive2.png';
+import thumbfive3 from '../img/shop-img/resurgence/look5/thumbfive3.png';
+import looksix from '../img/shop-img/resurgence/look6/look-six.png';
+import thumbsix1 from '../img/shop-img/resurgence/look6/thumbsix1.png';
+import thumbsix2 from '../img/shop-img/resurgence/look6/thumbsix2.png';
+import thumbsix3 from '../img/shop-img/resurgence/look6/thumbsix3.png';
+import lookseven from '../img/shop-img/resurgence/look7/look-seven.png';
+import thumbseven from '../img/shop-img/resurgence/look7/thumbseven.png';
+import lookeight from '../img/shop-img/resurgence/look8/look-eight.png';
+import thumbeight from '../img/shop-img/resurgence/look8/thumbeight.png';
+import looknine from '../img/shop-img/resurgence/look9/look-nine.png';
+import thumbnine from '../img/shop-img/resurgence/look9/thumbnine.png';
+import lookten from '../img/shop-img/resurgence/look10/look-ten.png';
+import thumbten1 from '../img/shop-img/resurgence/look10/thumbten1.png';
+import thumbten2 from '../img/shop-img/resurgence/look10/thumbten2.png';
+import lookeleven from '../img/shop-img/resurgence/look11/look-eleven.png';
+import thumbeleven1 from '../img/shop-img/resurgence/look11/thumbeleven1.png';
+import thumbeleven2 from '../img/shop-img/resurgence/look11/thumbeleven2.png';
+import thumbeleven3 from '../img/shop-img/resurgence/look11/thumbeleven3.png';
 
 // Hazelbee Images
 import cilia from '../img/hazelbee-img/Cilia.png';
@@ -99,6 +102,25 @@ import becca from '../img/hazelbee-img/Becca.png';
 import zuri from '../img/hazelbee-img/Zuri.png';
 import sanny from '../img/hazelbee-img/Sanny.png';
 import anitabee from '../img/hazelbee-img/Anita.png';
+
+// Hazelbeeshop Images
+import becca1 from '../img/shop-img/hazelbee/becca/main-becca.png';
+import beccathumb from '../img/shop-img/hazelbee/becca/thumb-becca.png';
+import cilia1 from '../img/shop-img/hazelbee/cilia/main-cilia.png';
+import ciliathumb1 from '../img/shop-img/hazelbee/cilia/thumb-cilia1.png';
+import ciliathumb2 from '../img/shop-img/hazelbee/cilia/thumb-cilia2.png';
+import jane1 from '../img/shop-img/hazelbee/jane/main-jane.png';
+import janethumb from '../img/shop-img/hazelbee/jane/thumb-jane.png';
+import keith1 from '../img/shop-img/hazelbee/keith/main-keith.png';
+import keiththumb from '../img/shop-img/hazelbee/keith/thumb-keith.png';
+import sanny1 from '../img/shop-img/hazelbee/sanny/main-sanny.png';
+import sannythumb from '../img/shop-img/hazelbee/sanny/thumb-sanny.png';
+import zaya1 from '../img/shop-img/hazelbee/zaya/main-zaya.png';
+import zayathumb1 from '../img/shop-img/hazelbee/zaya/thumb-zaya1.png';
+import zayathumb2 from '../img/shop-img/hazelbee/zaya/thumb-zaya2.png';
+import zuri1 from '../img/shop-img/hazelbee/zuri/main-zuri.png';
+import zurithumb1 from '../img/shop-img/hazelbee/zuri/thumb-zuri1.png';
+import zurithumb2 from '../img/shop-img/hazelbee/zuri/thumb-zuri2.png';
 
 // Hazelbabies Images
 import baby1 from '../img/babies-img/baby1.png';
@@ -125,7 +147,7 @@ const nalediData = [
         id: 1,
         src: arcturus,
         alt: 'Arcturus Blouse',
-        price: 60000,
+        price: 80000,
         carousel: [
             {
                 original: arcturus,
@@ -160,7 +182,7 @@ const nalediData = [
         id: 2,
         src: canopus,
         alt: 'Canopus Dress',
-        price: 55000,
+        price: 75000,
         carousel: [
             {
                 original: canopus,
@@ -186,7 +208,7 @@ const nalediData = [
         id: 3,
         src: orion,
         alt: 'Orion Dress',
-        price: 50000,
+        price: 70000,
         carousel: [
             {
                 original: orion,
@@ -212,7 +234,7 @@ const nalediData = [
         id: 4,
         src: castor,
         alt: 'Castor Ensemble',
-        price: 60000,
+        price: 80000,
         carousel: [
             {
                 original: castor,
@@ -238,7 +260,7 @@ const nalediData = [
         id: 5,
         src: rigel,
         alt: 'Rigel Dress',
-        price: 40000,
+        price: 60000,
         carousel: [
             {
                 original: rigel,
@@ -264,7 +286,7 @@ const nalediData = [
         id: 6,
         src: procyon,
         alt: 'Procyon Ensemble',
-        price: 40000,
+        price: 60000,
         carousel: [
             {
                 original: procyon,
@@ -290,7 +312,7 @@ const nalediData = [
         id: 7,
         src: altair,
         alt: 'Altair Dress',
-        price: 35000,
+        price: 55000,
         carousel: [
             {
                 original: altair,
@@ -325,7 +347,7 @@ const nalediData = [
         id: 8,
         src: sirius,
         alt: 'Sirius Dress',
-        price: 30000,
+        price: 50000,
         carousel: [
             {
                 original: sirius,
@@ -351,7 +373,7 @@ const nalediData = [
         id: 9,
         src: venus,
         alt: 'Venus Dress',
-        price: 30000,
+        price: 50000,
         carousel: [
             {
                 original: venus,
@@ -389,7 +411,7 @@ const genesisData = [
         id: 10,
         src: pomegranate,
         alt: 'Pomegranate Blouse',
-        price: 25000,
+        price: 35000,
         carousel: [
             {
                 original: pomegranate,
@@ -406,7 +428,7 @@ const genesisData = [
         id: 11,
         src: hazel,
         alt: 'Hazel Shirt',
-        price: 15000,
+        price: 25000,
         carousel: [
             {
                 original: hazel,
@@ -423,7 +445,7 @@ const genesisData = [
         id: 12,
         src: pistachio,
         alt: 'Pistachio Blouse',
-        price: 25000,
+        price: 35000,
         carousel: [
             {
                 original: pistachio,
@@ -436,168 +458,12 @@ const genesisData = [
             },
         ],
     },
-    {
-        id: 13,
-        src: grace,
-        alt: 'Grace Dress',
-        price: 45000,
-        carousel: [
-            {
-                original: grace,
-                thumbnail: grace,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Grace Dress',
-                thumbnailAlt: 'Grace Dress',
-                loading: 'lazy',
-            },
-            {
-                original: gracethumb,
-                thumbnail: gracethumb,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Grace Dress',
-                thumbnailAlt: 'Grace Dress',
-                loading: 'lazy',
-            },
-        ],
-    },
-    {
-        id: 14,
-        src: jessica,
-        alt: 'Jessica Dress',
-        price: 20000,
-        carousel: [
-            {
-                original: jessica,
-                thumbnail: jessica,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Jessica Dress',
-                thumbnailAlt: 'Jessica Dress',
-                loading: 'lazy',
-            },
-            {
-                original: jessthumb,
-                thumbnail: jessthumb,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Jessica Dress',
-                thumbnailAlt: 'Jessica Dress',
-                loading: 'lazy',
-            },
-        ],
-    },
-    {
-        id: 15,
-        src: anita,
-        alt: 'Anita Dress',
-        price: 25000,
-        carousel: [
-            {
-                original: anita,
-                thumbnail: anita,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Anita Dress',
-                thumbnailAlt: 'Anita Dress',
-                loading: 'lazy',
-            },
-            {
-                original: anithumb1,
-                thumbnail: anithumb1,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Anita Dress',
-                thumbnailAlt: 'Anita Dress',
-                loading: 'lazy',
-            },
-            {
-                original: anithumb2,
-                thumbnail: anithumb2,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Anita Dress',
-                thumbnailAlt: 'Anita Dress',
-                loading: 'lazy',
-            },
-        ],
-    },
-    {
-        id: 16,
-        src: naomi,
-        alt: 'Naomi Dress',
-        price: 25000,
-        carousel: [
-            {
-                original: naomi,
-                thumbnail: naomi,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Naomi Dress',
-                thumbnailAlt: 'Naomi Dress',
-                loading: 'lazy',
-            },
-            {
-                original: naothumb1,
-                thumbnail: naothumb1,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Naomi Dress',
-                thumbnailAlt: 'Naomi Dress',
-                loading: 'lazy',
-            },
-            {
-                original: naothumb2,
-                thumbnail: naothumb2,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Naomi Dress',
-                thumbnailAlt: 'Naomi Dress',
-                loading: 'lazy',
-            },
-        ],
-    },
-    {
-        id: 17,
-        src: ruth,
-        alt: 'Ruth Dress',
-        price: 20000,
-        carousel: [
-            {
-                original: ruth,
-                thumbnail: ruth,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Ruth Dress',
-                thumbnailAlt: 'Ruth Dress',
-                loading: 'lazy',
-            },
-            {
-                original: ruththumb1,
-                thumbnail: ruththumb1,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Ruth Dress',
-                thumbnailAlt: 'Ruth Dress',
-                loading: 'lazy',
-            },
-            {
-                original: ruththumb2,
-                thumbnail: ruththumb2,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Ruth Dress',
-                thumbnailAlt: 'Ruth Dress',
-                loading: 'lazy',
-            },
-        ],
-    },
+
     {
         id: 18,
         src: chia,
         alt: 'Chia Dress',
-        price: 30000,
+        price: 40000,
         carousel: [
             {
                 original: chia,
@@ -614,7 +480,7 @@ const genesisData = [
         id: 19,
         src: wildrice,
         alt: 'Wildrice Dress',
-        price: 25000,
+        price: 35000,
         carousel: [
             {
                 original: wildrice,
@@ -631,7 +497,7 @@ const genesisData = [
         id: 20,
         src: quinoa,
         alt: 'Quinoa Dress',
-        price: 20000,
+        price: 30000,
         carousel: [
             {
                 original: quinoa,
@@ -648,7 +514,7 @@ const genesisData = [
         id: 21,
         src: sesame,
         alt: 'Sesame Dress',
-        price: 50000,
+        price: 60000,
         carousel: [
             {
                 original: sesame,
@@ -663,88 +529,18 @@ const genesisData = [
     },
 
     {
-        id: 22,
-        src: bb,
-        alt: 'BB Ensemble',
-        price: 30000,
-        carousel: [
-            {
-                original: bb,
-                thumbnail: bb,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'BB Ensemble',
-                thumbnailAlt: 'BB Ensemble',
-                loading: 'lazy',
-            },
-            {
-                original: bbthumb1,
-                thumbnail: bbthumb1,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'BB Ensemble',
-                thumbnailAlt: 'BB Ensemble',
-                loading: 'lazy',
-            },
-            {
-                original: bbthumb2,
-                thumbnail: bbthumb2,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'BB Ensemble',
-                thumbnailAlt: 'BB Ensemble',
-                loading: 'lazy',
-            },
-        ],
-    },
-    {
-        id: 23,
-        src: esta,
-        alt: 'Esta Dress',
-        price: 25000,
-        carousel: [
-            {
-                original: esta,
-                thumbnail: esta,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Esta Dress',
-                thumbnailAlt: 'Esta Dress',
-                loading: 'lazy',
-            },
-            {
-                original: estathumb1,
-                thumbnail: estathumb1,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Esta Dress',
-                thumbnailAlt: 'Esta Dress',
-                loading: 'lazy',
-            },
-            {
-                original: estathumb2,
-                thumbnail: estathumb2,
-                originalClass: 'originalImg',
-                thumbnailClass: 'thumbImg',
-                originalAlt: 'Esta Dress',
-                thumbnailAlt: 'Esta Dress',
-                loading: 'lazy',
-            },
-        ],
-    },
-    {
         id: 24,
         src: pink,
-        alt: 'Pink Blouse',
-        price: 25000,
+        alt: 'Sophie Blouse',
+        price: 35000,
         carousel: [
             {
                 original: pink,
                 thumbnail: pink,
                 originalClass: 'originalImg',
                 thumbnailClass: 'thumbImg',
-                originalAlt: 'Pink Blouse',
-                thumbnailAlt: 'Pink Blouse',
+                originalAlt: 'Sophie Blouse',
+                thumbnailAlt: 'Sophie Blouse',
                 loading: 'lazy',
             },
             {
@@ -752,8 +548,8 @@ const genesisData = [
                 thumbnail: pinkthumb,
                 originalClass: 'originalImg',
                 thumbnailClass: 'thumbImg',
-                originalAlt: 'Pink Blouse',
-                thumbnailAlt: 'Pink Blouse',
+                originalAlt: 'Sophie Blouse',
+                thumbnailAlt: 'Sophie Blouse',
                 loading: 'lazy',
             },
         ],
@@ -1204,6 +1000,468 @@ const hazelBeeData = [
     { id: 9, img: anitabee, title: 'Anita Dress', price: '₦25,000' },
 ];
 
+const hazelBeeShopData = [
+    {
+        id: 37,
+        src: bb,
+        alt: 'BB Ensemble',
+        price: 30000,
+        carousel: [
+            {
+                original: bb,
+                thumbnail: bb,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'BB Ensemble',
+                thumbnailAlt: 'BB Ensemble',
+                loading: 'lazy',
+            },
+            {
+                original: bbthumb1,
+                thumbnail: bbthumb1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'BB Ensemble',
+                thumbnailAlt: 'BB Ensemble',
+                loading: 'lazy',
+            },
+            {
+                original: bbthumb2,
+                thumbnail: bbthumb2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'BB Ensemble',
+                thumbnailAlt: 'BB Ensemble',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 38,
+        src: esta,
+        alt: 'Esta Dress',
+        price: 25000,
+        carousel: [
+            {
+                original: esta,
+                thumbnail: esta,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Esta Dress',
+                thumbnailAlt: 'Esta Dress',
+                loading: 'lazy',
+            },
+            {
+                original: estathumb1,
+                thumbnail: estathumb1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Esta Dress',
+                thumbnailAlt: 'Esta Dress',
+                loading: 'lazy',
+            },
+            {
+                original: estathumb2,
+                thumbnail: estathumb2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Esta Dress',
+                thumbnailAlt: 'Esta Dress',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 39,
+        src: jessica,
+        alt: 'Jessica Dress',
+        price: 20000,
+        carousel: [
+            {
+                original: jessica,
+                thumbnail: jessica,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Jessica Dress',
+                thumbnailAlt: 'Jessica Dress',
+                loading: 'lazy',
+            },
+            {
+                original: jessthumb,
+                thumbnail: jessthumb,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Jessica Dress',
+                thumbnailAlt: 'Jessica Dress',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 40,
+        src: anithumb1,
+        alt: 'Anita Dress',
+        price: 25000,
+        carousel: [
+            {
+                original: anithumb1,
+                thumbnail: anithumb1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Anita Dress',
+                thumbnailAlt: 'Anita Dress',
+                loading: 'lazy',
+            },
+            {
+                original: anita,
+                thumbnail: anita,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Anita Dress',
+                thumbnailAlt: 'Anita Dress',
+                loading: 'lazy',
+            },
+
+            {
+                original: anithumb2,
+                thumbnail: anithumb2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Anita Dress',
+                thumbnailAlt: 'Anita Dress',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 41,
+        src: naomi,
+        alt: 'Naomi Dress',
+        price: 25000,
+        carousel: [
+            {
+                original: naomi,
+                thumbnail: naomi,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Naomi Dress',
+                thumbnailAlt: 'Naomi Dress',
+                loading: 'lazy',
+            },
+            {
+                original: naothumb1,
+                thumbnail: naothumb1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Naomi Dress',
+                thumbnailAlt: 'Naomi Dress',
+                loading: 'lazy',
+            },
+            {
+                original: naothumb2,
+                thumbnail: naothumb2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Naomi Dress',
+                thumbnailAlt: 'Naomi Dress',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 42,
+        src: ruth,
+        alt: 'Ruth Dress',
+        price: 20000,
+        carousel: [
+            {
+                original: ruth,
+                thumbnail: ruth,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Ruth Dress',
+                thumbnailAlt: 'Ruth Dress',
+                loading: 'lazy',
+            },
+            {
+                original: ruththumb1,
+                thumbnail: ruththumb1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Ruth Dress',
+                thumbnailAlt: 'Ruth Dress',
+                loading: 'lazy',
+            },
+            {
+                original: ruththumb2,
+                thumbnail: ruththumb2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Ruth Dress',
+                thumbnailAlt: 'Ruth Dress',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 43,
+        src: becca1,
+        alt: 'Becca Set',
+        price: 25000,
+        carousel: [
+            {
+                original: becca1,
+                thumbnail: becca1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Becca Set',
+                thumbnailAlt: 'Becca Set',
+                loading: 'lazy',
+            },
+            {
+                original: beccathumb,
+                thumbnail: beccathumb,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Becca Set',
+                thumbnailAlt: 'Becca Set',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 44,
+        src: jane1,
+        alt: 'Jane Dress',
+        price: 30000,
+        carousel: [
+            {
+                original: jane1,
+                thumbnail: jane1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Jane Dress',
+                thumbnailAlt: 'Jane Dress',
+                loading: 'lazy',
+            },
+            {
+                original: janethumb,
+                thumbnail: janethumb,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Jane Dress',
+                thumbnailAlt: 'Jane Dress',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 45,
+        src: keith1,
+        alt: 'Keith Set',
+        price: 18000,
+        carousel: [
+            {
+                original: keith1,
+                thumbnail: keith1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Keith Set',
+                thumbnailAlt: 'Keith Set',
+                loading: 'lazy',
+            },
+            {
+                original: keiththumb,
+                thumbnail: keiththumb,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Keith Set',
+                thumbnailAlt: 'Keith Set',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 46,
+        src: cilia1,
+        alt: 'Cilia Dress',
+        price: 35000,
+        carousel: [
+            {
+                original: cilia1,
+                thumbnail: cilia1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Cilia Dress',
+                thumbnailAlt: 'Cilia Dress',
+                loading: 'lazy',
+            },
+            {
+                original: ciliathumb1,
+                thumbnail: ciliathumb1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Cilia Dress',
+                thumbnailAlt: 'Cilia Dress',
+                loading: 'lazy',
+            },
+            {
+                original: ciliathumb2,
+                thumbnail: ciliathumb2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Cilia Dress',
+                thumbnailAlt: 'Cilia Dress',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 47,
+        src: sanny1,
+        alt: 'Sanny Kimono Dress',
+        price: 20000,
+        carousel: [
+            {
+                original: sanny1,
+                thumbnail: sanny1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Sanny Kimono Dress',
+                thumbnailAlt: 'Sanny Kimono Dress',
+                loading: 'lazy',
+            },
+            {
+                original: sannythumb,
+                thumbnail: sannythumb,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Sanny Kimono Dress',
+                thumbnailAlt: 'Sanny Kimono Dress',
+                loading: 'lazy',
+            },
+        ],
+    },
+    {
+        id: 48,
+        src: zaya1,
+        alt: 'Zaya Dress',
+        price: 28000,
+        carousel: [
+            {
+                original: zaya1,
+                thumbnail: zaya1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Zaya Dress',
+                thumbnailAlt: 'Zaya Dress',
+                loading: 'lazy',
+            },
+            {
+                original: zayathumb1,
+                thumbnail: zayathumb1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Zaya Dress',
+                thumbnailAlt: 'Zaya Dress',
+                loading: 'lazy',
+            },
+            {
+                original: zayathumb2,
+                thumbnail: zayathumb2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Zaya Dress',
+                thumbnailAlt: 'Zaya Dress',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 49,
+        src: zuri1,
+        alt: 'Zuri Set',
+        price: 35000,
+        carousel: [
+            {
+                original: zuri1,
+                thumbnail: zuri1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Zuri Set',
+                thumbnailAlt: 'Zuri Set',
+                loading: 'lazy',
+            },
+            {
+                original: zurithumb1,
+                thumbnail: zurithumb1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Zuri Set',
+                thumbnailAlt: 'Zuri Set',
+                loading: 'lazy',
+            },
+            {
+                original: zurithumb2,
+                thumbnail: zurithumb2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Zuri Set',
+                thumbnailAlt: 'Zuri Set',
+                loading: 'lazy',
+            },
+        ],
+    },
+
+    {
+        id: 50,
+        src: grace,
+        alt: 'Grace Dress',
+        price: 45000,
+        carousel: [
+            {
+                original: grace,
+                thumbnail: grace,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Grace Dress',
+                thumbnailAlt: 'Grace Dress',
+                loading: 'lazy',
+            },
+            {
+                original: gracethumb,
+                thumbnail: gracethumb,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Grace Dress',
+                thumbnailAlt: 'Grace Dress',
+                loading: 'lazy',
+            },
+
+            {
+                original: gracethumb1,
+                thumbnail: gracethumb1,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Grace Dress',
+                thumbnailAlt: 'Grace Dress',
+                loading: 'lazy',
+            },
+
+            {
+                original: gracethumb2,
+                thumbnail: gracethumb2,
+                originalClass: 'originalImg',
+                thumbnailClass: 'thumbImg',
+                originalAlt: 'Grace Dress',
+                thumbnailAlt: 'Grace Dress',
+                loading: 'lazy',
+            },
+        ],
+    },
+];
+
 const hazelBabiesData = [
     { id: 1, img: baby1, title: 'Custom Dress', price: '' },
     { id: 2, img: baby2, title: 'Custom Dress', price: '' },
@@ -1227,6 +1485,7 @@ const hazelLifestyleData = [
 
 export {
     nalediData,
+    hazelBeeShopData,
     genesisData,
     bespokeData,
     hazelBeeData,

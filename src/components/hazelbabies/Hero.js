@@ -6,14 +6,12 @@ const Hero = () => {
     return (
         <section id='babies-hero'>
             <Container fluid className='h-100'>
-                <Row className='justify-content-lg-end h-100 align-items-md-center align-items-end'>
-                    <Col lg={6} className='blue-box py-md-5 px-md-5 p-3'>
-                        <h1 className='mb-0 display-4 text-lg-start text-center'>
-                            <span className='text-pink'>
-                                Make Every Moment Magical:
-                            </span>{' '}
-                            Bespoke Kidswear for Life's Special Occasions with
-                            Hazel Babies
+                <Row className='justify-content-center h-100 align-items-center'>
+                    <Col md={10} className=''>
+                        <h1 className='mb-0 display-4  text-center text-capitalize'>
+                            Creating magical moments for every girl.
+                            {/* Resurgence Kidswear for Life's Special Occasions
+                            with HazelBabies */}
                         </h1>
                     </Col>
                 </Row>

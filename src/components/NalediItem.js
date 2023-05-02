@@ -18,7 +18,7 @@ const NalediItem = ({ product, formatter }) => {
     };
 
     const toLink = (param) => {
-        return param.toLowerCase().replace(' ', '-');
+        return param.toLowerCase().replaceAll(' ', '-');
     };
 
     return (

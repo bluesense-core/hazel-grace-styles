@@ -13,8 +13,8 @@ import { genesisData } from '../Images';
 import hangar from '../../img/coat-hanger-icon.png';
 import { useCart } from 'react-use-cart';
 import ReactImageGallery from 'react-image-gallery';
-import Header from '../hazelbee/Header';
-import Footer from '../hazelbee/Footer';
+import Header from '../Header';
+import Footer from '../Footer';
 
 const Pomegranate = ({ formatter }) => {
     const data = genesisData.filter((e) => e.alt === 'Pomegranate Blouse')[0];
@@ -61,7 +61,7 @@ const Pomegranate = ({ formatter }) => {
                         <Col
                             lg={6}
                             className='d-flex flex-column text-lg-start text-center'>
-                            <p className='hgs mb-4 fs-6'>Hazel Bee</p>
+                            <p className='hgs mb-4 fs-6'>HazelGrace Styles</p>
                             <h1 className='name mt-1 fs-2'>{data.alt}</h1>
                             <h2 className='price fs-3 mb-5'>
                                 ₦{formatter.format(data.price)}

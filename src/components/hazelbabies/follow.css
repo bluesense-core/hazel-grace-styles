@@ -4,7 +4,7 @@
 }
 
 #follow-babies h2 {
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Berkshire Swash';
     color: #89cff0;
     font-weight: 400;
 }
@@ -29,11 +29,19 @@
     #follow-babies p {
         padding: 0;
     }
+
+    #follow-babies {
+        padding: 3em 0;
+    }
 }
 
 @media (max-width: 575px) {
     #follow-babies p {
         font-size: 18px !important;
+    }
+
+    #follow-babies {
+        padding: 0;
     }
 }
 

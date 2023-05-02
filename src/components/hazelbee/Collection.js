@@ -6,6 +6,10 @@ import { hazelBeeData } from '../Images';
 import './collection.css';
 
 const Collection = () => {
+    const toLink = (param) => {
+        return param.toLowerCase().replaceAll(' ', '-');
+    };
+
     return (
         <section id='bee-about'>
             <Container className='pt-5'>
@@ -29,7 +33,7 @@ const Collection = () => {
                             <Card className='h-100'>
                                 <NavLink
                                     reloadDocument
-                                    to='/hazelbee/genesis'
+                                    to={'/hazelbee/shop/' + toLink(e.title)}
                                     className='text-decoration-none'>
                                     <LazyLoadImage
                                         delayTime='150'

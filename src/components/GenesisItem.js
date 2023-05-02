@@ -17,7 +17,7 @@ const GenesisItem = ({ product, formatter }) => {
     };
 
     const toLink = (param) => {
-        return param.toLowerCase().replace(' ', '-');
+        return param.toLowerCase().replaceAll(' ', '-');
     };
 
     return (
@@ -28,7 +28,7 @@ const GenesisItem = ({ product, formatter }) => {
                 onMouseLeave={() => setIsOverlay(false)}>
                 <NavLink
                     reloadDocument
-                    to={'/hazelbee/genesis/' + toLink(product.alt)}
+                    to={'/genesis/' + toLink(product.alt)}
                     className='text-decoration-none '>
                     <LazyLoadImage
                         delayTime='150'

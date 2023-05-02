@@ -14,10 +14,12 @@ const Follow = () => {
 
                 <p className='fs-5 text-center mb-5'>
                     Stay inspired and connected with the latest minimalist
-                    design trends by following us on Instagram. Our page is
-                    filled with beautiful photos of our curated collection,
-                    styling tips, and interior design inspiration to help you
-                    create the perfect space.
+                    design trends by following us on Instagram.
+                    <span className='d-sm-inline d-none'>
+                        Our page is filled with beautiful photos of our curated
+                        collection, styling tips, and interior design
+                        inspiration to help you create the perfect space.
+                    </span>
                 </p>
 
                 <Row className='g-5 mt-5 mx-auto'>

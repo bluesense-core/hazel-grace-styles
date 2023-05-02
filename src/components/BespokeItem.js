@@ -17,7 +17,7 @@ const BespokeItem = ({ product }) => {
     };
 
     const toLink = (param) => {
-        return param.toLowerCase().replace(' ', '-');
+        return param.toLowerCase().replaceAll(' ', '-');
     };
     return (
         <Col>
@@ -27,7 +27,7 @@ const BespokeItem = ({ product }) => {
                 onMouseLeave={() => setIsOverlay(false)}>
                 <NavLink
                     reloadDocument
-                    to={'/bespoke/' + toLink(product.alt)}
+                    to={'/resurgence/' + toLink(product.alt)}
                     className='text-decoration-none '>
                     <LazyLoadImage
                         delayTime='150'

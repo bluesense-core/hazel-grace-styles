@@ -1,15 +1,15 @@
 import React, { useRef } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import pink from '../img/home-img/pink.png';
-import brown from '../img/home-img/brown.png';
-import cream from '../img/home-img/cream.png';
-import orange from '../img/home-img/orange.png';
-import spotlight from '../img/home-img/spotlight.png';
+import pink from '../img/home-img/top-left.png';
+import brown from '../img/home-img/bottom-right.png';
+import cream from '../img/home-img/bottom-left.png';
+import orange from '../img/home-img/top-right.png';
+import spotlight from '../img/home-img/center.png';
 import about1 from '../img/home-img/who.png';
 import about2 from '../img/home-img/we.png';
 import { FaAngleDoubleDown, FaAngleDoubleRight } from 'react-icons/fa';
 import '../components/home/home-hero.css';
-import '../components/home/home-naledi.css';
+import '../components/home/home-collection.css';
 import '../components/home/home-about.css';
 import { NavHashLink } from 'react-router-hash-link';
 import Masonry from 'react-masonry-css';
@@ -50,22 +50,21 @@ function Home() {
                 <section id='home'>
                     <div className='home-hero text-center text-white'>
                         <div className='text'>
-                            <h1 className='display-2'>Genesis Collection</h1>
-                            <h2 className='display-6'>Hazel grace styles</h2>
+                            <h1 className='display-2'>HazelGrace styles</h1>
                         </div>
 
                         <NavHashLink
-                            to='/#home-naledi'
+                            to='/#home-collection'
                             className='d-sm-inline d-none'>
                             Explore <FaAngleDoubleDown />{' '}
                         </NavHashLink>
                     </div>
 
                     <Container
-                        id='home-naledi'
+                        id='home-collection'
                         className='pb-5 px-3 text-center'>
                         <h2 className='display-5'>
-                            Naledi <br />{' '}
+                            Resurgence <br />{' '}
                             <span className='display-6'>Collection</span>
                         </h2>
 
@@ -96,7 +95,7 @@ function Home() {
                                     className='naledi-img img-fluid'
                                 />
                                 <Button
-                                    href='/naledi'
+                                    href='/resurgence'
                                     as='a'
                                     className='shop-btn'>
                                     Shop Now <FaAngleDoubleRight />{' '}
@@ -123,10 +122,10 @@ function Home() {
                         </Row>
 
                         <Masonry
-                            breakpointCols={2}
+                            breakpointCols={{ 991: 2, 575: 1 }}
                             className='masonry row gy-4 d-lg-none d-flex'
                             columnClassName='my-masonry-grid_column'>
-                            <div>
+                            <div className='mb-sm-0 mb-5'>
                                 <LazyLoadImage
                                     delayTime='150'
                                     effect='blur'
@@ -151,7 +150,7 @@ function Home() {
                                 />
                             </div>
 
-                            <div className=''>
+                            <div>
                                 <LazyLoadImage
                                     delayTime='150'
                                     effect='blur'
@@ -165,11 +164,11 @@ function Home() {
                                     effect='blur'
                                     visibleByDefault={true}
                                     src={cream}
-                                    className='naledi-img img-fluid down'
+                                    className='mb-sm-0 mb-5 naledi-img img-fluid down'
                                 />
 
                                 <Button
-                                    href='/naledi'
+                                    href='/resurgence'
                                     as='a'
                                     className='shop-btn'>
                                     Shop Now <FaAngleDoubleRight />{' '}
@@ -198,7 +197,16 @@ function Home() {
                                     />
                                 </Col>
                                 <Col lg={6} className='ms-auto pe-lg-5'>
-                                    <h2 className='h2 mb-3'>Who We Are</h2>
+                                    <h2 className='h2 mb-3'>
+                                        The Brand (Who We Are)
+                                    </h2>
+                                    <p className='mb-4'>
+                                        {' '}
+                                        HazelGrace Styles is defined by
+                                        unconventional styles and individuality.
+                                        We have since launched HazelBee,
+                                        HazelBabies, followed by HazelLifestyle.
+                                    </p>
                                     <p className='mb-4'>
                                         We are a contemporary African luxury
                                         fashion and lifestyle brand found in
@@ -207,7 +215,7 @@ function Home() {
                                         for every client.{' '}
                                     </p>
                                     <p>
-                                        With Hazelgrace, every day is special
+                                        With HazelGrace, every day is special
                                         and every consumer deserves a special
                                         design to suit their unique personality.
                                         Be sure to stand out in our pieces as

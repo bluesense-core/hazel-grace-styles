@@ -42,7 +42,9 @@ function Header() {
     return (
         <header className='shadow-sm '>
             <div className='banner'>
-                <a href='/bespoke' className='text-decoration-none text-white'>
+                <a
+                    href='/resurgence'
+                    className='text-decoration-none text-white'>
                     <p className='m-0 py-2 text-uppercase text-center'>
                         Shop Our New Collection
                     </p>
@@ -69,7 +71,7 @@ function Header() {
                                             visibleByDefault={true}
                                             className='off-logo img-fluid'
                                             src={Logo}
-                                            alt='Hazel Grace Styles Logo'
+                                            alt='HazelGrace Styles Logo'
                                         />
                                     </Navbar.Brand>
                                 </Offcanvas.Header>
@@ -92,7 +94,7 @@ function Header() {
                                             id=''>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/hazelbee/genesis'>
+                                                href='/genesis'>
                                                 Genesis Collection
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
@@ -102,8 +104,8 @@ function Header() {
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/bespoke'>
-                                                Bespoke Collection
+                                                href='/resurgence'>
+                                                Resurgence Collection
                                             </NavDropdown.Item>
                                         </NavDropdown>
 
@@ -119,17 +121,17 @@ function Header() {
                                             <NavDropdown.Item
                                                 className='text-capitalize'
                                                 href='/hazelbee'>
-                                                Hazel Bee
+                                                HazelBee
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
                                                 href='/hazelbabies'>
-                                                Hazel Babies
+                                                HazelBabies
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
                                                 href='/hazellifestyle'>
-                                                Hazel Lifestyle
+                                                HazelLifestyle
                                             </NavDropdown.Item>
                                         </NavDropdown>
 
@@ -153,7 +155,7 @@ function Header() {
                                     visibleByDefault={true}
                                     className='img-fluid header-logo d-lg-inline d-block m-lg-0 mx-auto'
                                     src={Logo}
-                                    alt='Hazel Grace Styles Logo'
+                                    alt='HazelGrace Styles Logo'
                                 />
                             </Navbar.Brand>
                         </Col>
@@ -179,7 +181,7 @@ function Header() {
                                     onMouseLeave={hideDropdown1}>
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/hazelbee/genesis'>
+                                        href='/genesis'>
                                         Genesis Collection
                                     </NavDropdown.Item>
                                     <NavDropdown.Item
@@ -189,8 +191,8 @@ function Header() {
                                     </NavDropdown.Item>
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/bespoke'>
-                                        Bespoke Collection
+                                        href='/resurgence'>
+                                        Resurgence Collection
                                     </NavDropdown.Item>
                                 </NavDropdown>
 
@@ -209,17 +211,17 @@ function Header() {
                                     <NavDropdown.Item
                                         className='text-capitalize'
                                         href='/hazelbee'>
-                                        Hazel Bee
+                                        HazelBee
                                     </NavDropdown.Item>
                                     <NavDropdown.Item
                                         className='text-capitalize'
                                         href='/hazelbabies'>
-                                        Hazel Babies
+                                        HazelBabies
                                     </NavDropdown.Item>
                                     <NavDropdown.Item
                                         className='text-capitalize'
                                         href='/hazellifestyle'>
-                                        Hazel Lifestyle
+                                        HazelLifestyle
                                     </NavDropdown.Item>
                                 </NavDropdown>
 

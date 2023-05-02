@@ -18,6 +18,7 @@
 .shop img {
     cursor: pointer;
     transition: 200ms;
+    border-radius: 15px;
 }
 
 #shop-naledi .product__name,
@@ -26,7 +27,7 @@
     font-size: 1.21rem;
     letter-spacing: 0.15em;
     color: #1d1b1b;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 #shop-genesis .product__name,

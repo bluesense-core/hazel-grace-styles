@@ -61,7 +61,7 @@ const Altair = ({ formatter }) => {
                         <Col
                             lg={6}
                             className='d-flex flex-column text-lg-start text-center'>
-                            <p className='hgs mb-4 fs-6'>Hazel Grace Styles</p>
+                            <p className='hgs mb-4 fs-6'>HazelGrace Styles</p>
                             <h1 className='name mt-1 fs-2'>{data.alt}</h1>
                             <h2 className='price fs-3 mb-5'>
                                 ₦{formatter.format(data.price)}

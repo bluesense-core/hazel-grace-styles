@@ -14,10 +14,8 @@ const Collection = () => {
                 </h2>
                 <p className='fs-5 text-center'>
                     Step into the magical world of Hazel Babies and explore our
-                    stunning collection of kidswear designed for life's special
-                    moments. From birthdays to flower girl dresses, baptism
-                    ceremonies to graduations, we have an outfit for every
-                    occasion.
+                    stunning collection of kidswear. Discover our range of
+                    high-quality and stylish outfits today.
                 </p>
 
                 <Row
@@ -28,25 +26,25 @@ const Collection = () => {
                     {hazelBabiesData.map((e) => (
                         <Col key={e.id}>
                             <Card className='h-100'>
-                                <NavLink
+                                {/* <NavLink
                                     reloadDocument
-                                    to='/hazelbee/genesis'
-                                    className='text-decoration-none'>
-                                    <LazyLoadImage
-                                        delayTime='150'
-                                        effect='blur'
-                                        visibleByDefault={true}
-                                        className='img-fluid d-block mx-auto'
-                                        src={e.img}
-                                        alt={e.title}
-                                    />
+                                    to='/genesis'
+                                    className='text-decoration-none'> */}
+                                <LazyLoadImage
+                                    delayTime='150'
+                                    effect='blur'
+                                    visibleByDefault={true}
+                                    className='img-fluid d-block mx-auto'
+                                    src={e.img}
+                                    alt={e.title}
+                                />
 
-                                    {/* <Card.Body className='px-0 py-4 display-5'>
+                                {/* <Card.Body className='px-0 py-4 display-5'>
                                         <Card.Title className='fs-3'>
                                             {e.title}
                                         </Card.Title>
                                     </Card.Body> */}
-                                </NavLink>
+                                {/* </NavLink> */}
                             </Card>
                         </Col>
                     ))}
