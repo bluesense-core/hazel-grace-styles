@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Feed = (props) => {
-    const { id, caption, permalink, media_type, media_url } = props.feed;
+    const { id, caption, permalink, media_type, thumbnail_url, media_url } =
+        props.feed;
     let post;
 
     switch (media_type) {
@@ -9,11 +10,13 @@ const Feed = (props) => {
             post = (
                 <video
                     width='100%'
-                    height='auto'
+                    height='auto'                 
                     src={media_url}
                     type='video/mp4'
+                    preload='auto'
+                    poster={thumbnail_url}
                     controls
-                    playsinline></video>
+                    playsInline></video>
             );
             break;
         case 'CAROUSEL_ALBUM':
@@ -23,6 +26,8 @@ const Feed = (props) => {
                     className='img-fluid'
                     src={media_url}
                     alt={caption}
+                    width='100%'
+                    height='100%'
                 />
             );
             break;
@@ -33,6 +38,8 @@ const Feed = (props) => {
                     id={id}
                     src={media_url}
                     alt={caption}
+                    width='100%'
+                    height='100%'
                 />
             );
     }
