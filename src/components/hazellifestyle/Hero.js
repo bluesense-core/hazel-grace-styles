@@ -7,11 +7,11 @@ const Hero = () => {
         <section id='lifestyle-hero'>
             <Container fluid className='h-100'>
                 <Row className='justify-content-center h-100 align-items-center'>
-                    <Col xs={12} lg={11} xl={9} className=''>
+                    <Col className=''>
                         <h1 className='mb-xl-5 mb-sm-4 mb-0 display-3  text-center'>
-                            Elevate your space with unique interior details,
-                            curate bespoke gifts and enjoy premium intimate
-                            experiences with HazelLifestyle.
+                            Elevate your space with unique interior details and
+                            enjoy premium intimate experiences with
+                            HazelLifestyle.
                         </h1>
 
                         <Button

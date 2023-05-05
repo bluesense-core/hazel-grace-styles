@@ -18,7 +18,8 @@
 }
 
 #babies-hero h1 {
-    font-family: 'Berkshire Swash';
+    font-family: 'Happy Monkey';
+    font-weight: 900;
     color: #fed0d1;
     text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25);
 }

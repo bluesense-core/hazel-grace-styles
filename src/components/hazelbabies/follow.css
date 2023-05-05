@@ -4,9 +4,9 @@
 }
 
 #follow-babies h2 {
-    font-family: 'Berkshire Swash';
+    font-family: 'Happy Monkey';
     color: #89cff0;
-    font-weight: 400;
+    font-weight: 900;
 }
 
 #follow-babies p {
@@ -45,14 +45,16 @@
     }
 }
 
-#follow-babies img {
+#follow-babies img,
+#follow-babies video {
     width: 100%;
     height: auto;
     display: block;
     transition: all 200ms ease-out;
 }
 
-#follow-babies img:hover {
+#follow-babies img:hover,
+#follow-babies video:hover {
     transform: scale(1.04);
 }
 
@@ -65,6 +67,7 @@
 
 #follow-babies .username {
     padding: initial;
+    font-family: 'Happy Monkey';
 }
 
 #follow-babies .btn {

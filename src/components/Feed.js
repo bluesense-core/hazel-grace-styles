@@ -10,12 +10,13 @@ const Feed = (props) => {
             post = (
                 <video
                     width='100%'
-                    height='auto'                 
+                    height='auto'
                     src={media_url}
                     type='video/mp4'
                     preload='auto'
                     poster={thumbnail_url}
                     controls
+                    className='h-100'
                     playsInline></video>
             );
             break;
@@ -23,7 +24,7 @@ const Feed = (props) => {
             post = (
                 <img
                     id={id}
-                    className='img-fluid'
+                    className='img-fluid h-100'
                     src={media_url}
                     alt={caption}
                     width='100%'
@@ -34,7 +35,7 @@ const Feed = (props) => {
         default:
             post = (
                 <img
-                    className='img-fluid'
+                    className='img-fluid h-100'
                     id={id}
                     src={media_url}
                     alt={caption}

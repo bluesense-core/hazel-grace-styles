@@ -4,7 +4,7 @@
 }
 
 #follow-lifestyle h2 {
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'Happy Monkey';
     color: #d5b066;
     font-weight: 900;
 }
@@ -34,14 +34,16 @@
     }
 }
 
-#follow-lifestyle img {
+#follow-lifestyle img,
+#follow-lifestyle video {
     width: 100%;
     height: auto;
     display: block;
     transition: all 200ms ease-out;
 }
 
-#follow-lifestyle img:hover {
+#follow-lifestyle img:hover,
+#follow-lifestyle video:hover {
     transform: scale(1.04);
 }
 
@@ -54,6 +56,7 @@
 
 #follow-lifestyle .username {
     padding: initial;
+    font-family: 'Happy Monkey';
 }
 
 #follow-lifestyle .btn {
@@ -61,5 +64,5 @@
     border: 1px solid #d5b066;
     border-radius: 10px;
     width: 300px;
-    font-weight: 700;
+    font-weight: 600;
 }

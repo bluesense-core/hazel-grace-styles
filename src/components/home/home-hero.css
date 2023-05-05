@@ -1,8 +1,8 @@
 #home .home-hero {
-    background-image: url(../../img/home-img/home-hero.png);
+    background-image: url(../../img/home-img/hero-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(0.5541 * 100vw);
+    height: calc(0.625 * 100vw);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -17,34 +17,11 @@
     font-weight: 300;
     text-transform: uppercase;
     text-shadow: 5px 10px 5px #000000a9;
-    /* color: #d5b066; */
-}
-
-#home .home-hero h2 {
-    font-family: 'Happy Monkey';
-    text-transform: uppercase;
-    color: #f9d030;
-}
-
-@media (max-width: 767px) {
-    /* #home .home-hero h1 {
-        font-size: 4.5vw;
-    } */
-    /* 
-    #home .home-hero h2 {
-        font-size: 3.5vw;
-    } */
 }
 
 @media (max-width: 599px) {
-    #home .home-hero {
-        background-image: url(../../img/home-img/hero-left.png);
-        height: calc(1.1083 * 100vw);
-    }
-
-    #home .home-hero .text {
-        margin-top: 50%;
-        transform: translateY(-50%);
+    #home .home-hero h1 {
+        font-size: calc(1.575rem + 3vw);
     }
 }
 
@@ -60,17 +37,18 @@
     text-decoration: none;
     font-weight: 500;
     font-size: 20px;
-    color: #ffffff;
+    color: #000;
     padding: 10px 16px;
     border-width: 4px 4px 0px 4px;
     border-style: solid;
-    border-color: #ffffff;
+    border-color: #000;
     border-radius: 10px 10px 0px 0px;
     transition: 150ms;
 }
 
 #home .home-hero a:hover,
 #home .home-hero a:focus {
+    color: #fff;
     border-color: #d5b066;
     background-color: #d5b066;
 }

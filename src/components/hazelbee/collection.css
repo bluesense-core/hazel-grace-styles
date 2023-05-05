@@ -4,9 +4,9 @@
 }
 
 #bee-about h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Happy Monkey';
     color: #40444b;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 #bee-about p {
@@ -49,13 +49,12 @@
 }
 
 #bee-about .card-title {
-    font-family: 'Berkshire Swash';
-    font-weight: 400;
+    font-family: 'Happy Monkey';
+    font-weight: 700;
     color: #40444b;
 }
 
 #bee-about .card-text {
-    font-family: Raleway;
     font-weight: 400;
     color: #886f68;
     text-shadow: none;

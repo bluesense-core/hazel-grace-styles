@@ -4,9 +4,9 @@
 }
 
 #babies-about h2 {
-    font-family: 'Berkshire Swash';
+    font-family: 'Happy Monkey';
     color: #89cff0;
-    font-weight: 400;
+    font-weight: 900;
 }
 
 #babies-about p {
@@ -48,8 +48,8 @@
 }
 
 #babies-about .card-title {
-    font-family: 'Berkshire Swash';
-    font-weight: 400;
+    font-family: 'Happy Monkey';
+    font-weight: 700;
     color: #40444b;
 }
 #babies-about img {

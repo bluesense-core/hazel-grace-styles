@@ -11,13 +11,13 @@ import { FaAngleDoubleDown, FaAngleDoubleRight } from 'react-icons/fa';
 import '../components/home/home-hero.css';
 import '../components/home/home-collection.css';
 import '../components/home/home-about.css';
-import { NavHashLink } from 'react-router-hash-link';
 import Masonry from 'react-masonry-css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollPopup from '../components/ScrollPopup';
+import { Link } from 'react-router-dom';
 
 function Home() {
     const formRef = useRef();
@@ -53,18 +53,16 @@ function Home() {
                             <h1 className='display-2'>HazelGrace styles</h1>
                         </div>
 
-                        <NavHashLink
-                            to='/#home-collection'
-                            className='d-sm-inline d-none'>
+                        <Link to='/resurgence' className='d-sm-inline d-none'>
                             Explore <FaAngleDoubleDown />{' '}
-                        </NavHashLink>
+                        </Link>
                     </div>
 
                     <Container
                         id='home-collection'
                         className='pb-5 px-3 text-center'>
                         <h2 className='display-5'>
-                            Resurgence <br />{' '}
+                            Latest <br />{' '}
                             <span className='display-6'>Collection</span>
                         </h2>
 
@@ -197,9 +195,7 @@ function Home() {
                                     />
                                 </Col>
                                 <Col lg={6} className='ms-auto pe-lg-5'>
-                                    <h2 className='h2 mb-3'>
-                                        The Brand (Who We Are)
-                                    </h2>
+                                    <h2 className='h2 mb-3'>The Brand</h2>
                                     <p className='mb-4'>
                                         {' '}
                                         HazelGrace Styles is defined by
@@ -207,28 +203,13 @@ function Home() {
                                         We have since launched HazelBee,
                                         HazelBabies, followed by HazelLifestyle.
                                     </p>
-                                    <p className='mb-4'>
-                                        We are a contemporary African luxury
-                                        fashion and lifestyle brand found in
-                                        Nigeria! We create high fashion pieces
-                                        for special occasions and unique pieces
-                                        for every client.{' '}
-                                    </p>
-                                    <p>
-                                        With HazelGrace, every day is special
-                                        and every consumer deserves a special
-                                        design to suit their unique personality.
-                                        Be sure to stand out in our pieces as
-                                        our pieces adds the most important style
-                                        to your look; CONFIDENCE!
-                                    </p>
                                 </Col>
                             </Row>
                         </Container>
                     </div>
 
-                    <div className='newsletter'>
-                        <Container className='text-center px-4'>
+                    <div className='newsletter pt-5'>
+                        <Container className='text-center px-4 pt-5'>
                             <h2 className='display-6'>Subscribe</h2>
                             <p className='mt-3'>
                                 Sign up with your email address to receive news

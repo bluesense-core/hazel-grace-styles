@@ -9,9 +9,9 @@
 }
 
 #follow h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Happy Monkey';
     color: #40444b;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 #follow img {
@@ -19,6 +19,10 @@
     height: auto;
     display: block;
     transition: all 200ms ease-out;
+}
+
+#follow .username {
+    font-family: 'Happy Monkey';
 }
 
 #follow img:hover {
@@ -30,10 +34,6 @@
     height: 70px;
     background: #886f68;
     border-radius: 50%;
-}
-
-#follow .username {
-    font-family: Raleway;
 }
 
 #follow .btn {
