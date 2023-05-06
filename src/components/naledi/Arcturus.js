@@ -13,6 +13,8 @@ import { nalediData } from '../Images';
 import hangar from '../../img/coat-hanger-icon.png';
 import { useCart } from 'react-use-cart';
 import ReactImageGallery from 'react-image-gallery';
+import sizeGuide from '../../files/HazelGrace Size Guide.pdf';
+
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -69,7 +71,9 @@ const Arcturus = ({ formatter }) => {
                             </h2>
                             <Button
                                 as='a'
-                                href='#'
+                                href={sizeGuide}
+                                target='_blank'
+                                rel='noopener noreferrer'
                                 className='size-guide ms-lg-auto mx-lg-0 mx-auto py-3 mb-4  px-3'>
                                 <Image src={hangar} fluid className='me-2' />
                                 Size Guide
@@ -140,12 +144,23 @@ const Arcturus = ({ formatter }) => {
                                     <Form.Check
                                         className='px-0 me-0 ms-md-4 ms-3'
                                         inline
-                                        label='XXL'
-                                        value='XXL'
+                                        label='2XL'
+                                        value='2XL'
                                         name='size'
                                         type='radio'
-                                        id='size-xxl'
-                                        checked={formData.size === 'XXL'}
+                                        id='size-2xl'
+                                        checked={formData.size === '2XL'}
+                                        onChange={handleChange}
+                                    />
+                                    <Form.Check
+                                        className='px-0 me-0 ms-md-4 ms-3'
+                                        inline
+                                        label='3XL'
+                                        value='3XL'
+                                        name='size'
+                                        type='radio'
+                                        id='size-3xl'
+                                        checked={formData.size === '3XL'}
                                         onChange={handleChange}
                                     />
                                 </div>

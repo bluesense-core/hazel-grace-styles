@@ -1,10 +1,15 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
+import sizeGuide from '../files/HazelGrace Size Guide.pdf';
 
 function SidebarMenu() {
     return (
         <div id='sidebar-menu' className='mt-4 text-capitalize pb-5'>
-            <Nav.Link href='#size-guide' className='py-2'>
+            <Nav.Link
+                href={sizeGuide}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='py-2'>
                 Size Guide
             </Nav.Link>
             {/* <Nav.Link href='#events' className='py-2'>

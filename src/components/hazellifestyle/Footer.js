@@ -4,6 +4,7 @@ import { Row, Col, Nav, Container, Image } from 'react-bootstrap';
 import { BsInstagram, BsFacebook } from 'react-icons/bs';
 import './footer.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import sizeGuide from '../../files/HazelGrace Size Guide.pdf';
 
 function Footer() {
     return (
@@ -38,7 +39,9 @@ function Footer() {
                             </Nav.Item>
 
                             <Nav.Item className='px-2'>
-                                <Nav.Link href='#size-guide'>
+                                <Nav.Link  href={sizeGuide}
+                                        target='_blank'
+                                        rel='noopener noreferrer'>
                                     Size Guide
                                 </Nav.Link>
                             </Nav.Item>
