@@ -166,7 +166,7 @@ const Look8 = () => {
                                                 return {
                                                     ...prevData,
                                                     quantity:
-                                                        (prevData.quantity -= 1),
+                                                        (prevData.quantity - 1),
                                                 };
                                             })
                                         }>
@@ -188,7 +188,7 @@ const Look8 = () => {
                                                 return {
                                                     ...prevData,
                                                     quantity:
-                                                        (prevData.quantity += 1),
+                                                        (prevData.quantity + 1),
                                                 };
                                             })
                                         }>

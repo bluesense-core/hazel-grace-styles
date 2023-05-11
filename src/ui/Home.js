@@ -18,6 +18,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollPopup from '../components/ScrollPopup';
 import { Link } from 'react-router-dom';
+import CookieConsent from 'react-cookie-consent';
 
 function Home() {
     const formRef = useRef();
@@ -233,6 +234,20 @@ function Home() {
                     </div>
                 </section>
             </main>
+            <CookieConsent
+                location='bottom'
+                buttonText='Agree'
+                cookieName='myAwesomeCookieName2'
+                style={{ background: '#ffffff', color: '#191919' }}
+                buttonStyle={{
+                    background: '#d5b066',
+                    color: '#191919',
+                    fontSize: '16px',
+                    fontWeight: '700',
+                }}
+                expires={150}>
+                This website uses cookies to enhance the user experience.{' '}
+            </CookieConsent>
             <Footer />
             <ScrollPopup />
         </>

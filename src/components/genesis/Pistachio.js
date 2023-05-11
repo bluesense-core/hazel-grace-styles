@@ -181,7 +181,7 @@ const Pistachio = ({ formatter }) => {
                                                 return {
                                                     ...prevData,
                                                     quantity:
-                                                        (prevData.quantity -= 1),
+                                                        prevData.quantity - 1,
                                                 };
                                             })
                                         }>
@@ -203,7 +203,7 @@ const Pistachio = ({ formatter }) => {
                                                 return {
                                                     ...prevData,
                                                     quantity:
-                                                        (prevData.quantity += 1),
+                                                        prevData.quantity + 1,
                                                 };
                                             })
                                         }>

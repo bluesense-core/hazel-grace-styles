@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useCart } from 'react-use-cart';
 import { Form } from 'react-bootstrap';
 import { PaystackButton } from 'react-paystack';
@@ -7,38 +7,83 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 export default function Checkout({ formatter }) {
     const { totalItems, items, cartTotal, emptyCart } = useCart();
-
+    const formRef = useRef(null);
     const [validated, setValidated] = useState(false);
-
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        event.preventDefault();
-
-        if (form.checkValidity() === false) {
-            event.stopPropagation();
-        }
-
-        setValidated(true);
-    };
 
     const publicKey = 'pk_live_52618125cff02760cb4a111f58caa27a8981ecfa';
     const amount = cartTotal * 100; // Remember, set in kobo!
-    const [email, setEmail] = useState('');
-    const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
-    const [country, setCountry] = useState('');
-    const [state, setState] = useState('');
-    const [address, setAddress] = useState('');
+    const [formData, setFormData] = useState({
+        email: '',
+        firstName: '',
+        lastName: '',
+        phone: '',
+        address: '',
+        state: '',
+        country: '',
+        comments: '',
+    });
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        formRef.current.reset();
+    };
+
+    const handleChange = (event) => {
+        setFormData((prevData) => {
+            return {
+                ...prevData,
+                [event.target.name]: event.target.value,
+            };
+        });
+    };
+
+    const orders = `Orders: ${items
+        .map((item, el) => {
+            return `${item.alt}: Price: ₦${item.itemTotal}, Quantity: ${item.quantity}, Size: ${item.size}`;
+        })
+        .join('; ')}`;
 
     const componentProps = {
-        email,
+        email: formData.email,
         amount,
         metadata: {
-            name,
-            phone,
-            country,
-            state,
-            address,
+            custom_fields: [
+                {
+                    display_name: 'Customer Name',
+                    variable_name: 'Customer Name',
+                    value: formData.firstName + ' ' + formData.lastName,
+                },
+                {
+                    display_name: 'Phone Number',
+                    variable_name: 'Phone Number',
+                    value: formData.phone,
+                },
+                {
+                    display_name: 'Shipping Address',
+                    variable_name: 'Shipping Address',
+                    value: formData.address,
+                },
+                {
+                    display_name: 'State',
+                    variable_name: 'State',
+                    value: formData.state,
+                },
+                {
+                    display_name: 'Country',
+                    variable_name: 'Country',
+                    value: formData.country,
+                },
+                {
+                    display_name: 'Comments',
+                    variable_name: 'Comments',
+                    value: formData.comments,
+                },
+                {
+                    display_name: 'Order Summary',
+                    variable_name: 'Order Summary',
+                    value: orders,
+                },
+            ],
         },
         publicKey,
         text: 'Place Order',
@@ -151,29 +196,55 @@ export default function Checkout({ formatter }) {
                                         className='needs-validation mt-4'
                                         noValidate
                                         validated={validated}
+                                        ref={formRef}
                                         onSubmit={handleSubmit}>
                                         <div className=''>
                                             <div className='mb-3'>
                                                 <label
                                                     htmlFor='firstName'
                                                     className='form-label'>
-                                                    Name
+                                                    First Name
                                                 </label>
                                                 <input
                                                     type='text'
                                                     className='form-control'
-                                                    id='name'
-                                                    placeholder=''
+                                                    id='firstName'
+                                                    placeholder='First Name'
+                                                    name='firstName'
                                                     required
-                                                    onChange={(e) =>
-                                                        setName(e.target.value)
-                                                    }
+                                                    onChange={handleChange}
                                                 />
 
                                                 <Form.Control.Feedback
                                                     type='invalid'
                                                     className='invalid-feedback'>
-                                                    Valid name is required.
+                                                    Valid first name is
+                                                    required.
+                                                </Form.Control.Feedback>
+                                            </div>
+                                        </div>
+
+                                        <div className=''>
+                                            <div className='mb-3'>
+                                                <label
+                                                    htmlFor='lastName'
+                                                    className='form-label'>
+                                                    Last Name
+                                                </label>
+                                                <input
+                                                    type='text'
+                                                    className='form-control'
+                                                    id='lastName'
+                                                    placeholder='Last Name'
+                                                    name='lastName'
+                                                    required
+                                                    onChange={handleChange}
+                                                />
+
+                                                <Form.Control.Feedback
+                                                    type='invalid'
+                                                    className='invalid-feedback'>
+                                                    Valid last name is required.
                                                 </Form.Control.Feedback>
                                             </div>
                                         </div>
@@ -183,19 +254,15 @@ export default function Checkout({ formatter }) {
                                                 htmlFor='email'
                                                 className='form-label'>
                                                 Email{' '}
-                                                {/* <span className='text-muted'>
-                                                (Optional)
-                                            </span> */}
                                             </label>
                                             <input
                                                 type='email'
                                                 className='form-control'
                                                 id='email'
+                                                name='email'
                                                 placeholder='you@example.com'
                                                 required
-                                                onChange={(e) =>
-                                                    setEmail(e.target.value)
-                                                }
+                                                onChange={handleChange}
                                             />
                                             <div className='invalid-feedback'>
                                                 Please enter a valid email
@@ -208,19 +275,15 @@ export default function Checkout({ formatter }) {
                                                 htmlFor='phone'
                                                 className='form-label'>
                                                 Phone Number{' '}
-                                                {/* <span className='text-muted'>
-                                                (Optional)
-                                            </span> */}
                                             </label>
                                             <input
                                                 type={'tel'}
                                                 className='form-control'
-                                                id='tel'
+                                                id='phone'
                                                 placeholder=''
                                                 required
-                                                onChange={(e) =>
-                                                    setPhone(e.target.value)
-                                                }
+                                                name='phone'
+                                                onChange={handleChange}
                                             />
                                             <small className='text-muted'>
                                                 Include your country code
@@ -235,39 +298,21 @@ export default function Checkout({ formatter }) {
                                             <label
                                                 htmlFor='address'
                                                 className='form-label'>
-                                                Address
+                                                Shipping Address
                                             </label>
                                             <input
                                                 type='text'
                                                 className='form-control'
                                                 id='address'
                                                 placeholder='1234 Main St'
+                                                name='address'
                                                 required
-                                                onChange={(e) =>
-                                                    setAddress(e.target.value)
-                                                }
+                                                onChange={handleChange}
                                             />
                                             <div className='invalid-feedback'>
                                                 Please enter your shipping
                                                 address.
                                             </div>
-                                        </div>
-
-                                        <div className='mb-3'>
-                                            <label
-                                                htmlFor='address2'
-                                                className='form-label'>
-                                                Address 2{' '}
-                                                <span className='text-muted'>
-                                                    (Optional)
-                                                </span>
-                                            </label>
-                                            <input
-                                                type='text'
-                                                className='form-control'
-                                                id='address2'
-                                                placeholder='Apartment or suite'
-                                            />
                                         </div>
 
                                         <div className='row'>
@@ -281,11 +326,8 @@ export default function Checkout({ formatter }) {
                                                     className='form-select d-block w-100'
                                                     id='country'
                                                     required
-                                                    onChange={(e) =>
-                                                        setCountry(
-                                                            e.target.value
-                                                        )
-                                                    }>
+                                                    name='country'
+                                                    onChange={handleChange}>
                                                     <option value=''>
                                                         Choose...
                                                     </option>
@@ -305,10 +347,9 @@ export default function Checkout({ formatter }) {
                                                 <select
                                                     className='form-select d-block w-100'
                                                     id='state'
+                                                    name='state'
                                                     required
-                                                    onChange={(e) =>
-                                                        setState(e.target.value)
-                                                    }>
+                                                    onChange={handleChange}>
                                                     <option value=''>
                                                         Choose...
                                                     </option>
@@ -354,22 +395,25 @@ export default function Checkout({ formatter }) {
                                                     state.
                                                 </div>
                                             </div>
-                                            <div className='col-md-3 mb-3'>
-                                                <label
-                                                    htmlFor='zip'
-                                                    className='form-label'>
-                                                    Zip
-                                                </label>
-                                                <span className='text-muted'>
-                                                    (Optional)
-                                                </span>
-                                                <input
-                                                    type='text'
-                                                    className='form-control'
-                                                    id='zip'
-                                                    placeholder=''
-                                                />
-                                            </div>
+                                        </div>
+
+                                        <div className='mb-3'>
+                                            <label
+                                                htmlFor='comments'
+                                                className='form-label'>
+                                                Comments
+                                            </label>
+                                            <br />
+                                            <Form.Control
+                                                as='textarea'
+                                                rows={5}
+                                                style={{ width: '100%' }}
+                                                id='comments'
+                                                placeholder='Include any additional details that you find necessary'
+                                                name='comments'
+                                                onChange={
+                                                    handleChange
+                                                }></Form.Control>
                                         </div>
 
                                         <hr className='mb-4' />
