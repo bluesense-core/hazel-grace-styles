@@ -4,7 +4,7 @@ import { Card, Col } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const BespokeItem = ({ product }) => {
+const BespokeItem = ({ product, formatter }) => {
     const [isOverlay, setIsOverlay] = useState(false);
 
     const styles = {
@@ -49,6 +49,12 @@ const BespokeItem = ({ product }) => {
                     <h5 className='product__name shop-title py-2'>
                         {product.alt}
                     </h5>
+
+                    <div className='product__details'>
+                        <p className='product__price shop-text'>
+                            ₦{formatter.format(product.price)}
+                        </p>
+                    </div>
                 </Card.Body>
             </Card>
         </Col>

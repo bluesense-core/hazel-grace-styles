@@ -87,7 +87,12 @@ function App() {
                         />
                         <Route
                             path='/resurgence'
-                            element={<BespokeShop isLoading={isLoading} />}
+                            element={
+                                <BespokeShop
+                                    isLoading={isLoading}
+                                    formatter={formatter}
+                                />
+                            }
                         />
                         <Route
                             path='/genesis'
@@ -138,26 +143,53 @@ function App() {
                         />
 
                         {/* Resurgence Clothes */}
-                        <Route path='/resurgence/look-1' element={<Look1 />} />
-                        <Route path='/resurgence/look-2' element={<Look2 />} />
-                        <Route path='/resurgence/look-3' element={<Look3 />} />
-                        <Route path='/resurgence/look-4' element={<Look4 />} />
-                        <Route path='/resurgence/look-5' element={<Look5 />} />
-                        <Route path='/resurgence/look-6' element={<Look6 />} />
-                        <Route path='/resurgence/look-7' element={<Look7 />} />
-                        <Route path='/resurgence/look-8' element={<Look8 />} />
-                        <Route path='/resurgence/look-9' element={<Look9 />} />
+                        <Route
+                            path='/resurgence/look-1'
+                            element={<Look1 formatter={formatter} />}
+                        />
+                        <Route
+                            path='/resurgence/look-2'
+                            element={<Look2 formatter={formatter} />}
+                        />
+                        <Route
+                            path='/resurgence/look-3'
+                            element={<Look3 formatter={formatter} />}
+                        />
+                        <Route
+                            path='/resurgence/look-4'
+                            element={<Look4 formatter={formatter} />}
+                        />
+                        <Route
+                            path='/resurgence/look-5'
+                            element={<Look5 formatter={formatter} />}
+                        />
+                        <Route
+                            path='/resurgence/look-6'
+                            element={<Look6 formatter={formatter} />}
+                        />
+                        <Route
+                            path='/resurgence/look-7'
+                            element={<Look7 formatter={formatter} />}
+                        />
+                        <Route
+                            path='/resurgence/look-8'
+                            element={<Look8 formatter={formatter} />}
+                        />
+                        <Route
+                            path='/resurgence/look-9'
+                            element={<Look9 formatter={formatter} />}
+                        />
                         <Route
                             path='/resurgence/look-10'
-                            element={<Look10 />}
+                            element={<Look10 formatter={formatter} />}
                         />
                         <Route
                             path='/resurgence/look-11'
-                            element={<Look11 />}
+                            element={<Look11 formatter={formatter} />}
                         />
                         <Route
                             path='/resurgence/look-12'
-                            element={<Yellow />}
+                            element={<Yellow formatter={formatter} />}
                         />
 
                         {/* Genesis Clothes */}

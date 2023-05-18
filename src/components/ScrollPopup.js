@@ -3,6 +3,7 @@ import { Modal, Form, Button } from 'react-bootstrap';
 import emailjs from '@emailjs/browser';
 import './popup.css';
 const ScrollPopup = () => {
+    const [formSubmitted, setFormSubmitted] = useState(false);
     const formRef = useRef();
 
     const handleSubmit = (event) => {
@@ -24,16 +25,10 @@ const ScrollPopup = () => {
                     console.log(error.text);
                 }
             );
+
+        setFormSubmitted(true);
     };
     const [showModal, setShowModal] = useState(false);
-    // const handleScroll = () => {
-    //     const scrollTop =
-    //         window.pageYOffset || document.documentElement.scrollTop;
-    //     if (scrollTop > 800) {
-    //         setShowModal(true);
-    //         window.removeEventListener('scroll', handleScroll);
-    //     }
-    // };
 
     const shouldShowPopup = (event) => {
         // const viewportHeight = window.innerHeight;
@@ -43,8 +38,6 @@ const ScrollPopup = () => {
     };
 
     useEffect(() => {
-        // window.addEventListener('scroll', handleScroll);
-
         const handleExitIntent = (event) => {
             if (shouldShowPopup(event)) {
                 setShowModal(true);
@@ -54,7 +47,6 @@ const ScrollPopup = () => {
         document.addEventListener('mouseout', handleExitIntent);
 
         return () => {
-            // window.removeEventListener('scroll', handleScroll);
             document.removeEventListener('mouseout', handleExitIntent);
         };
     });
@@ -64,7 +56,7 @@ const ScrollPopup = () => {
             <Modal
                 id='scroll-popup'
                 backdrop='static'
-                show={showModal}
+                show={showModal && !formSubmitted}
                 onHide={() => setShowModal(false)}>
                 <Modal.Header className='border-0 ' closeButton />
 

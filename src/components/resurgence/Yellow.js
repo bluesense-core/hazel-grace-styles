@@ -1,16 +1,46 @@
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import React, { useState } from 'react';
+import {
+    Button,
+    Col,
+    Container,
+    Form,
+    FormGroup,
+    Image,
+    Row,
+} from 'react-bootstrap';
 import './single.css';
 import { bespokeData } from '../Images';
+import hangar from '../../img/coat-hanger-icon.png';
+import { useCart } from 'react-use-cart';
 import ReactImageGallery from 'react-image-gallery';
 import sizeGuide from '../../files/HazelGrace Size Guide.pdf';
 
 import Header from '../Header';
 import Footer from '../Footer';
 
-const Yellow = () => {
+const Yellow = ({ formatter }) => {
     const data = bespokeData.filter((e) => e.alt === 'Look 12')[0];
 
+    const [formData, setFormData] = useState({
+        size: '',
+        quantity: 1,
+    });
+
+    const { addItem, updateItem } = useCart();
+
+    const addToCart = () => {
+        addItem(data);
+    };
+
+    function handleChange(event) {
+        const { name, value } = event.target;
+        setFormData((prevFormData) => {
+            return {
+                ...prevFormData,
+                [name]: value,
+            };
+        });
+    }
     return (
         <>
             <Header />
@@ -35,7 +65,7 @@ const Yellow = () => {
                             className='d-flex flex-column text-lg-start text-center'>
                             <p className='hgs mb-4 fs-6'>HazelGrace Styles</p>
                             <h1 className='name mt-1 fs-2 mb-4'>{data.alt}</h1>
-                            <p className='mt-1'>
+                            {/* <p className='mt-1'>
                                 To custom order this look, send us a direct
                                 message on our{' '}
                                 <a
@@ -48,16 +78,15 @@ const Yellow = () => {
                                 <a href='tel:+2349056043956'>+2349056043956</a>.
                                 Our team is always happy to help you bring your
                                 vision to life!
-                            </p>
-                            {/* <h2 className='price fs-3 mb-5'>
+                            </p>  */}
+                            <h2 className='price fs-3 mb-5'>
                                 ₦{formatter.format(data.price)}
-                            </h2> 
+                            </h2>
                             <Button
                                 as='a'
                                 href={sizeGuide}
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-
+                                target='_blank'
+                                rel='noopener noreferrer'
                                 className='size-guide ms-lg-auto mx-lg-0 mx-auto py-3 mb-4  px-3'>
                                 <Image src={hangar} fluid className='me-2' />
                                 Size Guide
@@ -136,7 +165,7 @@ const Yellow = () => {
                                         checked={formData.size === '2XL'}
                                         onChange={handleChange}
                                     />
- <Form.Check
+                                    <Form.Check
                                         className='px-0 me-0 ms-md-4 ms-3'
                                         inline
                                         label='3XL'
@@ -167,7 +196,7 @@ const Yellow = () => {
                                                 return {
                                                     ...prevData,
                                                     quantity:
-                                                        (prevData.quantity - 1),
+                                                        prevData.quantity - 1,
                                                 };
                                             })
                                         }>
@@ -189,7 +218,7 @@ const Yellow = () => {
                                                 return {
                                                     ...prevData,
                                                     quantity:
-                                                        (prevData.quantity + 1),
+                                                        prevData.quantity + 1,
                                                 };
                                             })
                                         }>
@@ -211,7 +240,6 @@ const Yellow = () => {
                                     Add To Cart
                                 </Button>
                             </Form>
-                            */}
                         </Col>
                     </Row>
                 </Container>

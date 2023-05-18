@@ -4,7 +4,7 @@ import { Container, Row } from 'react-bootstrap';
 import { bespokeData } from './Images';
 import BespokeItem from './BespokeItem';
 
-const BespokeList = () => {
+const BespokeList = ({formatter}) => {
     return (
         <Container>
             <Row
@@ -14,7 +14,7 @@ const BespokeList = () => {
                 className='gy-5 gx-sm-5 pt-5 products'
                 id='products'>
                 {bespokeData.map((product) => (
-                    <BespokeItem key={product.id} product={product} />
+                    <BespokeItem key={product.id} product={product} formatter={formatter} />
                 ))}
             </Row>
         </Container>

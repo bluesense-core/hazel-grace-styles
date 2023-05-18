@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom';
 import CookieConsent from 'react-cookie-consent';
 
 function Home() {
-    const formRef = useRef();
+    const formRef1 = useRef();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -30,7 +30,7 @@ function Home() {
             .sendForm(
                 'service_hd6w2lk',
                 'template_6b6tzjx',
-                formRef.current,
+                formRef1.current,
                 'NadKuQM6677lL9__h'
             )
 
@@ -218,7 +218,7 @@ function Home() {
                             </p>
 
                             <Form
-                                ref={formRef}
+                                ref={formRef1}
                                 onSubmit={handleSubmit}
                                 className='d-flex mt-3 justify-content-between align-items-center'>
                                 <Form.Control
@@ -234,7 +234,7 @@ function Home() {
                     </div>
                 </section>
             </main>
-            <CookieConsent
+            {/* <CookieConsent
                 location='bottom'
                 buttonText='Agree'
                 cookieName='myAwesomeCookieName2'
@@ -247,7 +247,7 @@ function Home() {
                 }}
                 expires={150}>
                 This website uses cookies to enhance the user experience.{' '}
-            </CookieConsent>
+            </CookieConsent> */}
             <Footer />
             <ScrollPopup />
         </>

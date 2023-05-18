@@ -6,7 +6,7 @@ import Header from '../components/Header.js';
 import Spinner from '../components/Spinner.js';
 import './shop.css';
 
-const BespokeShop = ({ isLoading }) => {
+const BespokeShop = ({ isLoading, formatter }) => {
     return (
         <>
             <Header />
@@ -23,7 +23,7 @@ const BespokeShop = ({ isLoading }) => {
                             This collection is inspired by the Afro-centric
                             woman making a statement in every appearance.
                         </p>
-                        {isLoading ? <Spinner /> : <BespokeList />}
+                        {isLoading ? <Spinner /> : <BespokeList formatter={formatter} />}
                     </Container>
                 </section>
             </main>

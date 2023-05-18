@@ -5,12 +5,14 @@ import { PaystackButton } from 'react-paystack';
 import './checkout.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
+
 export default function Checkout({ formatter }) {
     const { totalItems, items, cartTotal, emptyCart } = useCart();
     const formRef = useRef(null);
     const [validated, setValidated] = useState(false);
 
-    const publicKey = 'pk_live_52618125cff02760cb4a111f58caa27a8981ecfa';
+    const publicKey = 'pk_test_d4e53e2d9a012de4590bb59a96bc9218a65b58d3';
     const amount = cartTotal * 100; // Remember, set in kobo!
     const [formData, setFormData] = useState({
         email: '',
@@ -25,7 +27,25 @@ export default function Checkout({ formatter }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        formRef.current.reset();
+
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.stopPropagation();
+        }
+
+        setValidated(true);
+
+        setFormData({
+            email: '',
+            firstName: '',
+            lastName: '',
+            phone: '',
+            address: '',
+            state: '',
+            country: '',
+            comments: '',
+        });
+        setValidated(false);
     };
 
     const handleChange = (event) => {
@@ -322,7 +342,17 @@ export default function Checkout({ formatter }) {
                                                     className='form-label'>
                                                     Country
                                                 </label>
-                                                <select
+                                                <CountryDropdown
+                                                    className='form-select d-block w-100'
+                                                    value={formData.country}
+                                                    id='country'
+                                                    required
+                                                    name='country'
+                                                    onChange={(e) =>
+                                                        console.log(e.target)
+                                                    }
+                                                />
+                                                {/* <select
                                                     className='form-select d-block w-100'
                                                     id='country'
                                                     required
@@ -332,7 +362,7 @@ export default function Checkout({ formatter }) {
                                                         Choose...
                                                     </option>
                                                     <option>Nigeria</option>
-                                                </select>
+                                                </select> */}
                                                 <div className='invalid-feedback'>
                                                     Please select a valid
                                                     country.
@@ -344,7 +374,17 @@ export default function Checkout({ formatter }) {
                                                     className='form-label'>
                                                     State
                                                 </label>
-                                                <select
+                                                <RegionDropdown
+                                                    disableWhenEmpty={true}
+                                                    country={formData.country}
+                                                    value={formData.state}
+                                                    className='form-select d-block w-100'
+                                                    id='state'
+                                                    name='state'
+                                                    required
+                                                    // onChange={handleChange}
+                                                />
+                                                {/* <select
                                                     className='form-select d-block w-100'
                                                     id='state'
                                                     name='state'
@@ -389,7 +429,7 @@ export default function Checkout({ formatter }) {
                                                     <option>Taraba</option>
                                                     <option>Yobe</option>
                                                     <option>Zamfara</option>
-                                                </select>
+                                                </select> */}
                                                 <div className='invalid-feedback'>
                                                     Please provide a valid
                                                     state.
