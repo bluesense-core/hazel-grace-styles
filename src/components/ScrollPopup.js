@@ -12,7 +12,7 @@ const ScrollPopup = () => {
         emailjs
             .sendForm(
                 'service_hd6w2lk',
-                'template_6b6tzjx',
+                'template_00yb4e5',
                 formRef.current,
                 'NadKuQM6677lL9__h'
             )
@@ -25,31 +25,35 @@ const ScrollPopup = () => {
                     console.log(error.text);
                 }
             );
+        formRef.current.reset();
 
         setFormSubmitted(true);
     };
     const [showModal, setShowModal] = useState(false);
 
-    const shouldShowPopup = (event) => {
-        // const viewportHeight = window.innerHeight;
-        const cursorY = event.clientY;
-        const threshold = 20; // Number of pixels from the top of the viewport at which to show the popup
-        return cursorY <= threshold;
+    const shouldShowPopup = useRef(false);
+
+    const handleExitIntent = (event) => {
+        if (shouldShowPopup.current && event.clientY <= 20) {
+            setShowModal(true);
+        }
     };
 
     useEffect(() => {
-        const handleExitIntent = (event) => {
-            if (shouldShowPopup(event)) {
-                setShowModal(true);
-            }
-        };
+        shouldShowPopup.current = true;
 
+        return () => {
+            shouldShowPopup.current = false;
+        };
+    }, []);
+
+    useEffect(() => {
         document.addEventListener('mouseout', handleExitIntent);
 
         return () => {
             document.removeEventListener('mouseout', handleExitIntent);
         };
-    });
+    }, []);
 
     return (
         <>

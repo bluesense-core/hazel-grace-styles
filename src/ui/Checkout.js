@@ -11,8 +11,8 @@ export default function Checkout({ formatter }) {
     const { totalItems, items, cartTotal, emptyCart } = useCart();
     const formRef = useRef(null);
     const [validated, setValidated] = useState(false);
-
     const publicKey = 'pk_live_52618125cff02760cb4a111f58caa27a8981ecfa';
+    const testKey = 'pk_test_d4e53e2d9a012de4590bb59a96bc9218a65b58d3';
     const amount = cartTotal * 100; // Remember, set in kobo!
     const [formData, setFormData] = useState({
         email: '',
@@ -34,18 +34,6 @@ export default function Checkout({ formatter }) {
         }
 
         setValidated(true);
-
-        setFormData({
-            email: '',
-            firstName: '',
-            lastName: '',
-            phone: '',
-            address: '',
-            state: '',
-            country: '',
-            comments: '',
-        });
-        setValidated(false);
     };
 
     const handleChange = (event) => {
@@ -109,6 +97,8 @@ export default function Checkout({ formatter }) {
         text: 'Place Order',
         onSuccess: () => {
             emptyCart();
+            setValidated(false);
+            formRef.current.reset();
         },
     };
 
@@ -190,23 +180,6 @@ export default function Checkout({ formatter }) {
                                             </strong>
                                         </li>
                                     </ul>
-
-                                    {/* <form className='card p-2'>
-                                    <div className='input-group'>
-                                        <input
-                                            type='text'
-                                            className='form-control me-2'
-                                            placeholder='Promo code'
-                                        />
-                                        <div className='input-group-append'>
-                                            <button
-                                                type='button'
-                                                className='btn btn-dark px-4 rounded-pill'>
-                                                Redeem
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form> */}
                                 </div>
                                 <div className='col-lg-7 order-lg-1'>
                                     <h4 className='mb-3 text-uppercase'>
@@ -342,17 +315,22 @@ export default function Checkout({ formatter }) {
                                                     className='form-label'>
                                                     Country
                                                 </label>
-                                                {/* <CountryDropdown
+                                                <CountryDropdown
                                                     className='form-select d-block w-100'
                                                     value={formData.country}
                                                     id='country'
                                                     required
                                                     name='country'
-                                                    onChange={(e) =>
-                                                        console.log(e.target)
+                                                    onChange={(value) =>
+                                                        setFormData(
+                                                            (prevData) => ({
+                                                                ...prevData,
+                                                                country: value,
+                                                            })
+                                                        )
                                                     }
-                                                /> */}
-                                                <select
+                                                />
+                                                {/* <select
                                                     className='form-select d-block w-100'
                                                     id='country'
                                                     required
@@ -362,7 +340,7 @@ export default function Checkout({ formatter }) {
                                                         Choose...
                                                     </option>
                                                     <option>Nigeria</option>
-                                                </select>
+                                                </select> */}
                                                 <div className='invalid-feedback'>
                                                     Please select a valid
                                                     country.
@@ -374,7 +352,7 @@ export default function Checkout({ formatter }) {
                                                     className='form-label'>
                                                     State
                                                 </label>
-                                                {/* <RegionDropdown
+                                                <RegionDropdown
                                                     disableWhenEmpty={true}
                                                     country={formData.country}
                                                     value={formData.state}
@@ -382,9 +360,16 @@ export default function Checkout({ formatter }) {
                                                     id='state'
                                                     name='state'
                                                     required
-                                                    // onChange={handleChange}
-                                                /> */}
-                                                <select
+                                                    onChange={(value) =>
+                                                        setFormData(
+                                                            (prevData) => ({
+                                                                ...prevData,
+                                                                state: value,
+                                                            })
+                                                        )
+                                                    }
+                                                />
+                                                {/* <select
                                                     className='form-select d-block w-100'
                                                     id='state'
                                                     name='state'
@@ -429,7 +414,7 @@ export default function Checkout({ formatter }) {
                                                     <option>Taraba</option>
                                                     <option>Yobe</option>
                                                     <option>Zamfara</option>
-                                                </select>
+                                                </select> */}
                                                 <div className='invalid-feedback'>
                                                     Please provide a valid
                                                     state.

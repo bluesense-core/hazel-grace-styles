@@ -18,10 +18,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollPopup from '../components/ScrollPopup';
 import { Link } from 'react-router-dom';
-import CookieConsent from 'react-cookie-consent';
 
 function Home() {
-    const formRef1 = useRef();
+    const formRef = useRef();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -29,8 +28,8 @@ function Home() {
         emailjs
             .sendForm(
                 'service_hd6w2lk',
-                'template_6b6tzjx',
-                formRef1.current,
+                'template_00yb4e5',
+                formRef.current,
                 'NadKuQM6677lL9__h'
             )
 
@@ -42,6 +41,7 @@ function Home() {
                     console.log(error.text);
                 }
             );
+        formRef.current.reset();
     };
 
     return (
@@ -218,7 +218,7 @@ function Home() {
                             </p>
 
                             <Form
-                                ref={formRef1}
+                                ref={formRef}
                                 onSubmit={handleSubmit}
                                 className='d-flex mt-3 justify-content-between align-items-center'>
                                 <Form.Control
@@ -228,7 +228,9 @@ function Home() {
                                     placeholder='Email'
                                     required
                                 />
-                                <Button className='d-inline'>Sign Up</Button>
+                                <Button type='submit' className='d-inline'>
+                                    Sign Up
+                                </Button>
                             </Form>
                         </Container>
                     </div>

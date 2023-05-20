@@ -16,7 +16,7 @@ function ContactUs() {
         emailjs
             .sendForm(
                 'service_hd6w2lk',
-                'template_6b6tzjx',
+                'template_00yb4e5',
                 formRef.current,
                 'NadKuQM6677lL9__h'
             )
@@ -29,6 +29,7 @@ function ContactUs() {
                     console.log(error.text);
                 }
             );
+        formRef.current.reset();
     };
     return (
         <>
@@ -201,7 +202,9 @@ function ContactUs() {
                                         />
                                     </Form.Group>
                                     <div className='text-center mt-5'>
-                                        <Button className='message-btn py-3 px-5  text-uppercase'>
+                                        <Button
+                                            type='submit'
+                                            className='message-btn py-3 px-5  text-uppercase'>
                                             Send
                                         </Button>
                                     </div>

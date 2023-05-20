@@ -6,37 +6,36 @@ import Feed from './Feed';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 const InstaFeeds = ({ token, limit }) => {
-    const [feeds, setFeedsData] = useState();
-    //use useRef to store the latest value of the prop without firing the effect
+    const [feeds, setFeedsData] = useState(null);
     const tokenProp = useRef(token);
     tokenProp.current = token;
 
     useEffect(() => {
-        // this is to avoid memory leaks
-        const abortController = new AbortController();
+        let isMounted = true;
+        const source = axios.CancelToken.source();
 
         async function fetchInstagramPost() {
             try {
-                axios
-                    .get(
-                        `https://graph.instagram.com/me/media?fields=id,is_shared_to_feed,media_type,caption,media_url,permalink,thumbnail_url,username,timestamp&limit=${limit}&access_token=${token}`
-                    )
-                    .then((resp) => {
-                        setFeedsData(resp.data.data);
-                    });
-            } catch (err) {
-                console.log('error', err);
+                const response = await axios.get(
+                    `https://graph.instagram.com/me/media?fields=id,is_shared_to_feed,media_type,caption,media_url,permalink,thumbnail_url,username,timestamp&limit=${limit}&access_token=${tokenProp.current}`,
+                    { cancelToken: source.token }
+                );
+
+                if (isMounted) {
+                    setFeedsData(response.data.data);
+                }
+            } catch (error) {
+                console.log('error', error);
             }
         }
 
-        // manually call the fecth function
         fetchInstagramPost();
 
         return () => {
-            // cancel pending fetch request on component unmount
-            abortController.abort();
+            isMounted = false;
+            source.cancel('Request canceled');
         };
-    }, [limit, token]);
+    }, [limit]);
 
     return (
         <div id='feeds'>
