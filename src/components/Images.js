@@ -1005,15 +1005,15 @@ const bespokeData = [
 ];
 
 const hazelBeeData = [
-    { id: 1, img: cilia, title: 'Cilia Dress', price: '₦35,000' },
-    { id: 2, img: lush, title: 'Lush Blouse', price: '₦15,000' },
-    { id: 3, img: zaya, title: 'Zaya Dress', price: '₦28,000' },
-    { id: 4, img: keith, title: 'Keith Set', price: '₦18,000' },
-    { id: 5, img: jane, title: 'Jane Dress', price: '₦30,000' },
-    { id: 6, img: becca, title: 'Becca Set', price: '₦25,000' },
-    { id: 7, img: zuri, title: 'Zuri Set', price: '₦35,000' },
-    { id: 8, img: sanny, title: 'Sanny Kimono Dress', price: '₦20,000' },
-    { id: 9, img: anitabee, title: 'Anita Dress', price: '₦25,000' },
+    { id: 1, img: cilia, title: 'Cilia Dress', price: 35000 },
+    { id: 2, img: lush, title: 'Lush Blouse', price: 15000 },
+    { id: 3, img: zaya, title: 'Zaya Dress', price: 28000 },
+    { id: 4, img: keith, title: 'Keith Set', price: 18000 },
+    { id: 5, img: jane, title: 'Jane Dress', price: 30000 },
+    { id: 6, img: becca, title: 'Becca Set', price: 25000 },
+    { id: 7, img: zuri, title: 'Zuri Set', price: 35000 },
+    { id: 8, img: sanny, title: 'Sanny Kimono Dress', price: 20000 },
+    { id: 9, img: anitabee, title: 'Anita Dress', price: 25000 },
 ];
 
 const hazelBeeShopData = [

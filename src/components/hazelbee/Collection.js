@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { NavLink } from 'react-router-dom';
 import { hazelBeeData } from '../Images';
 import './collection.css';
+import { CurrencyContext } from '../CurrencyContext';
 
-const Collection = () => {
+const Collection = ({ formatter }) => {
     const toLink = (param) => {
         return param.toLowerCase().replaceAll(' ', '-');
     };
+
+    const { selectedCurrency, convertPrice, selectedSign } =
+        useContext(CurrencyContext);
 
     return (
         <section id='bee-about'>
@@ -49,7 +53,13 @@ const Collection = () => {
                                             {e.title}
                                         </Card.Title>
                                         <Card.Text className='fs-4 p-0'>
-                                            {e.price}
+                                            {selectedSign}
+                                            {formatter.format(
+                                                convertPrice(
+                                                    e.price,
+                                                    selectedCurrency
+                                                )
+                                            )}
                                         </Card.Text>
                                     </Card.Body>
                                 </NavLink>

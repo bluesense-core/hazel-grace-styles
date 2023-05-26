@@ -78,14 +78,26 @@ button:active,
 } */
 
 .currency {
-    border: none;
-    font-size: 12px;
+    font-size: 14px;
     color: #000;
     letter-spacing: 0.2em;
     width: 100px;
     font-weight: 500;
 }
 
-footer .currency {
-    color: #5b5a5a;
+.form-select:focus {
+    border-color: #ced4da;
+    outline: 0;
+    box-shadow: none;
 }
+
+.currency option {
+    padding: 5rem 0 5rem 1rem;
+    margin: 3rem 0;
+    border-radius: 0.3rem;
+    min-height: 500px;
+}
+
+/* footer .currency {
+    color: #5b5a5a;
+} */

@@ -6,13 +6,13 @@ import Header from '../components/hazelbee/Header';
 import Hero from '../components/hazelbee/Hero';
 import './hazelbee.css';
 
-const HazelBee = () => {
+const HazelBee = ({ formatter }) => {
     return (
         <div className='hazel-bee'>
             <Header />
             <main>
                 <Hero />
-                <Collection />
+                <Collection formatter={formatter} />
                 <Follow />
             </main>
             <Footer />

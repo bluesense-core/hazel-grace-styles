@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Card, Col } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { CurrencyContext } from './CurrencyContext';
 
 const NalediItem = ({ product, formatter }) => {
     const [isOverlay, setIsOverlay] = useState(false);
@@ -20,6 +20,9 @@ const NalediItem = ({ product, formatter }) => {
     const toLink = (param) => {
         return param.toLowerCase().replaceAll(' ', '-');
     };
+
+    const { selectedCurrency, convertPrice, selectedSign } =
+        useContext(CurrencyContext);
 
     return (
         <Col>
@@ -54,7 +57,10 @@ const NalediItem = ({ product, formatter }) => {
 
                     <div className='product__details'>
                         <p className='product__price shop-text'>
-                            ₦{formatter.format(product.price)}
+                            {selectedSign}
+                            {formatter.format(
+                                convertPrice(product.price, selectedCurrency)
+                            )}
                         </p>
                     </div>
                 </Card.Body>

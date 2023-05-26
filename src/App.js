@@ -237,7 +237,10 @@ function App() {
                             element={<Pink formatter={formatter} />}
                         />
 
-                        <Route path='/hazelbee' element={<HazelBee />} />
+                        <Route
+                            path='/hazelbee'
+                            element={<HazelBee formatter={formatter} />}
+                        />
                         <Route
                             path='/hazelbee/shop'
                             element={

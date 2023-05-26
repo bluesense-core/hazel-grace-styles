@@ -15,6 +15,7 @@ import Socials from '../Socials';
 import { BsBag, BsChevronDown } from 'react-icons/bs';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useCart } from 'react-use-cart';
+import CurrencyForm from '../CurrencyForm';
 
 function Header() {
     const [show, setShow] = useState();
@@ -64,7 +65,7 @@ function Header() {
                                 <Offcanvas.Header
                                     closeButton
                                     className='py-4 ps-4 sticky-top'>
-                                    <Navbar.Brand>
+                                    <Navbar.Brand href='/'>
                                         <LazyLoadImage
                                             delayTime='150'
                                             effect='blur'
@@ -127,7 +128,9 @@ function Header() {
                         </Col>
 
                         <Col xs={6} lg='auto' className='d-lg-flex d-block'>
-                            <Navbar.Brand className='d-flex m-0 justify-content-center'>
+                            <Navbar.Brand
+                                href='/'
+                                className='d-flex m-0 justify-content-center'>
                                 <LazyLoadImage
                                     delayTime='150'
                                     effect='blur'
@@ -186,10 +189,12 @@ function Header() {
                                 </Nav.Item>
 
                                 <div className='ps-2'>
-                                    <Nav.Link href='/cart'>
-                                        <BsBag className='cart-icon mb-1' />
+                                    <Nav.Link
+                                        href='/cart'
+                                        className='position-relative'>
+                                        <BsBag className='cart-icon mb-1 ' />
                                         {!isEmpty && (
-                                            <span className=' badge rounded-circle bg-dark'>
+                                            <span className=' badge rounded-circle bg-dark position-absolute'>
                                                 <span className='text-white'>
                                                     {totalItems}
                                                 </span>
@@ -197,16 +202,23 @@ function Header() {
                                         )}
                                     </Nav.Link>
                                 </div>
+
+                                <CurrencyForm />
                             </Nav>
                         </Col>
-                        <Col xs={3} lg='auto' className='d-lg-none d-block'>
+                        <Col
+                            xs={3}
+                            lg='auto'
+                            className='d-lg-none d-flex justify-content-center flex-sm-nowrap flex-wrap'>
                             <Nav
                                 id='header-nav'
                                 className=' text-uppercase justify-content-end'>
-                                <Nav.Link href='/cart' className='ms-auto px-3'>
-                                    <BsBag className='cart-icon me-4' />
+                                <Nav.Link
+                                    href='/cart'
+                                    className='position-relative'>
+                                    <BsBag className='cart-icon mb-1 ' />
                                     {!isEmpty && (
-                                        <span className=' badge rounded-circle bg-dark'>
+                                        <span className=' badge rounded-circle bg-dark position-absolute'>
                                             <span className='text-white'>
                                                 {totalItems}
                                             </span>
@@ -214,6 +226,8 @@ function Header() {
                                     )}
                                 </Nav.Link>
                             </Nav>
+
+                            <CurrencyForm />
                         </Col>
                     </Row>
                 </Container>
