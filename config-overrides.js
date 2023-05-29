@@ -1,5 +1,5 @@
-const webpack = require('webpack');
-module.exports = function override(config) {
+import { ProvidePlugin } from 'webpack';
+export default function override(config) {
     const fallback = config.resolve.fallback || {};
     Object.assign(fallback, {
         crypto: require.resolve('crypto-browserify'),
@@ -12,10 +12,10 @@ module.exports = function override(config) {
     });
     config.resolve.fallback = fallback;
     config.plugins = (config.plugins || []).concat([
-        new webpack.ProvidePlugin({
+        new ProvidePlugin({
             process: 'process/browser',
             Buffer: ['buffer', 'Buffer'],
         }),
     ]);
     return config;
-};
+}
