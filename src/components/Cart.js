@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useCart } from 'react-use-cart';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,7 @@ import { Button, Container, Table } from 'react-bootstrap';
 import './cart.css';
 import Header from './Header';
 import Footer from './Footer';
+import { CurrencyContext } from './CurrencyContext';
 
 const Cart = ({ formatter }) => {
     const {
@@ -18,6 +19,8 @@ const Cart = ({ formatter }) => {
         emptyCart,
     } = useCart();
 
+    const { selectedCurrency, convertPrice, selectedSign } =
+        useContext(CurrencyContext);
     return (
         <>
             <Header />
@@ -75,9 +78,12 @@ const Cart = ({ formatter }) => {
                                                                 {item.alt}
                                                             </h4>
                                                             <div className='cart-item__details-price'>
-                                                                ₦
+                                                                {selectedSign}
                                                                 {formatter.format(
-                                                                    item.price
+                                                                    convertPrice(
+                                                                        item.price,
+                                                                        selectedCurrency
+                                                                    )
                                                                 )}
                                                             </div>
                                                         </div>
@@ -143,10 +149,13 @@ const Cart = ({ formatter }) => {
 
                                                     <td className=''>
                                                         <p className='d-flex justify-content-center total-price'>
-                                                            ₦
+                                                            {selectedSign}
                                                             {formatter.format(
-                                                                item.price *
-                                                                    item.quantity
+                                                                convertPrice(
+                                                                    item.price *
+                                                                        item.quantity,
+                                                                    selectedCurrency
+                                                                )
                                                             )}
                                                         </p>
                                                     </td>
@@ -173,9 +182,12 @@ const Cart = ({ formatter }) => {
                                                     {item.alt}
                                                 </h4>
                                                 <div className='cart-item__details-price1'>
-                                                    ₦
+                                                    {selectedSign}
                                                     {formatter.format(
-                                                        item.price
+                                                        convertPrice(
+                                                            item.price,
+                                                            selectedCurrency
+                                                        )
                                                     )}
                                                 </div>
                                                 <p className='fs-6 mt-4'>
@@ -247,7 +259,13 @@ const Cart = ({ formatter }) => {
                                             {' '}
                                             Subtotal:{' '}
                                             <span className='cart__total-price ms-2'>
-                                                ₦{formatter.format(cartTotal)}
+                                                {selectedSign}
+                                                {formatter.format(
+                                                    convertPrice(
+                                                        cartTotal,
+                                                        selectedCurrency
+                                                    )
+                                                )}
                                             </span>
                                         </strong>
                                     </p>

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { useCart } from 'react-use-cart';
 import { Form } from 'react-bootstrap';
 import { PaystackButton } from 'react-paystack';
@@ -6,6 +6,7 @@ import './checkout.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
+import { CurrencyContext } from '../components/CurrencyContext';
 
 export default function Checkout({ formatter }) {
     const { totalItems, items, cartTotal, emptyCart } = useCart();
@@ -102,6 +103,9 @@ export default function Checkout({ formatter }) {
         },
     };
 
+    const { selectedCurrency, convertPrice, selectedSign } =
+        useContext(CurrencyContext);
+
     return (
         <>
             <Header />
@@ -147,9 +151,12 @@ export default function Checkout({ formatter }) {
                                                                 {item.alt}
                                                             </h6>
                                                             <small className='text-muted d-sm-block d-none'>
-                                                                ₦
+                                                                {selectedSign}
                                                                 {formatter.format(
-                                                                    item.price
+                                                                    convertPrice(
+                                                                        item.price,
+                                                                        selectedCurrency
+                                                                    )
                                                                 )}
                                                             </small>
                                                             <small className='text-muted'>
@@ -163,10 +170,12 @@ export default function Checkout({ formatter }) {
                                                         </div>
                                                     </div>
                                                     <span className='text-muted'>
-                                                        ₦
+                                                        {selectedSign}
                                                         {formatter.format(
-                                                            item.price *
-                                                                item.quantity
+                                                            convertPrice(
+                                                                item.price,
+                                                                selectedCurrency
+                                                            )
                                                         )}
                                                     </span>
                                                 </li>
@@ -176,7 +185,13 @@ export default function Checkout({ formatter }) {
                                         <li className=' border-bottom border-top px-2 py-2 d-flex justify-content-between'>
                                             <span>Total</span>
                                             <strong>
-                                                ₦{formatter.format(cartTotal)}
+                                                {selectedSign}
+                                                {formatter.format(
+                                                    convertPrice(
+                                                        cartTotal,
+                                                        selectedCurrency
+                                                    )
+                                                )}
                                             </strong>
                                         </li>
                                     </ul>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
     Button,
     Col,
@@ -17,6 +17,7 @@ import sizeGuide from '../../files/HazelGrace Size Guide.pdf';
 
 import Header from '../Header';
 import Footer from '../Footer';
+import { CurrencyContext } from '../CurrencyContext';
 
 const Canopus = ({ formatter }) => {
     const data = nalediData.filter((e) => e.alt === 'Canopus Dress')[0];
@@ -41,6 +42,9 @@ const Canopus = ({ formatter }) => {
             };
         });
     }
+
+    const { selectedCurrency, convertPrice, selectedSign } =
+        useContext(CurrencyContext);
     return (
         <>
             <Header />
@@ -66,7 +70,10 @@ const Canopus = ({ formatter }) => {
                             <p className='hgs mb-4 fs-6'>HazelGrace Styles</p>
                             <h1 className='name mt-1 fs-2'>{data.alt}</h1>
                             <h2 className='price fs-3 mb-5'>
-                                ₦{formatter.format(data.price)}
+                                {selectedSign}
+                                {formatter.format(
+                                    convertPrice(data.price, selectedCurrency)
+                                )}
                             </h2>
                             <Button
                                 as='a'

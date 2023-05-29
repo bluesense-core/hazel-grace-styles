@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
     Button,
     Col,
@@ -16,6 +16,7 @@ import ReactImageGallery from 'react-image-gallery';
 import sizeGuide from '../../files/HazelGrace Size Guide.pdf';
 import Header from '../Header';
 import Footer from '../Footer';
+import { CurrencyContext } from '../CurrencyContext';
 
 const Pistachio = ({ formatter }) => {
     const data = genesisData.filter((e) => e.alt === 'Pistachio Blouse')[0];
@@ -40,6 +41,9 @@ const Pistachio = ({ formatter }) => {
             };
         });
     }
+
+    const { selectedCurrency, convertPrice, selectedSign } =
+        useContext(CurrencyContext);
     return (
         <>
             <Header />
@@ -65,7 +69,10 @@ const Pistachio = ({ formatter }) => {
                             <p className='hgs mb-4 fs-6'>HazelGrace Styles</p>
                             <h1 className='name mt-1 fs-2'>{data.alt}</h1>
                             <h2 className='price fs-3 mb-5'>
-                                ₦{formatter.format(data.price)}
+                                {selectedSign}
+                                {formatter.format(
+                                    convertPrice(data.price, selectedCurrency)
+                                )}
                             </h2>
                             <Button
                                 as='a'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
     Button,
     Col,
@@ -17,6 +17,8 @@ import sizeGuide from '../../files/HazelGrace Size Guide.pdf';
 
 import Header from '../Header';
 import Footer from '../Footer';
+
+import { CurrencyContext } from '../CurrencyContext';
 
 const Look9 = ({ formatter }) => {
     const data = bespokeData.filter((e) => e.alt === 'Look 9')[0];
@@ -41,6 +43,9 @@ const Look9 = ({ formatter }) => {
             };
         });
     }
+
+    const { selectedCurrency, convertPrice, selectedSign } =
+        useContext(CurrencyContext);
     return (
         <>
             <Header />
@@ -80,7 +85,10 @@ const Look9 = ({ formatter }) => {
                                 vision to life!
                             </p>  */}
                             <h2 className='price fs-3 mb-5'>
-                                ₦{formatter.format(data.price)}
+                                {selectedSign}
+                                {formatter.format(
+                                    convertPrice(data.price, selectedCurrency)
+                                )}
                             </h2>
                             <Button
                                 as='a'

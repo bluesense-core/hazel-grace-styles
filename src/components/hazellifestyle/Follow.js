@@ -35,7 +35,7 @@ const Follow = () => {
                 </Row>
 
                 <InstaFeeds
-                    token='IGQVJVZAXd6SkxLLVZArUUxTZA25lZAXYtTEk4Vk9WV1NiOHA4WkZAzcFUtdVZAFSURkLTRhUHZAVVWhqTjdycE9qdFNmNWVDSV9fcmFaWGZAfeEVkelFFQ2FNUG1vR0NaS0RjRmozeXFsWjJNQXdmM2NmTVQzTAZDZD'
+                    token='IGQVJYZAU5zaU9MNEtKMVJPenRrdGdLejJ6V29yci1WX2hBZATNrRWtPcjc1Y3FkS0wzY1dpMmFnM25yNkE5RWkyRTBLc3ZAoZAGtyLTJSOEpDTWo0QUk4Ukw4b3V0c19rTVBsN0F3bmEweW02Y2VQQmtjawZDZD'
                     limit={9}
                 />
 
