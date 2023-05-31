@@ -147,7 +147,7 @@ const nalediData = [
         id: 1,
         src: arcturus,
         alt: 'Arcturus Blouse',
-        price: 80000,
+        price: 160000,
         carousel: [
             {
                 original: arcturus,
@@ -182,7 +182,7 @@ const nalediData = [
         id: 2,
         src: canopus,
         alt: 'Canopus Dress',
-        price: 75000,
+        price: 150000,
         carousel: [
             {
                 original: canopus,
@@ -208,7 +208,7 @@ const nalediData = [
         id: 3,
         src: orion,
         alt: 'Orion Dress',
-        price: 70000,
+        price: 140000,
         carousel: [
             {
                 original: orion,
@@ -234,7 +234,7 @@ const nalediData = [
         id: 4,
         src: castor,
         alt: 'Castor Ensemble',
-        price: 80000,
+        price: 160000,
         carousel: [
             {
                 original: castor,
@@ -260,7 +260,7 @@ const nalediData = [
         id: 5,
         src: rigel,
         alt: 'Rigel Dress',
-        price: 60000,
+        price: 120000,
         carousel: [
             {
                 original: rigel,
@@ -286,7 +286,7 @@ const nalediData = [
         id: 6,
         src: procyon,
         alt: 'Procyon Ensemble',
-        price: 60000,
+        price: 120000,
         carousel: [
             {
                 original: procyon,
@@ -312,7 +312,7 @@ const nalediData = [
         id: 7,
         src: altair,
         alt: 'Altair Dress',
-        price: 55000,
+        price: 110000,
         carousel: [
             {
                 original: altair,
@@ -347,7 +347,7 @@ const nalediData = [
         id: 8,
         src: sirius,
         alt: 'Sirius Dress',
-        price: 50000,
+        price: 100000,
         carousel: [
             {
                 original: sirius,
@@ -373,7 +373,7 @@ const nalediData = [
         id: 9,
         src: venus,
         alt: 'Venus Dress',
-        price: 50000,
+        price: 100000,
         carousel: [
             {
                 original: venus,
@@ -561,7 +561,7 @@ const bespokeData = [
         id: 25,
         src: lookone,
         alt: 'Look 1',
-        price: 550000,
+        price: 1100000,
         carousel: [
             {
                 original: lookone,
@@ -607,7 +607,7 @@ const bespokeData = [
         id: 26,
         src: looktwo,
         alt: 'Look 2',
-        price: 400000,
+        price: 800000,
         carousel: [
             {
                 original: looktwo,
@@ -644,7 +644,7 @@ const bespokeData = [
         id: 27,
         src: lookthree,
         alt: 'Look 3',
-        price: 550000,
+        price: 1100000,
         carousel: [
             {
                 original: lookthree,
@@ -681,7 +681,7 @@ const bespokeData = [
         id: 28,
         src: lookfour,
         alt: 'Look 4',
-        price: 450000,
+        price: 900000,
         carousel: [
             {
                 original: lookfour,
@@ -718,7 +718,7 @@ const bespokeData = [
         id: 29,
         src: lookfive,
         alt: 'Look 5',
-        price: 65000,
+        price: 130000,
         carousel: [
             {
                 original: lookfive,
@@ -764,7 +764,7 @@ const bespokeData = [
         id: 30,
         src: looksix,
         alt: 'Look 6',
-        price: 80000,
+        price: 160000,
         carousel: [
             {
                 original: looksix,
@@ -810,7 +810,7 @@ const bespokeData = [
         id: 31,
         src: lookseven,
         alt: 'Look 7',
-        price: 100000,
+        price: 200000,
         carousel: [
             {
                 original: lookseven,
@@ -838,7 +838,7 @@ const bespokeData = [
         id: 32,
         src: lookeight,
         alt: 'Look 8',
-        price: 150000,
+        price: 300000,
 
         carousel: [
             {
@@ -867,7 +867,7 @@ const bespokeData = [
         id: 33,
         src: looknine,
         alt: 'Look 9',
-        price: 55000,
+        price: 110000,
 
         carousel: [
             {
@@ -896,7 +896,7 @@ const bespokeData = [
         id: 34,
         src: lookten,
         alt: 'Look 10',
-        price: 120000,
+        price: 240000,
 
         carousel: [
             {
@@ -934,7 +934,7 @@ const bespokeData = [
         id: 35,
         src: lookeleven,
         alt: 'Look 11',
-        price: 115000,
+        price: 230000,
 
         carousel: [
             {
@@ -980,7 +980,7 @@ const bespokeData = [
         id: 36,
         src: yellow,
         alt: 'Look 12',
-        price: 55000,
+        price: 255000,
         carousel: [
             {
                 original: yellow,
