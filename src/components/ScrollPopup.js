@@ -26,7 +26,7 @@ const ScrollPopup = () => {
                 }
             );
         formRef.current.reset();
-
+        localStorage.setItem('hasSignedUp', true); // Set hasSignedUp flag to true
         setFormSubmitted(true);
     };
     const [showModal, setShowModal] = useState(false);
@@ -40,20 +40,23 @@ const ScrollPopup = () => {
     };
 
     useEffect(() => {
-        shouldShowPopup.current = true;
-
+        const hasSignedUp = localStorage.getItem('hasSignedUp');
+        if (!hasSignedUp) {
+          shouldShowPopup.current = true;
+        }
+    
         return () => {
-            shouldShowPopup.current = false;
+          shouldShowPopup.current = false;
         };
-    }, []);
-
-    useEffect(() => {
+      }, []);
+    
+      useEffect(() => {
         document.addEventListener('mouseout', handleExitIntent);
-
+    
         return () => {
-            document.removeEventListener('mouseout', handleExitIntent);
+          document.removeEventListener('mouseout', handleExitIntent);
         };
-    }, []);
+      }, []);
 
     return (
         <>

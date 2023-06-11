@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import pink from '../img/home-img/top-left.png';
-import brown from '../img/home-img/bottom-right.png';
-import cream from '../img/home-img/bottom-left.png';
-import orange from '../img/home-img/top-right.png';
-import spotlight from '../img/home-img/center.png';
+import pink from '../img/home-img/top-left.webp';
+import brown from '../img/home-img/bottom-right.webp';
+import cream from '../img/home-img/bottom-left.webp';
+import orange from '../img/home-img/top-right.webp';
+import spotlight from '../img/home-img/center.webp';
 import about1 from '../img/home-img/who.png';
 import about2 from '../img/home-img/we.png';
 import { FaAngleDoubleDown, FaAngleDoubleRight } from 'react-icons/fa';

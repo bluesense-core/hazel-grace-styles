@@ -27,7 +27,7 @@ const GenesisItem = ({ product, formatter }) => {
     return (
         <Col>
             <Card
-                className='product__card h-100  text-center border-white rounded-0'
+                className='product__card text-center border-white rounded-0'
                 onMouseOver={() => setIsOverlay(true)}
                 onMouseLeave={() => setIsOverlay(false)}>
                 <NavLink
@@ -39,7 +39,7 @@ const GenesisItem = ({ product, formatter }) => {
                         effect='blur'
                         visibleByDefault={true}
                         style={gray}
-                        className='position-relative product__image h-100 shop-img img-fluid'
+                        className='position-relative product__image shop-img img-fluid'
                         src={product.src}
                         alt={product.alt}
                     />

@@ -21,6 +21,12 @@
     border-radius: 15px;
 }
 
+@media (max-width: 767px) {
+    .shop img {
+        max-width: 90%;
+    }
+}
+
 #shop-naledi .product__name,
 #shop-naledi .product__price {
     font-weight: 400;
