@@ -10,14 +10,8 @@ import Footer from './Footer';
 import { CurrencyContext } from './CurrencyContext';
 
 const Cart = ({ formatter }) => {
-    const {
-        isEmpty,
-        items,
-        updateItemQuantity,
-        removeItem,
-        cartTotal,
-        emptyCart,
-    } = useCart();
+    const { isEmpty, items, updateItemQuantity, removeItem, cartTotal } =
+        useCart();
 
     const { selectedCurrency, convertPrice, selectedSign } =
         useContext(CurrencyContext);
@@ -272,14 +266,13 @@ const Cart = ({ formatter }) => {
                                 </div>
 
                                 <div className='d-flex justify-content-center'>
-                                    <button
-                                        className='lh-0 me-2  cart__btn-empty text-uppercase text-white'
-                                        onClick={() => emptyCart()}>
-                                        Empty cart
-                                    </button>
+                                    <Link to='/'>
+                                        <Button className='lh-0 me-2  cart__btn-empty text-uppercase text-white'>
+                                            Add To Cart
+                                        </Button>
+                                    </Link>
 
                                     <Link
-                                        reloadDocument
                                         to='/checkout'
                                         className='text-decoration-none'>
                                         <Button className='lh-0 ms-2  cart__btn-checkout text-white text-uppercase'>
