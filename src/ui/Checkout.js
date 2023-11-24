@@ -154,7 +154,7 @@ export default function Checkout({ formatter }) {
                                                                 {selectedSign}
                                                                 {formatter.format(
                                                                     convertPrice(
-                                                                        item.price,
+                                                                        item.originalPrice,
                                                                         selectedCurrency
                                                                     )
                                                                 )}
@@ -173,7 +173,7 @@ export default function Checkout({ formatter }) {
                                                         {selectedSign}
                                                         {formatter.format(
                                                             convertPrice(
-                                                                item.price,
+                                                                item.originalPrice,
                                                                 selectedCurrency
                                                             )
                                                         )}

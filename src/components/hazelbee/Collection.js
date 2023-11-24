@@ -56,10 +56,24 @@ const Collection = ({ formatter }) => {
                                             {selectedSign}
                                             {formatter.format(
                                                 convertPrice(
-                                                    e.price,
+                                                    e.bfDiscount,
                                                     selectedCurrency
                                                 )
                                             )}
+
+                                            <br />
+
+                                            <span className='text-secondary fs-6'>
+                                                <strike>
+                                                    {selectedSign}
+                                                    {formatter.format(
+                                                        convertPrice(
+                                                            e.originalPrice,
+                                                            selectedCurrency
+                                                        )
+                                                    )}
+                                                </strike>
+                                            </span>
                                         </Card.Text>
                                     </Card.Body>
                                 </NavLink>

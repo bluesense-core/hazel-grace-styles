@@ -206,6 +206,10 @@
 #cart-menu .total-price {
     margin-top: 23%;
 }
+
+#cart-menu .total-price span {
+    font-size: 14px;
+}
 #cart-menu .cart-item__details-qty {
     display: flex;
     margin-bottom: 0;
@@ -234,6 +238,10 @@
 #cart-menu .cart-item__details-price {
     font-size: 1rem;
     color: #191919;
+}
+
+#cart-menu .cart-item__details-price span {
+    font-size: 14px;
 }
 
 #cart-menu .cart-item__remove {

@@ -71,7 +71,10 @@ const Pistachio = ({ formatter }) => {
                             <h2 className='price fs-3 mb-5'>
                                 {selectedSign}
                                 {formatter.format(
-                                    convertPrice(data.price, selectedCurrency)
+                                    convertPrice(
+                                        data.originalPrice,
+                                        selectedCurrency
+                                    )
                                 )}
                             </h2>
                             <Button

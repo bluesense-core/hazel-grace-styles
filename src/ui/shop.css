@@ -45,10 +45,22 @@
     white-space: nowrap;
 }
 
+#shop-naledi .product__price span,
+#shop-genesis .product__price span {
+    font-size: 14px;
+    white-space: normal;
+}
+
 @media (max-width: 767px) {
     #shop-naledi .product__name,
     #shop-naledi .product__price {
         font-size: 1rem;
+        white-space: normal;
+    }
+
+    #shop-naledi .product__price span,
+    #shop-genesis .product__price span {
+        font-size: 12px;
         white-space: normal;
     }
 }

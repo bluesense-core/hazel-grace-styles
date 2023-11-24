@@ -59,8 +59,24 @@ const ShopItem = ({ product, formatter }) => {
                         <p className='product__price shop-text'>
                             {selectedSign}
                             {formatter.format(
-                                convertPrice(product.price, selectedCurrency)
+                                convertPrice(
+                                    product.bfDiscount,
+                                    selectedCurrency
+                                )
                             )}
+                            <br />
+
+                            <span className='text-secondary'>
+                                <strike>
+                                    {selectedSign}
+                                    {formatter.format(
+                                        convertPrice(
+                                            product.originalPrice,
+                                            selectedCurrency
+                                        )
+                                    )}
+                                </strike>
+                            </span>
                         </p>
                     </div>
                 </Card.Body>

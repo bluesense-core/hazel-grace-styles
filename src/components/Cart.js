@@ -75,10 +75,25 @@ const Cart = ({ formatter }) => {
                                                                 {selectedSign}
                                                                 {formatter.format(
                                                                     convertPrice(
-                                                                        item.price,
+                                                                        item.bfDiscount,
                                                                         selectedCurrency
                                                                     )
                                                                 )}
+                                                                <br />
+
+                                                                <span className='text-secondary'>
+                                                                    <strike>
+                                                                        {
+                                                                            selectedSign
+                                                                        }
+                                                                        {formatter.format(
+                                                                            convertPrice(
+                                                                                item.originalPrice,
+                                                                                selectedCurrency
+                                                                            )
+                                                                        )}
+                                                                    </strike>
+                                                                </span>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -142,15 +157,32 @@ const Cart = ({ formatter }) => {
                                                     </td>
 
                                                     <td className=''>
-                                                        <p className='d-flex justify-content-center total-price'>
+                                                        <p className='d-flex align-items-center flex-column total-price'>
                                                             {selectedSign}
                                                             {formatter.format(
                                                                 convertPrice(
-                                                                    item.price *
+                                                                    item.bfDiscount *
                                                                         item.quantity,
                                                                     selectedCurrency
                                                                 )
                                                             )}
+
+                                                            <br />
+
+                                                            <span className='text-secondary'>
+                                                                <strike>
+                                                                    {
+                                                                        selectedSign
+                                                                    }
+                                                                    {formatter.format(
+                                                                        convertPrice(
+                                                                            item.originalPrice *
+                                                                                item.quantity,
+                                                                            selectedCurrency
+                                                                        )
+                                                                    )}
+                                                                </strike>
+                                                            </span>
                                                         </p>
                                                     </td>
                                                     {/* <div>
@@ -179,7 +211,7 @@ const Cart = ({ formatter }) => {
                                                     {selectedSign}
                                                     {formatter.format(
                                                         convertPrice(
-                                                            item.price,
+                                                            item.originalPrice,
                                                             selectedCurrency
                                                         )
                                                     )}

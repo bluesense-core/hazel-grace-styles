@@ -46,8 +46,15 @@ function Header() {
                 <a
                     href='/resurgence'
                     className='text-decoration-none text-white'>
-                    <p className='m-0 py-2 text-uppercase text-center'>
-                        Shop Our New Collection
+                    <p className='m-0 py-2 fs-6 font-semibold  text-center px-5'>
+                        {/* <strong>Hello lovelies,</strong><br />
+                         A little bird told us you waited for this day! <br /> */}
+                        ✨ Shop 50% off all items this Black Friday and enjoy
+                        30% discount until December 23rd. ✨
+                        {/* <br />
+                        Offer valid while stocks last.
+                        <br />
+                        <strong>- Hazel Grace Styles </strong> */}
                     </p>
                 </a>
             </div>

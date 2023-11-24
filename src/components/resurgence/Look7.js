@@ -87,8 +87,25 @@ const Look7 = ({ formatter }) => {
                             <h2 className='price fs-3 mb-5'>
                                 {selectedSign}
                                 {formatter.format(
-                                    convertPrice(data.price, selectedCurrency)
+                                    convertPrice(
+                                        data.bfDiscount,
+                                        selectedCurrency
+                                    )
                                 )}
+
+                                <br />
+
+                                <span className='text-secondary fs-5'>
+                                    <strike>
+                                        {selectedSign}
+                                        {formatter.format(
+                                            convertPrice(
+                                                data.originalPrice,
+                                                selectedCurrency
+                                            )
+                                        )}
+                                    </strike>
+                                </span>
                             </h2>
                             <Button
                                 as='a'
