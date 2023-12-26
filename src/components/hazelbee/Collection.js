@@ -31,14 +31,16 @@ const Collection = ({ formatter }) => {
                     xs={1}
                     md={2}
                     lg={3}
-                    className='g-5 mt-5 mx-auto justify-content-center'>
+                    className='g-5 mt-5 mx-auto justify-content-center'
+                >
                     {hazelBeeData.map((e) => (
                         <Col key={e.id}>
                             <Card className='h-100'>
                                 <NavLink
                                     reloadDocument
                                     to={'/hazelbee/shop/' + toLink(e.title)}
-                                    className='text-decoration-none'>
+                                    className='text-decoration-none'
+                                >
                                     <LazyLoadImage
                                         delayTime='150'
                                         effect='blur'
@@ -56,14 +58,14 @@ const Collection = ({ formatter }) => {
                                             {selectedSign}
                                             {formatter.format(
                                                 convertPrice(
-                                                    e.bfDiscount,
+                                                    e.price,
                                                     selectedCurrency
                                                 )
                                             )}
 
                                             <br />
 
-                                            <span className='text-secondary fs-6'>
+                                            {/* <span className='text-secondary fs-6'>
                                                 <strike>
                                                     {selectedSign}
                                                     {formatter.format(
@@ -73,7 +75,7 @@ const Collection = ({ formatter }) => {
                                                         )
                                                     )}
                                                 </strike>
-                                            </span>
+                                            </span> */}
                                         </Card.Text>
                                     </Card.Body>
                                 </NavLink>

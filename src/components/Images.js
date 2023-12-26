@@ -155,7 +155,8 @@ const nalediData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -199,7 +200,8 @@ const nalediData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -234,7 +236,8 @@ const nalediData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -269,7 +272,8 @@ const nalediData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -304,7 +308,8 @@ const nalediData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -339,7 +344,8 @@ const nalediData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -374,7 +380,8 @@ const nalediData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -418,7 +425,8 @@ const nalediData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -453,7 +461,8 @@ const nalediData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -501,7 +510,8 @@ const genesisData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -527,7 +537,8 @@ const genesisData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -553,7 +564,8 @@ const genesisData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -580,7 +592,8 @@ const genesisData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -606,7 +619,8 @@ const genesisData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -632,7 +646,8 @@ const genesisData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -658,7 +673,8 @@ const genesisData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -685,7 +701,8 @@ const genesisData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -724,7 +741,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -779,7 +797,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -825,7 +844,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -871,7 +891,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -917,7 +938,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -972,7 +994,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1027,7 +1050,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1064,7 +1088,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
 
         carousel: [
@@ -1102,7 +1127,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1139,7 +1165,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1185,7 +1212,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1239,7 +1267,8 @@ const bespokeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1277,7 +1306,8 @@ const hazelBeeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
     },
     {
@@ -1292,7 +1322,8 @@ const hazelBeeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
     },
     {
@@ -1307,7 +1338,8 @@ const hazelBeeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
     },
     {
@@ -1322,7 +1354,8 @@ const hazelBeeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
     },
     {
@@ -1337,7 +1370,8 @@ const hazelBeeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
     },
     {
@@ -1352,7 +1386,8 @@ const hazelBeeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
     },
     {
@@ -1367,7 +1402,8 @@ const hazelBeeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
     },
     {
@@ -1382,7 +1418,8 @@ const hazelBeeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
     },
     {
@@ -1397,7 +1434,8 @@ const hazelBeeData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
     },
 ];
@@ -1415,7 +1453,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1459,7 +1498,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1503,7 +1543,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1538,7 +1579,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1583,7 +1625,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1627,7 +1670,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1671,7 +1715,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1706,7 +1751,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1741,7 +1787,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1776,7 +1823,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1820,7 +1868,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1855,7 +1904,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1900,7 +1950,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {
@@ -1945,7 +1996,8 @@ const hazelBeeShopData = [
             return this.originalPrice - (30 / 100) * this.originalPrice; // 30% off
         },
         get price() {
-            return this.bfDiscount; // Use bfDiscount as the price
+            // return this.bfDiscount;  Use bfDiscount as the price
+           return this.originalPrice
         },
         carousel: [
             {

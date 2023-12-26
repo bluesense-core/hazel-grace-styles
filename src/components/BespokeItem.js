@@ -9,12 +9,12 @@ const BespokeItem = ({ product, formatter }) => {
     const [isOverlay, setIsOverlay] = useState(false);
 
     const styles = {
-        display: !isOverlay ? 'none' : 'flex',
+        display: !isOverlay ? 'none' : 'flex'
     };
 
     const gray = {
         filter: !isOverlay ? 'none' : 'grayscale(100%)',
-        transform: !isOverlay ? 'none' : 'scale(1.05)',
+        transform: !isOverlay ? 'none' : 'scale(1.05)'
     };
 
     const toLink = (param) => {
@@ -28,11 +28,13 @@ const BespokeItem = ({ product, formatter }) => {
             <Card
                 className='product__card text-center border-white rounded-0'
                 onMouseOver={() => setIsOverlay(true)}
-                onMouseLeave={() => setIsOverlay(false)}>
+                onMouseLeave={() => setIsOverlay(false)}
+            >
                 <NavLink
                     reloadDocument
                     to={'/resurgence/' + toLink(product.alt)}
-                    className='text-decoration-none '>
+                    className='text-decoration-none '
+                >
                     <LazyLoadImage
                         delayTime='150'
                         effect='blur'
@@ -45,7 +47,8 @@ const BespokeItem = ({ product, formatter }) => {
 
                     <Card.Text
                         style={styles}
-                        className='shop-overlay h5 fw-bolder'>
+                        className='shop-overlay h5 fw-bolder'
+                    >
                         View More
                     </Card.Text>
                 </NavLink>
@@ -58,14 +61,11 @@ const BespokeItem = ({ product, formatter }) => {
                         <p className='product__price shop-text'>
                             {selectedSign}
                             {formatter.format(
-                                convertPrice(
-                                    product.bfDiscount,
-                                    selectedCurrency
-                                )
+                                convertPrice(product.price, selectedCurrency)
                             )}
                             <br />
 
-                            <span className='text-secondary'>
+                            {/* <span className='text-secondary'>
                                 <strike>
                                     {selectedSign}
                                     {formatter.format(
@@ -75,7 +75,7 @@ const BespokeItem = ({ product, formatter }) => {
                                         )
                                     )}
                                 </strike>
-                            </span>
+                            </span> */}
                         </p>
                     </div>
                 </Card.Body>
@@ -85,7 +85,7 @@ const BespokeItem = ({ product, formatter }) => {
 };
 
 BespokeItem.propTypes = {
-    product: PropTypes.object,
+    product: PropTypes.object
 };
 
 export default BespokeItem;

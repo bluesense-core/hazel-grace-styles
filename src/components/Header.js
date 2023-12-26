@@ -6,7 +6,7 @@ import {
     Container,
     NavDropdown,
     Col,
-    Row,
+    Row
 } from 'react-bootstrap';
 import Logo from '../img/logo.png';
 import './header.css';
@@ -45,12 +45,14 @@ function Header() {
             <div className='banner'>
                 <a
                     href='/resurgence'
-                    className='text-decoration-none text-white'>
+                    className='text-decoration-none text-white'
+                >
                     <p className='m-0 py-2 fs-6 font-semibold  text-center px-5'>
                         {/* <strong>Hello lovelies,</strong><br />
                          A little bird told us you waited for this day! <br /> */}
-                        ✨ Shop 50% off all items this Black Friday and enjoy
-                        30% discount until December 23rd. ✨
+                        {/* ✨ Shop 50% off all items this Black Friday and enjoy
+                        30% discount until December 23rd. ✨ */}
+                        ✨ Shop our new collection! ✨
                         {/* <br />
                         Offer valid while stocks last.
                         <br />
@@ -68,10 +70,12 @@ function Header() {
                                 id='navbar-off'
                                 placement='start'
                                 show={show}
-                                onHide={handleClose}>
+                                onHide={handleClose}
+                            >
                                 <Offcanvas.Header
                                     closeButton
-                                    className='py-4 ps-4 sticky-top'>
+                                    className='py-4 ps-4 sticky-top'
+                                >
                                     <Navbar.Brand href='/'>
                                         <LazyLoadImage
                                             delayTime='150'
@@ -86,7 +90,8 @@ function Header() {
                                 <Offcanvas.Body>
                                     <Nav
                                         id='header-nav'
-                                        className=' text-uppercase justify-content-end flex-grow-1 px-3'>
+                                        className=' text-uppercase justify-content-end flex-grow-1 px-3'
+                                    >
                                         <Nav.Item className='py-3 text-decoration-none'>
                                             <Nav.Link href='/'>Home</Nav.Link>
                                         </Nav.Item>
@@ -99,20 +104,24 @@ function Header() {
                                                     <BsChevronDown className='ms-2 mb-1 arrow' />
                                                 </span>
                                             }
-                                            id=''>
+                                            id=''
+                                        >
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/genesis'>
+                                                href='/genesis'
+                                            >
                                                 Genesis Collection
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/naledi'>
+                                                href='/naledi'
+                                            >
                                                 Naledi Collection
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/resurgence'>
+                                                href='/resurgence'
+                                            >
                                                 Resurgence Collection
                                             </NavDropdown.Item>
                                         </NavDropdown>
@@ -125,20 +134,24 @@ function Header() {
                                                     <BsChevronDown className='ms-2 mb-1 arrow' />
                                                 </span>
                                             }
-                                            id=''>
+                                            id=''
+                                        >
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/hazelbee'>
+                                                href='/hazelbee'
+                                            >
                                                 HazelBee
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/hazelbabies'>
+                                                href='/hazelbabies'
+                                            >
                                                 HazelBabies
                                             </NavDropdown.Item>
                                             <NavDropdown.Item
                                                 className='text-capitalize'
-                                                href='/hazellifestyle'>
+                                                href='/hazellifestyle'
+                                            >
                                                 HazelLifestyle
                                             </NavDropdown.Item>
                                         </NavDropdown>
@@ -158,7 +171,8 @@ function Header() {
                         <Col xs={6} lg='auto' className='d-lg-flex d-block'>
                             <Navbar.Brand
                                 href='/'
-                                className='d-flex m-0 justify-content-center'>
+                                className='d-flex m-0 justify-content-center'
+                            >
                                 <LazyLoadImage
                                     delayTime='150'
                                     effect='blur'
@@ -172,7 +186,8 @@ function Header() {
                         <Col className='d-lg-block d-none'>
                             <Nav
                                 id='header-nav'
-                                className=' text-uppercase justify-content-end flex-grow-1'>
+                                className=' text-uppercase justify-content-end flex-grow-1'
+                            >
                                 <Nav.Item className='px-2'>
                                     <Nav.Link href='/'>Home</Nav.Link>
                                 </Nav.Item>
@@ -188,20 +203,24 @@ function Header() {
                                     id=''
                                     show={dropdown1}
                                     onMouseEnter={showDropdown1}
-                                    onMouseLeave={hideDropdown1}>
+                                    onMouseLeave={hideDropdown1}
+                                >
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/genesis'>
+                                        href='/genesis'
+                                    >
                                         Genesis Collection
                                     </NavDropdown.Item>
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/naledi'>
+                                        href='/naledi'
+                                    >
                                         Naledi Collection
                                     </NavDropdown.Item>
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/resurgence'>
+                                        href='/resurgence'
+                                    >
                                         Resurgence Collection
                                     </NavDropdown.Item>
                                 </NavDropdown>
@@ -217,20 +236,24 @@ function Header() {
                                     id=''
                                     show={dropdown2}
                                     onMouseEnter={showDropdown2}
-                                    onMouseLeave={hideDropdown2}>
+                                    onMouseLeave={hideDropdown2}
+                                >
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/hazelbee'>
+                                        href='/hazelbee'
+                                    >
                                         HazelBee
                                     </NavDropdown.Item>
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/hazelbabies'>
+                                        href='/hazelbabies'
+                                    >
                                         HazelBabies
                                     </NavDropdown.Item>
                                     <NavDropdown.Item
                                         className='text-capitalize'
-                                        href='/hazellifestyle'>
+                                        href='/hazellifestyle'
+                                    >
                                         HazelLifestyle
                                     </NavDropdown.Item>
                                 </NavDropdown>
@@ -242,7 +265,8 @@ function Header() {
                                 <div className='ps-2'>
                                     <Nav.Link
                                         href='/cart'
-                                        className='position-relative'>
+                                        className='position-relative'
+                                    >
                                         <BsBag className='cart-icon mb-1 ' />
                                         {!isEmpty && (
                                             <span className=' badge rounded-circle bg-dark position-absolute'>
@@ -260,13 +284,16 @@ function Header() {
                         <Col
                             xs={3}
                             lg='auto'
-                            className='d-lg-none d-flex justify-content-center flex-sm-nowrap flex-wrap'>
+                            className='d-lg-none d-flex justify-content-center flex-sm-nowrap flex-wrap'
+                        >
                             <Nav
                                 id='header-nav'
-                                className=' text-uppercase justify-content-end'>
+                                className=' text-uppercase justify-content-end'
+                            >
                                 <Nav.Link
                                     href='/cart'
-                                    className='position-relative'>
+                                    className='position-relative'
+                                >
                                     <BsBag className='cart-icon mb-1 ' />
                                     {!isEmpty && (
                                         <span className=' badge rounded-circle bg-dark position-absolute'>

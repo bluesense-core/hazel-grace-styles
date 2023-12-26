@@ -36,7 +36,8 @@ const Cart = ({ formatter }) => {
                                 <div className='d-flex justify-content-center'>
                                     <Link
                                         to='/naledi'
-                                        className='text-decoration-none cart-btn btn mx-auto  text-white mt-1 py-2 px-3 border-none'>
+                                        className='text-decoration-none cart-btn btn mx-auto  text-white mt-1 py-2 px-3 border-none'
+                                    >
                                         SHOP NOW
                                     </Link>
                                 </div>
@@ -60,7 +61,8 @@ const Cart = ({ formatter }) => {
                                             return (
                                                 <tr
                                                     className='cart-item'
-                                                    key={index}>
+                                                    key={index}
+                                                >
                                                     <td className='d-flex w-100 align-items-center justify-content-between'>
                                                         <img
                                                             className='cart-item__image w-50 '
@@ -75,13 +77,13 @@ const Cart = ({ formatter }) => {
                                                                 {selectedSign}
                                                                 {formatter.format(
                                                                     convertPrice(
-                                                                        item.bfDiscount,
+                                                                        item.price,
                                                                         selectedCurrency
                                                                     )
                                                                 )}
                                                                 <br />
 
-                                                                <span className='text-secondary'>
+                                                                {/* <span className='text-secondary'>
                                                                     <strike>
                                                                         {
                                                                             selectedSign
@@ -93,7 +95,7 @@ const Cart = ({ formatter }) => {
                                                                             )
                                                                         )}
                                                                     </strike>
-                                                                </span>
+                                                                </span> */}
                                                             </div>
                                                         </div>
                                                     </td>
@@ -116,7 +118,8 @@ const Cart = ({ formatter }) => {
                                                                             item.quantity -
                                                                                 1
                                                                         )
-                                                                    }>
+                                                                    }
+                                                                >
                                                                     -
                                                                 </button>
                                                                 <p className='px-3 py-1'>
@@ -133,7 +136,8 @@ const Cart = ({ formatter }) => {
                                                                             item.quantity +
                                                                                 1
                                                                         )
-                                                                    }>
+                                                                    }
+                                                                >
                                                                     +
                                                                 </button>
                                                             </div>
@@ -150,7 +154,8 @@ const Cart = ({ formatter }) => {
                                                                     removeItem(
                                                                         item.id
                                                                     )
-                                                                }>
+                                                                }
+                                                            >
                                                                 Remove
                                                             </button>
                                                         </div>
@@ -161,7 +166,7 @@ const Cart = ({ formatter }) => {
                                                             {selectedSign}
                                                             {formatter.format(
                                                                 convertPrice(
-                                                                    item.bfDiscount *
+                                                                    item.price *
                                                                         item.quantity,
                                                                     selectedCurrency
                                                                 )
@@ -169,7 +174,7 @@ const Cart = ({ formatter }) => {
 
                                                             <br />
 
-                                                            <span className='text-secondary'>
+                                                            {/* <span className='text-secondary'>
                                                                 <strike>
                                                                     {
                                                                         selectedSign
@@ -182,7 +187,7 @@ const Cart = ({ formatter }) => {
                                                                         )
                                                                     )}
                                                                 </strike>
-                                                            </span>
+                                                            </span> */}
                                                         </p>
                                                     </td>
                                                     {/* <div>
@@ -197,7 +202,8 @@ const Cart = ({ formatter }) => {
                                     return (
                                         <div
                                             className='cart-item1 d-md-none d-flex'
-                                            key={index}>
+                                            key={index}
+                                        >
                                             <img
                                                 className='cart-item__image1'
                                                 src={item.src}
@@ -239,7 +245,8 @@ const Cart = ({ formatter }) => {
                                                                     item.quantity -
                                                                         1
                                                                 )
-                                                            }>
+                                                            }
+                                                        >
                                                             -
                                                         </button>
                                                         <p className='px-3 py-1'>
@@ -254,7 +261,8 @@ const Cart = ({ formatter }) => {
                                                                     item.quantity +
                                                                         1
                                                                 )
-                                                            }>
+                                                            }
+                                                        >
                                                             +
                                                         </button>
                                                     </div>
@@ -264,7 +272,8 @@ const Cart = ({ formatter }) => {
                                                         className='cart-item__remove1'
                                                         onClick={() =>
                                                             removeItem(item.id)
-                                                        }>
+                                                        }
+                                                    >
                                                         Remove
                                                     </button>
                                                 </div>
@@ -306,7 +315,8 @@ const Cart = ({ formatter }) => {
 
                                     <Link
                                         to='/checkout'
-                                        className='text-decoration-none'>
+                                        className='text-decoration-none'
+                                    >
                                         <Button className='lh-0 ms-2  cart__btn-checkout text-white text-uppercase'>
                                             <BsCart4 className='me-2 fs-6' />
                                             Checkout
@@ -331,5 +341,5 @@ Cart.propTypes = {
     cart: PropTypes.object,
     onRemoveFromCart: () => {},
     onUpdateCartQty: () => {},
-    onEmptyCart: () => {},
+    onEmptyCart: () => {}
 };

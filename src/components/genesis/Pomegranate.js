@@ -6,7 +6,7 @@ import {
     Form,
     FormGroup,
     Image,
-    Row,
+    Row
 } from 'react-bootstrap';
 import './single.css';
 import { genesisData } from '../Images';
@@ -23,7 +23,7 @@ const Pomegranate = ({ formatter }) => {
 
     const [formData, setFormData] = useState({
         size: '',
-        quantity: 1,
+        quantity: 1
     });
 
     const { addItem, updateItem } = useCart();
@@ -37,7 +37,7 @@ const Pomegranate = ({ formatter }) => {
         setFormData((prevFormData) => {
             return {
                 ...prevFormData,
-                [name]: value,
+                [name]: value
             };
         });
     }
@@ -65,21 +65,19 @@ const Pomegranate = ({ formatter }) => {
 
                         <Col
                             lg={6}
-                            className='d-flex flex-column text-lg-start text-center'>
+                            className='d-flex flex-column text-lg-start text-center'
+                        >
                             <p className='hgs mb-4 fs-6'>HazelGrace Styles</p>
                             <h1 className='name mt-1 fs-2'>{data.alt}</h1>
                             <h2 className='price fs-3 mb-5'>
                                 {selectedSign}
                                 {formatter.format(
-                                    convertPrice(
-                                        data.bfDiscount,
-                                        selectedCurrency
-                                    )
+                                    convertPrice(data.price, selectedCurrency)
                                 )}
 
                                 <br />
 
-                                <span className='text-secondary fs-5'>
+                                {/* <span className='text-secondary fs-5'>
                                     <strike>
                                         {selectedSign}
                                         {formatter.format(
@@ -89,14 +87,15 @@ const Pomegranate = ({ formatter }) => {
                                             )
                                         )}
                                     </strike>
-                                </span>
+                                </span> */}
                             </h2>
                             <Button
                                 as='a'
                                 href={sizeGuide}
                                 target='_blank'
                                 rel='noopener noreferrer'
-                                className='size-guide ms-lg-auto mx-lg-0 mx-auto py-3 mb-4  px-3'>
+                                className='size-guide ms-lg-auto mx-lg-0 mx-auto py-3 mb-4  px-3'
+                            >
                                 <Image src={hangar} fluid className='me-2' />
                                 Size Guide
                             </Button>
@@ -107,7 +106,8 @@ const Pomegranate = ({ formatter }) => {
                                 </Form.Label>
                                 <div
                                     key='inline-radio'
-                                    className='mb-4 size fs-6 w-100'>
+                                    className='mb-4 size fs-6 w-100'
+                                >
                                     <Form.Check
                                         className='px-0 me-0'
                                         inline
@@ -205,10 +205,11 @@ const Pomegranate = ({ formatter }) => {
                                                 return {
                                                     ...prevData,
                                                     quantity:
-                                                        prevData.quantity - 1,
+                                                        prevData.quantity - 1
                                                 };
                                             })
-                                        }>
+                                        }
+                                    >
                                         -
                                     </button>
                                     <Form.Control
@@ -227,10 +228,11 @@ const Pomegranate = ({ formatter }) => {
                                                 return {
                                                     ...prevData,
                                                     quantity:
-                                                        prevData.quantity + 1,
+                                                        prevData.quantity + 1
                                                 };
                                             })
-                                        }>
+                                        }
+                                    >
                                         +
                                     </button>
                                 </FormGroup>
@@ -243,9 +245,10 @@ const Pomegranate = ({ formatter }) => {
                                         updateItem(data.id, {
                                             ...data,
                                             size: formData.size,
-                                            quantity: Number(formData.quantity),
+                                            quantity: Number(formData.quantity)
                                         });
-                                    }}>
+                                    }}
+                                >
                                     Add To Cart
                                 </Button>
                             </Form>
