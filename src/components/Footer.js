@@ -7,13 +7,15 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import sizeGuide from '../files/HazelGrace Size Guide.pdf';
 
 function Footer() {
+    const date = new Date();
     return (
         <footer className=''>
             <Container fluid className='px-lg-5 pt-5 pb-4'>
                 <Row className='align-items-end'>
                     <Col
                         lg={8}
-                        className='justify-content-lg-start justify-content-center'>
+                        className='justify-content-lg-start justify-content-center'
+                    >
                         <div className='d-flex justify-content-lg-start justify-content-center'>
                             <LazyLoadImage
                                 className='d-lg-inline d-none footer-logo img-fluid mx-auto'
@@ -31,7 +33,8 @@ function Footer() {
 
                         <Nav
                             id='footer-nav'
-                            className='mt-4 text-center justify-content-lg-start justify-content-center'>
+                            className='mt-4 text-center justify-content-lg-start justify-content-center'
+                        >
                             <Nav.Item className='pe-2'>
                                 <Nav.Link className='ps-lg-0' href='/contact'>
                                     Contact
@@ -42,7 +45,8 @@ function Footer() {
                                 <Nav.Link
                                     href={sizeGuide}
                                     target='_blank'
-                                    rel='noopener noreferrer'>
+                                    rel='noopener noreferrer'
+                                >
                                     Size Guide
                                 </Nav.Link>
                             </Nav.Item>
@@ -63,7 +67,8 @@ function Footer() {
                                 className='me-3'
                                 href='https://web.facebook.com/hazelgracestyles/'
                                 target='_blank'
-                                rel='noopener noreferrer'>
+                                rel='noopener noreferrer'
+                            >
                                 <BsFacebook />
                             </a>
 
@@ -71,7 +76,8 @@ function Footer() {
                                 className='ms-3 me-lg-4'
                                 href='https://www.instagram.com/hazelgracestyles/'
                                 target='_blank'
-                                rel='noopener noreferrer'>
+                                rel='noopener noreferrer'
+                            >
                                 <BsInstagram />
                             </a>
 
@@ -84,7 +90,7 @@ function Footer() {
                             </a> */}
                         </div>
                         <p className='text-lg-end text-center mb-2'>
-                            © HazelGrace Styles 2023
+                            © HazelGrace Styles {date.getFullYear()}
                         </p>
                     </Col>
                 </Row>
